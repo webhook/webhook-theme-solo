@@ -154,3 +154,28 @@ article
   pre
     max-width: 120%
     margin: $base-line-height * 2 -10%
+
+.next-item, .prev-item
+  position: fixed
+  top: 50%
+  background: $gray-darker
+  color: $white
+  height: 60px
+  width: 20px
+  span
+    font-size: 30px
+    line-height: 60px
+    width: 20px
+    text-align: center
+  div
+    color: $gray
+    display: block
+    display: none
+  span
+    color: $white
+.next-item
+  right: 0
+  +border-left-radius(2px)
+.prev-item
+  left: 0
+  +border-right-radius(2px)

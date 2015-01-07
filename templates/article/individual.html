@@ -12,6 +12,24 @@
 {# This sets our page <title>. It will append this article's name to the site title defined in base.html #}
 {% block title %}{{ item.name }}{% endblock %}
 {% block content %}
+
+  {% set next = nextItem(item, 'publish_date', true) %}
+  {% set prev = prevItem(item, 'publish_date', true) %}
+  {% if next %}
+    <a href="{{ url(next)}}" class="next-item">
+      <span class="fa fa-angle-right"></span>
+      <div>Next article</div>
+      <div>{{ next.name }}</div>
+    </a>
+  {% endif %}
+  {% if prev %}
+    <a href="{{ url(prev)}}" class="prev-item">
+      <span class="fa fa-angle-left"></span>
+      <div>Previous article</div>
+      <div>{{ prev.name }}</div>
+    </a>
+  {% endif %}
+
   <article>
     <div class="date">{{ item.publish_date|date('M d Y') }}</div>
     <h1>{{ item.name }}</h1>
