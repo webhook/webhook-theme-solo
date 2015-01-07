@@ -1,0 +1,30 @@
+{# ------------------------------------------------------- #}
+{# INDIVIDUAL VIEW FOR EACH gallery #}
+{# This page can use any data from http:localhost:2000/cms/#/form/gallery/ #}
+{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
+{# http://paularmstrong.github.io/swig/docs/tags/ #}
+{# Learn about calling data into Webhook pages here: #}
+{# http://www.webhook.com/docs/template-rules-and-filters/ #}
+{# ------------------------------------------------------- #}
+{# Confused what extends and blocks do? Watch a primer: #}
+{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
+{% extends "templates/partials/base.html" %}
+{# This sets our page <title>. It will append this gallery's name to the site title defined in base.html #}
+{% block title %}{% parent %} - {{ item.name }}{% endblock %}
+{% block content %}
+  <p><a href="{{ url('gallery') }}">View a list of all gallery</a></p>
+  <h1>{{ item.name }}</h1>
+  {{ item.publish_date|date('F d Y') }}
+  {{ item.description|markdown }}
+  <strong>Images: </strong>
+  {# Loop of your Repeatable Form items. Remember, you can sort the order in your CMS if you need. #}
+  <ul>
+  {% for row in item.images %}
+    <li>
+      <a href="{{ row.image.url }}">
+        <img src="{{ row.image|imageCrop(300) }}" />
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+{% endblock %}
