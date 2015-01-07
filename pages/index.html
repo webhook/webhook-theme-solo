@@ -27,14 +27,21 @@
   </div>
 
   <hr>
+  {% set editorial = merge(cms.article, cms.gallery) %}
 
   <ul class="home-feed">
-    {% for item in cms.article %}
+    {% for item in editorial|sort('publish_date', true) %}
       <li>
-        <a href="{{ url(item) }}">
-          <h3>{{ item.name }}</h3>
-          {{ item.deck|markdown }}
-        </a>
+        {% if item.images %}
+          <a href="{{ url(item)}}">
+            <img src="{{ item.images[0].image|imageSize(900) }}">
+          </a>
+        {% else %}
+          <a href="{{ url(item) }}">
+            <h3>{{ item.name }}</h3>
+            {{ item.deck|markdown }}
+          </a>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
