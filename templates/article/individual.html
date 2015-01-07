@@ -18,15 +18,15 @@
   {% if next %}
     <a href="{{ url(next)}}" class="next-item">
       <span class="fa fa-angle-right"></span>
-      <div>Next article</div>
-      <div>{{ next.name }}</div>
+      <div class="item-head">Next article</div>
+      <div class="item-name">{{ next.name }}</div>
     </a>
   {% endif %}
   {% if prev %}
     <a href="{{ url(prev)}}" class="prev-item">
       <span class="fa fa-angle-left"></span>
-      <div>Previous article</div>
-      <div>{{ prev.name }}</div>
+      <div class="item-head">Previous article</div>
+      <div class="item-name">{{ prev.name }}</div>
     </a>
   {% endif %}
 

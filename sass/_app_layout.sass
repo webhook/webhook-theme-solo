@@ -162,20 +162,50 @@ article
   color: $white
   height: 60px
   width: 20px
+  margin-top: -30px
+  overflow: hidden
+  +transition(width, ease-in, .2s)
   span
     font-size: 30px
     line-height: 60px
     width: 20px
     text-align: center
+    color: $white
   div
-    color: $gray
+    color: $white
     display: block
     display: none
-  span
-    color: $white
+    font-size: 12px
+    line-height: 20px
+    +truncate(200px)
+  .item-head
+    font-family: $custom-font-family
+    text-transform: uppercase
+    color: $gray-light
+    font-size: 10px
+    margin-top: 10px
+.next-item:hover, .prev-item:hover
+  width: 240px
+  div
+    display: inline-block
+.next-item:hover
+  padding-left: $base-line-height / 2
+.prev-item:hover
+  padding-right: $base-line-height / 2
+  div
+    float: right
+
 .next-item
   right: 0
   +border-left-radius(2px)
+  span
+    float: right
+  div
+    float: left
 .prev-item
   left: 0
   +border-right-radius(2px)
+  span
+    float: left
+  div
+    float: right
