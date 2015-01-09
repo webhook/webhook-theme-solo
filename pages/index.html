@@ -19,6 +19,8 @@
 
 {% block content %}
 
+
+<div class="container">
   <img src="{{ cms.aboutme.picture_of_you|imageCrop(100) }}" class="home-me">
 
   <h1 class="home-h1">Hello. I'm {{ cms.aboutme.name }}.</h1>
@@ -31,18 +33,19 @@
 
   <ul class="home-feed">
     {% for item in editorial|sort('publish_date', true) %}
-      <li>
-        {% if item.images %}
-          <a href="{{ url(item)}}">
-            <img src="{{ item.images[0].image|imageSize(900) }}">
-          </a>
-        {% else %}
-          <a href="{{ url(item) }}">
-            <h3>{{ item.name }}</h3>
-            {{ item.deck|markdown }}
-          </a>
-        {% endif %}
-      </li>
+    <li>
+    {% if item.images %}
+    <a href="{{ url(item)}}">
+      <img src="{{ item.images[0].image|imageSize(900) }}">
+    </a>
+    {% else %}
+    <a href="{{ url(item) }}">
+      <h3>{{ item.name }}</h3>
+      {{ item.deck|markdown }}
+    </a>
+    {% endif %}
+    </li>
     {% endfor %}
   </ul>
+</div>
 {% endblock %}

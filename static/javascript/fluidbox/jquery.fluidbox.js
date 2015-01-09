@@ -1,12 +1,12 @@
 // Fluidbox
 // Description: Replicating the seamless lightbox transition effect seen on Medium.com, with some improvements
-// Version: 1.3.5
+// Version: 1.4.2
 // Author: Terry Mun
 // Author URI: http://terrymun.com
 
-// --------------------------------------------------------
-//  Dependency: Paul Irish's jQuery debounced resize event
-// --------------------------------------------------------
+// -------------------------------------------------------- //
+//  Dependency: Paul Irish's jQuery debounced resize event  //
+// -------------------------------------------------------- //
 (function($,sr){
 
 	// debouncing function from John Hann
@@ -35,10 +35,37 @@
 
 })(jQuery,'smartresize');
 
+
+// ---------------------------------------------------------------------------------------------------------------------- //
+//  Dependency: David Walsh (http://davidwalsh.name/css-animation-callback)                                               //
+//              and                                                                                                       //
+//              Jonathan Suh (https://jonsuh.com/blog/detect-the-end-of-css-animations-and-transitions-with-javascript/)  //
+// ---------------------------------------------------------------------------------------------------------------------- //
+function whichTransitionEvent() {
+	var t,
+		el = document.createElement("fakeelement");
+
+	var transitions = {
+		"transition"      : "transitionend",
+		"OTransition"     : "oTransitionEnd",
+		"MozTransition"   : "transitionend",
+		"WebkitTransition": "webkitTransitionEnd"
+	}
+
+	for (t in transitions){
+		if (el.style[t] !== undefined){
+			return transitions[t];
+		}
+	}
+}
+var customTransitionEnd = whichTransitionEvent();
+
 // -----------------------------
 //  Fluidbox plugin starts here
 // -----------------------------
 (function ($) {
+
+	var fbCount = 0;
 
 	$.fn.fluidbox = function (opts) {
 
@@ -66,7 +93,7 @@
 
 		// Dynamically create overlay
 		$fbOverlay = $('<div />', {
-			class: 'fluidbox-overlay',
+			'class': 'fluidbox-overlay',
 			css: {
 				'z-index': settings.stackIndex
 			}
@@ -78,15 +105,13 @@
 			vpRatio,
 
 			// Function:
-			// 1. funcCloseFb()		- used to close any instance of opened Fluidbox
 			// 2. funcPositionFb()	- used for dynamic positioning of any instance of opened Fluidbox
 			// 3. funcCalcAll()		- used to run funcCalc() for every instance of targered Fluidbox thumbnail
-			// 4. funcCalc()		- used to store dimensions of image, ghost element and wrapper element upon initialization or resize
 			// 5. fbClickhandler()	- universal click handler for all Fluidbox items
-			funcCloseFb = function () {
-				$('.fluidbox-opened').trigger('click');
+			funcCloseFb = function (selector) {
+				$(selector + '.fluidbox-opened').trigger('click');
 			},
-			funcPositionFb = function ($activeFb) {
+			funcPositionFb = function ($activeFb, customEvent) {
 				// Get shorthand for more objects
 				var $img    = $activeFb.find('img'),
 					$ghost  = $activeFb.find('.fluidbox-ghost'),
@@ -94,7 +119,10 @@
 					$data	= $activeFb.data(),
 					fHeight = 0,
 					fWidth	= 0;
-
+                                $img.data().imgRatio = $data.natWidth/ $data.natHeight;
+                                
+                                var newHeight, missingRatioNormal, missingRatio;
+                                
 				// Check natural dimensions
 				if(vpRatio > $img.data().imgRatio) {
 					if($data.natHeight < $w.height()*settings.viewportFill) {
@@ -102,33 +130,44 @@
 					} else {
 						fHeight = $w.height()*settings.viewportFill;
 					}
-					$data.imgScale = fHeight/$img.height();
+					$data.imgScale = fHeight/$img.height();                                       
+                                        $data.imgScaleY = $data.imgScale;
+
+                                        newHeight = $img.height() * $data.imgScaleY;
+                                        missingRatioNormal = newHeight / $data.natHeight;
+                                        missingRatio = $data.natWidth * missingRatioNormal / $img.width();   
+
+                                        $data.imgScaleX = missingRatio;
 				} else {
 					if($data.natWidth < $w.width()*settings.viewportFill) {
 						fWidth = $data.natWidth;
 					} else {
 						fWidth = $w.width()*settings.viewportFill;
 					}
-					$data.imgScale = fWidth/$img.width();
+					$data.imgScale = fWidth/$img.width();                                      
+                                        $data.imgScaleX = $data.imgScale;
+
+                                        var newWidth = $img.width() * $data.imgScaleX;
+                                        var missingRatioNormal = newWidth / $data.natWidth;
+                                        var missingRatio = $data.natHeight * missingRatioNormal / $img.height();
+
+                                        $data.imgScaleY = missingRatio;
 				}	
 
 				// Calculation goes here
 				var offsetY = $w.scrollTop()-$img.offset().top+0.5*($img.data('imgHeight')*($img.data('imgScale')-1))+0.5*($w.height()-$img.data('imgHeight')*$img.data('imgScale')),
 					offsetX = 0.5*($img.data('imgWidth')*($img.data('imgScale')-1))+0.5*($w.width()-$img.data('imgWidth')*$img.data('imgScale'))-$img.offset().left,
-					scale   = $data.imgScale;
+                                        scale = parseInt($data.imgScaleX * 1000) / 1000 + ',' + parseInt($data.imgScaleY * 1000) / 1000;
 
 				// Apply CSS transforms to ghost element
 				// For offsetX and Y, we round to one decimal place
 				// For scale, we round to three decimal places
 				$ghost.css({
-					'transform': 'translate('+parseInt(offsetX*10)/10+'px,'+parseInt(offsetY*10)/10+'px) scale('+parseInt(scale*1000)/1000+')',
+					'transform': 'translate('+parseInt(offsetX*10)/10+'px,'+parseInt(offsetY*10)/10+'px) scale('+ scale +')',
 					top: $img.offset().top - $wrap.offset().top,
 					left: $img.offset().left - $wrap.offset().left
-				});
-			},
-			funcCalcAll = function() {
-				$fb.each(function () {
-					funcCalc($(this));
+				}).one(customTransitionEnd, function() {
+					$activeFb.trigger(customEvent);
 				});
 			},
 			funcCalc = function ($fbItem) {
@@ -186,6 +225,9 @@
 						// State: Closed
 						// Action: Open fluidbox
 
+						// Fire custom event: openstart
+						$(this).trigger('openstart');
+
 						// Wait for ghost image to be loaded successfully first, then do the rest
 						$('<img />', {
 							src: $img.attr('src')
@@ -236,13 +278,16 @@
 								$ghost.css({ 'background-image': 'url('+$activeFb.attr('href')+')' });
 
 								// Position Fluidbox
-								funcPositionFb($activeFb);
+								funcPositionFb($activeFb, 'openend');
 							});
 						});
 
 					} else {
 						// State: Open
 						// Action: Close fluidbox
+
+						// Fire custom event: closestart
+						$activeFb.trigger('closestart');
 
 						// Switch state
 						$activeFb
@@ -267,6 +312,8 @@
 							opacity: 0,
 							top: $img.offset().top - $wrap.offset().top + parseInt($img.css('borderTopWidth')) + parseInt($img.css('paddingTop')),
 							left: $img.offset().left - $wrap.offset().left + parseInt($img.css('borderLeftWidth')) + parseInt($img.css('paddingLeft'))
+						}).one(customTransitionEnd, function() {
+							$activeFb.trigger('closeend');
 						});
 						$img.css({ opacity: 1 });
 					}
@@ -274,38 +321,31 @@
 					e.preventDefault();
 				}
 			};
-
-		// When should we close Fluidbox?
-		if(settings.closeTrigger) {
-			// Go through array
-			$.each(settings.closeTrigger, function (i) {
-				var trigger = settings.closeTrigger[i];
-
-				// Attach events
-				if(trigger.selector != 'window') {
-					// If it is not 'window', we append click handler to $(document) object, allow it to bubble up
-					// However, if thes selector is 'document', we use a different .on() syntax
-					if(trigger.selector == 'document') {
-						if(trigger.keyCode) {
-							$(document).on(trigger.event, function (e) {
-								if(e.keyCode == trigger.keyCode) funcCloseFb();
-							});
-						} else {
-							$(document).on(trigger.event, funcCloseFb);
-						}
-					} else {
-						$(document).on(trigger.event, settings.closeTrigger[i].selector, funcCloseFb);
-					}
+			var funcResize = function (selectorChoice) {
+				// Recalculate dimensions
+				if(!selectorChoice) {
+					// Recalcualte ALL Fluidbox instances (fired upon window resize)
+					$fb.each(function () {
+						funcCalc($(this));
+					});
 				} else {
-					// If it is 'window', append click handler to $(window) object
-					$w.on(trigger.event, funcCloseFb);
+					// Recalcualte selected Fluidbox instances
+					funcCalc(selectorChoice);
 				}
-			});
+
+				// Reposition Fluidbox, but only if one is found to be open
+				var $activeFb = $('a.fluidbox.fluidbox-opened');
+				if($activeFb.length > 0) funcPositionFb($activeFb, 'resizeend');
+			};
+
+		if(settings.debounceResize) {
+			$(window).smartresize(function() { funcResize(); });
+		} else {
+			$(window).resize(function() { funcResize(); });
 		}
 
 		// Go through each individual object
 		$fb.each(function (i) {
-
 			// Check if Fluidbox:
 			// 1. Is an anchor element ,<a>
 			// 2. Contains one and ONLY one child
@@ -315,16 +355,20 @@
 
 				// Define wrap
 				var $fbInnerWrap = $('<div />', {
-					class: 'fluidbox-wrap',
+					'class': 'fluidbox-wrap',
 					css: {
 						'z-index': settings.stackIndex - settings.stackIndexDelta
 					}
 				});
 
+				// Update count for global Fluidbox instances
+				fbCount+=1;
+
 				// Add class
 				var $fbItem = $(this);
 				$fbItem
 				.addClass('fluidbox')
+				.attr('id', 'fluidbox-'+fbCount)
 				.wrapInner($fbInnerWrap)
 				.find('img')
 					.css({ opacity: 1 })
@@ -345,25 +389,44 @@
 						}
 				});
 
+				// Custom trigger
+				$(this).on('recompute', function() {
+					funcResize($(this));
+					$(this).trigger('recomputeend');
+				});
+
+				// When should we close Fluidbox?
+				var selector = '#fluidbox-'+fbCount;
+				if(settings.closeTrigger) {
+					// Go through array
+					$.each(settings.closeTrigger, function (i) {
+						var trigger = settings.closeTrigger[i];
+
+						// Attach events
+						if(trigger.selector != 'window') {
+							// If it is not 'window', we append click handler to $(document) object, allow it to bubble up
+							// However, if thes selector is 'document', we use a different .on() syntax
+							if(trigger.selector == 'document') {
+								if(trigger.keyCode) {
+									$(document).on(trigger.event, function (e) {
+										if(e.keyCode == trigger.keyCode) funcCloseFb(selector);
+									});
+								} else {
+									$(document).on(trigger.event, selector, function() {
+										funcCloseFb(selector);
+									});
+								}
+							}
+						} else {
+							// If it is 'window', append click handler to $(window) object
+							$w.on(trigger.event, function() {
+								funcCloseFb(selector);
+							});
+						}
+					});
+				}
 			}
 		});
-
-		// Listen to window resize event
-		// Check if user wants to debounce the resize event (it is debounced by default)
-		var funcResize = function () {
-			// Recalculate dimensions
-			funcCalcAll();
-
-			// Reposition Fluidbox, but only if one is found to be open
-			var $activeFb = $('a.fluidbox.fluidbox-opened');
-			if($activeFb.length > 0) funcPositionFb($activeFb);
-		}
-
-		if(settings.debounceResize) {
-			$(window).smartresize(funcResize);
-		} else {
-			$(window).resize(funcResize);
-		}
 
 		// Return to allow chaining
 		return $fb;
