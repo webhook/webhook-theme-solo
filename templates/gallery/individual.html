@@ -36,13 +36,16 @@
     </div>
     <h1>{{ item.name }}</h1>
     <div class="deck">{{ item.description|markdown }}</div>
+    <hr>
   </article>
 
   <ul class="gallery">
   {% for row in item.images %}
     <li>
       <a href="{{ row.image.url }}">
-        <img src="{{ row.image|imageCrop(300) }}" />
+        <div class="image-wrap">
+          <img src="{{ row.image|imageCrop(500) }}" />
+        </div>
       </a>
     </li>
   {% endfor %}

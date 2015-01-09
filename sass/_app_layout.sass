@@ -297,3 +297,20 @@ hr
   margin-right: 25%
   margin-left: 25%
 
+.gallery
+  +display(flex)
+  +flex-flow(row wrap)
+  max-width: 1200px
+  margin: auto
+  width: 90%
+  li
+    width: 25%
+    padding: $base-line-height / 4
+  .image-wrap
+    padding: $base-line-height / 2
+    background: $white
+    border: solid 1px $table-border-color
+  img
+    width: 100%
+
+
