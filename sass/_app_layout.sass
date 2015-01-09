@@ -228,19 +228,70 @@ article
   text-align: center
 
 .home-feed
-  li a
+  li > a
     color: $text-color
     margin-bottom: $base-line-height
     display: block
     width: 100%
-  li a h3
+  li a > h3
     margin-bottom: $base-line-height / 2
-  li a p
+  li a:hover > h3
+    color: $red
+  li a > p
     color: $gray
-  img
+  .image
     max-width: 150%
     width: 150%
     margin: $base-line-height -25%
+    height: 300px
+    background-size: cover
+    background-position: center center
+    position: relative
+    overflow: hidden
+    +filter(grayscale(100%))
+    +transition(background-position, .5s ease-in)
+    &:hover
+      +filter(grayscale(0%))
+      .mask
+        opacity: 1
+        left: 0
+      .text
+        opacity: 1
+        left: 0
+    .mask
+      left: -50%
+      top: 0
+      bottom: 0
+      position: absolute
+      width: 50%
+      background: rgba(255,255,255,.9)
+      z-index: $z-index-tooltip
+      opacity: 0
+      +transition(all .4s ease-in)
+    .text
+      padding: $base-line-height
+      position: absolute
+      left: -50%
+      width: 50%
+      bottom: 0
+      opacity: 0
+      z-index: $z-index-tooltip + 1
+      +transition(all .2s ease-in)
+      +transition-delay(.2s)
+      .title
+        font-family: $custom-font-family
+        font-size: 125%
+        font-weight: bold
+        display: block
+        margin-bottom: $base-line-height / 2
+        color: $link-color
+      .num
+        display: block
+      .description
+        color: $gray
+        line-height: 1.5
+        display: block
+        margin-bottom: $base-line-height / 2
 hr
   margin-right: 25%
   margin-left: 25%
