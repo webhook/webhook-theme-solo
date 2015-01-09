@@ -235,6 +235,8 @@ article
     width: 100%
   li a > h3
     margin-bottom: $base-line-height / 2
+    color: $text-color
+    +transition(color .2s ease-in)
   li a:hover > h3
     color: $red
   li a > p
@@ -254,30 +256,29 @@ article
       +filter(grayscale(0%))
       .mask
         opacity: 1
-        left: 0
+        right: 0
       .text
         opacity: 1
-        left: 0
+        right: 0
     .mask
-      left: -50%
+      right: -30%
       top: 0
       bottom: 0
       position: absolute
-      width: 50%
+      width: 30%
       background: rgba(255,255,255,.9)
       z-index: $z-index-tooltip
       opacity: 0
-      +transition(all .4s ease-in)
+      +transition(all .2s ease-in)
     .text
       padding: $base-line-height
       position: absolute
-      left: -50%
-      width: 50%
+      right: -30%
+      width: 30%
       bottom: 0
       opacity: 0
       z-index: $z-index-tooltip + 1
       +transition(all .2s ease-in)
-      +transition-delay(.2s)
       .title
         font-family: $custom-font-family
         font-size: 125%
