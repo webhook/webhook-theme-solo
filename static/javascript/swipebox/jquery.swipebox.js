@@ -35,7 +35,7 @@
 					<div id="swipebox-slider"></div>\
 					<div id="swipebox-caption"></div>\
 					<div id="swipebox-action">\
-						<a id="swipebox-close"></a>\
+						<a id="swipebox-close">DS</a>\
 						<a id="swipebox-prev"></a>\
 						<a id="swipebox-next"></a>\
 					</div>\
