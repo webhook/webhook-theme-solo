@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // $('.gallery a, figure a, article a').fluidbox();
-  $( '.gallery a' ).swipebox({hideBarsDelay:999999});
+  $( '.gallery a, article p a' ).swipebox({hideBarsDelay:999999});
   $('.circle').click(function(){
     $(this).toggleClass('open');
   });
