@@ -35,7 +35,7 @@
     {% for item in editorial|sort('publish_date', true) %}
     <li>
       {% if item.images %}
-        <a href="{{ url(item)}}" class="image" style="background-image:url({{ item.images[0].image|imageSize(900) }})">
+        <a href="{{ url(item)}}" class="image" style="background-image:url({{ item.images[0].image|imageSize(1050) }})">
           <div class="mask"></div>
           <div class="text">
             <span class="title">{{ item.name }}</span>
