@@ -1,0 +1,29 @@
+<header>
+  <div class="ham-wrap">
+    <div class="ham">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav>
+    <ul class="name">
+      <li class="circle"><a href="/">{{ cms.aboutme.initials }}</a></li>
+      <li><a href="/">{{ cms.aboutme.name }}</a></li>
+      <li><a href="/">@{{ cms.aboutme.twitter }}</a></li>
+    </ul>
+    <ul class="menu">
+      <li><a href="/aboutme/">About</a></li>
+      <li><a href="/article/">Articles</a></li>
+      <li><a href="/gallery/">Photos</a></li>
+      <li><a href="/video/">Video</a></li>
+      <li><a href="/link-with-commentary/">Links</a></li>
+      <li><a href="mailto:{{ cms.aboutme.email }}">Contact</a></li>
+      <li><a href="/search-results" class="fa fa-search"></a></li>
+    </ul>
+    <form action="/search-results/" method="get" data-search-index="false">
+      <input type="text" name="q" placeholder="Search" id="tipue_search_input" />
+    </form>
+  </nav>
+</header>

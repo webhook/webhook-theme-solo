@@ -1,0 +1,193 @@
+/*! Swipebox v1.2.8 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox
+
+// Gradient mixin
+=css-gradient($from: #dfdfdf, $to: #f8f8f8)
+  background-color: $from
+  background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to))
+  background-image: -webkit-linear-gradient(top, $from, $to)
+  background-image: -moz-linear-gradient(top, $from, $to)
+  background-image: -o-linear-gradient(top, $from, $to)
+  background-image: linear-gradient(to bottom, $from, $to)
+
+// Bar mixin
+=bar($color)
+  background-color: $color
+  +css-gradient($color, darken($color, 20%))
+
+html.swipebox-html.swipebox-touch
+  overflow: hidden !important
+
+#swipebox-overlay img
+  border: none !important
+
+#swipebox-overlay
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 990 !important
+  overflow: hidden
+  user-select: none
+  background: $background-color
+
+#swipebox-loading
+  @extend .wy-spinner
+  position: fixed
+  top: 50%
+  left: 50%
+  margin-left: -15px
+  z-index: 900
+  border-color: $gray-lighter
+  border-top-color: $gray-light
+
+#swipebox-slider
+  height: 100%
+  left: 0
+  top: 0
+  width: 100%
+  white-space: nowrap
+  position: absolute
+  display: none
+  z-index: 995
+  .slide
+    height: 100%
+    width: 100%
+    line-height: 1px
+    text-align: center
+    display: inline-block
+    z-index: 996
+    &:before
+      content: ""
+      display: inline-block
+      height: 50%
+      width: 1px
+      margin-right: -1px
+    img, .swipebox-video-container
+      display: inline-block
+      max-height: 100%
+      max-width: 100%
+      margin: 0
+      padding: 0
+      width: auto
+      height: auto
+      vertical-align: middle
+    img
+      max-height: 80%
+    .swipebox-video-container
+      background: none
+      max-width: 1140px
+      max-height: 100%
+      width: 100%
+      padding: 5%
+      box-sizing: border-box
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      .swipebox-video
+        width: 100%
+        height: 0
+        padding-bottom: 56.25%
+        overflow: hidden
+        position: relative
+        iframe
+          width: 100% !important
+          height: 100% !important
+          position: absolute
+          top: 0
+          left: 0
+
+#swipebox-caption
+  z-index: 1000
+  position: fixed
+  bottom: 0
+  text-align: center
+  right: 0
+  left: 0
+  padding: $base-line-height 20%
+  font-size: 80%
+  font-family: $custom-font-family
+  opacity: 0
+  +animation(title-in .5s ease-in-out)
+  +animation-fill-mode(forwards)
+  +animation-delay(.5s)
+
+#swipebox-action
+  #swipebox-prev,
+  #swipebox-next,
+  #swipebox-close
+    position: fixed
+    background: rgba(0,0,0,.8)
+    color: $white
+    height: 60px
+    width: 20px
+    cursor: pointer
+    font-size: 30px
+    line-height: 60px
+    text-align: center
+    z-index: 999999
+    opacity: 0
+  #swipebox-prev
+    left: 0
+    top: 50%
+    margin-top: -30px
+    +border-right-radius(2px)
+    @extend .fa
+    @extend .fa-angle-left
+    +animation(title-in .5s ease-in-out)
+    +animation-fill-mode(forwards)
+    +animation-delay(.25s)
+  #swipebox-next
+    right: 0
+    top: 50%
+    margin-top: -30px
+    +border-left-radius(2px)
+    @extend .fa
+    @extend .fa-angle-right
+    +animation(title-in .5s ease-in-out)
+    +animation-fill-mode(forwards)
+    +animation-delay(.25s)
+  #swipebox-close
+    background: $gray-darker
+    border-radius: 50px
+    height: 30px
+    width: 30px
+    line-height: 30px
+    text-align: center
+    color: $white
+    position: fixed
+    top: $base-line-height
+    left: 50%
+    margin-left: -15px
+    text-transform: uppercase
+    font-size: 12px
+    font-family: $custom-font-family
+    +animation(bounce-in 1s ease-in-out)
+    +animation-fill-mode(forwards)
+    +animation-delay(.25s)
+  #swipebox-prev,
+  #swipebox-next
+    &.disabled
+      display: none
+
+#swipebox-slider.rightSpring
+  animation: rightSpring 0.3s
+
+#swipebox-slider.leftSpring
+  animation: leftSpring 0.3s
+
+@keyframes rightSpring
+  0%
+    margin-left: 0px
+  50%
+    margin-left: -30px
+  100%
+    margin-left: 0px
+
+
+@keyframes leftSpring
+  0%
+    margin-left: 0px
+  50%
+    margin-left: 30px
+  100%
+    margin-left: 0px
