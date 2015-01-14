@@ -39,10 +39,12 @@
         <img src="{{ cms.twitter.user_profile_image_url }}">
       </a>
       <div class="twitter-message">
-        <a href="http://www.twitter.com/{{ cms.twitter.name }}">@{{ cms.twitter.name }}</a>
+        <a href="http://www.twitter.com/{{ cms.twitter.name }}" class="twitter-name">@{{ cms.twitter.name }}</a>
         <p>{{ cms.twitter.text }}</p>
-        <p><a href="{{ cms.twitter.url }}">{{ cms.twitter.created_at|date('M d, Y. g:i a') }}</a></p>
+        <p class="twitter-date">My last tweet published <a href="{{ cms.twitter.url }}">{{ cms.twitter.created_at|date('M d, Y. g:i a') }}</a>.</p>
       </div>
+      {# <a href="https://twitter.com/enemykite" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @enemykite</a> #}
+      {# <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> #}
     </li>
     {% for item in editorial|sort('publish_date', true) %}
     <li>
