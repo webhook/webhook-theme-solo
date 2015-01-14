@@ -21,10 +21,12 @@
 
 
 <div class="container">
-  <img src="{{ cms.aboutme.picture_of_you|imageCrop(100) }}" class="home-me">
+  <div class="home-me-wrap">
+    <img src="{{ cms.aboutme.picture_of_you|imageCrop(100) }}" class="home-me">
+  </div>
 
-  <h1 class="home-h1">Hello. I'm {{ cms.aboutme.name }}.</h1>
-  <div class="home-hello">
+  <h1>Hello. I'm {{ cms.aboutme.name }}.</h1>
+  <div class="deck deck-smaller">
     {{ cms.aboutme.homepage_hello|markdown }}
   </div>
 
@@ -32,6 +34,16 @@
   {% set editorial = merge(cms.article, cms.gallery) %}
 
   <ul class="home-feed">
+    <li class="twitter">
+      <a href="http://www.twitter.com/{{ cms.twitter.name }}" class="twitter-avatar">
+        <img src="{{ cms.twitter.user_profile_image_url }}">
+      </a>
+      <div class="twitter-message">
+        <a href="http://www.twitter.com/{{ cms.twitter.name }}">@{{ cms.twitter.name }}</a>
+        <p>{{ cms.twitter.text }}</p>
+        <p><a href="{{ cms.twitter.url }}">{{ cms.twitter.created_at|date('M d, Y. g:i a') }}</a></p>
+      </div>
+    </li>
     {% for item in editorial|sort('publish_date', true) %}
     <li>
       {% if item.images %}

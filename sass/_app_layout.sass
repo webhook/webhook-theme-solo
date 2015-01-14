@@ -102,25 +102,26 @@ article, .container
   max-width: 700px
   margin: auto
 
+h1
+  text-align: center
+  font-size: 250%
+  opacity: 0
+  +animation(title-in .5s ease-in-out)
+  +animation-fill-mode(forwards)
+  +animation-delay(.25s)
+.deck p
+  font-size: 150%
+  font-family: $custom-font-family
+  line-height: 1.3
+  font-weight: 300
+  opacity: 0
+  +animation(deck-in .5s ease-in-out)
+  +animation-fill-mode(forwards)
+  +animation-delay(.5s)
+.deck.deck-smaller p
+  font-size: 110%
+
 article
-  h1
-    text-align: center
-    font-size: 250%
-    opacity: 0
-    +animation(title-in .5s ease-in-out)
-    +animation-fill-mode(forwards)
-    +animation-delay(.25s)
-  .deck p
-    font-size: 150%
-    font-family: $custom-font-family
-    line-height: 1.3
-    font-weight: 300
-    opacity: 0
-    +animation(deck-in .5s ease-in-out)
-    +animation-fill-mode(forwards)
-    +animation-delay(.5s)
-  .deck.deck-smaller p
-    font-size: 110%
   .date
     margin-bottom: $base-line-height / 4
     text-align: center
@@ -213,8 +214,15 @@ article
 
 .home-me
   border-radius: 150px
-  margin: $base-line-height  * 2 auto $base-line-height auto
   display: block
+  width: 100px
+  height: 100px
+
+.home-me-wrap
+  width: 150px
+  height: 100px
+  margin: $base-line-height  * 2 auto $base-line-height auto
+  position: relative
 
 .home-h1
   text-align: center
@@ -243,6 +251,21 @@ article
     color: $red
   li a > p
     color: $gray
+  li.twitter
+    background: $white
+    padding: $base-line-height
+    border: solid 1px $table-border-color
+    border-radius: 4px
+    +clearfix
+    .twitter-avatar
+      width: 50px
+      float: left
+    .twitter-message
+      margin-left: 74px
+    p
+      margin-bottom: $base-line-height / 4
+    p:last-child
+      margin-bottom: 0
   .image
     max-width: 150%
     width: 150%
@@ -252,6 +275,7 @@ article
     background-position: center center
     position: relative
     overflow: hidden
+    border-radius: 4px
     +filter(grayscale(100%))
     +transition(background-position, .5s ease-in)
     &:hover
@@ -309,7 +333,7 @@ hr
     width: 25%
     padding: $base-line-height / 4
   .image-wrap
-    padding: $base-line-height / 2
+    padding: $base-line-height / 4
     background: $white
     border: solid 1px $table-border-color
   img

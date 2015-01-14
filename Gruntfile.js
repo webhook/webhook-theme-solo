@@ -44,21 +44,6 @@ module.exports = function(grunt) {
         files: [
           {expand: true, src: ['bower_components/webhook-js/src/webhook-affix.js'], dest: 'static/javascript/webhook-js/', flatten: true, filter: 'isFile'}
         ]
-      },
-      // Import Fluid Box JS
-      fluidbox: {
-        files: [
-          {expand: true, src: ['bower_components/fluidbox/jquery.fluidbox.js'], dest: 'static/javascript/fluidbox/', flatten: true, filter: 'isFile'},
-          {expand: true, src: ['bower_components/fluidbox/css/fluidbox.css'], dest: 'static/css/', flatten: true, filter: 'isFile'},
-          {expand: true, src: ['bower_components/imagesloaded/*.js'], dest: 'static/javascript/imagesloaded/', flatten: true, filter: 'isFile'}
-        ]
-      },
-      swipebox: {
-        files: [
-          {expand: true, src: ['bower_components/swipebox/src/js/jquery.swipebox.js'], dest: 'static/javascript/swipebox/', flatten: true, filter: 'isFile'},
-          {expand: true, src: ['bower_components/swipebox/src/css/swipebox.css'], dest: 'static/css/', flatten: true, filter: 'isFile'},
-          {expand: true, src: ['bower_components/swipebox/src/img/*'], dest: 'static/images/swipebox/', flatten: true, filter: 'isFile'},
-        ]
       }
     },
     watch: {
