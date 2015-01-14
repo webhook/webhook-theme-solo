@@ -49,7 +49,6 @@
 			plugin.settings = $.extend( {}, defaults, options );
 
 			if ( $.isArray( elem ) ) {
-
 				elements = elem;
 				ui.target = $( window );
 				ui.init( plugin.settings.initialIndexOnArray );
@@ -58,7 +57,8 @@
 
 				$( document ).on( 'click', selector, function( event ) {
 
-					// console.log( isTouch );
+					event.preventDefault();
+					event.stopPropagation();
 
 					if ( event.target.parentNode.className === 'slide current' ) {
 
@@ -113,11 +113,29 @@
 					} );
 
 					index = $elem.index( $( this ) );
-					event.preventDefault();
-					event.stopPropagation();
 					ui.target = $( event.target );
 					ui.init( index );
 				} );
+
+				var curHash = window.location.hash;
+
+				if(curHash) {
+					curHash = curHash.slice(1);
+					
+					$(elem).each( function() {
+
+						var href = null;
+
+						if ( $( this ).attr( 'href' ) ) {
+							href = $( this ).attr( 'href' );
+						}
+
+						if(href === curHash) {
+							$(this).click();
+							return false;
+						}
+					} );
+				}
 			}
 		};
 
@@ -524,6 +542,8 @@
 			 * Set current slide
 			 */
 			setSlide : function ( index, isFirst ) {
+				window.location.hash = elements[index].href;
+
 				isFirst = isFirst || false;
 
 				var slider = $( '#swipebox-slider' );
@@ -716,6 +736,8 @@
 			 * Close
 			 */
 			closeSlide : function () {
+				window.location.hash = '';
+
 				$( 'html' ).removeClass( 'swipebox-html' );
 				$( 'html' ).removeClass( 'swipebox-touch' );
 				$( window ).trigger( 'resize' );
