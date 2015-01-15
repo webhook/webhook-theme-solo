@@ -237,9 +237,16 @@ article
   display: block
   width: 100px
   height: 100px
+  text-align: center
+  line-height: 100px
+  opacity: 0
+  border: solid 0px $red
+  +animation(avatar-in .5s ease-in-out)
+  +animation-fill-mode(forwards)
+  +animation-delay(2s)
 
 .home-me-wrap
-  width: 150px
+  width: 100px
   height: 100px
   margin: $base-line-height auto
   position: relative
