@@ -337,6 +337,11 @@ article
     width: 100%
     background-size: 100%
     background-position: center
+    border-radius: 4px
+    +filter(grayscale(100%))
+    +transition(background-position, .5s ease-in)
+  a:hover .image
+    +filter(grayscale(0%))
   .video-thumb
     +span-columns(4)
   .video-text
