@@ -26,7 +26,7 @@
       </a>
       <div class="twitter-message">
         <a href="http://www.twitter.com/{{ cms.twitter.name }}" class="twitter-name">@{{ cms.twitter.name }}</a>
-        <p>{{ cms.twitter.text }}</p>
+        <p>{{ cms.twitter.text|markdown }}</p>
         <p class="twitter-date">My last tweet published <a href="{{ cms.twitter.url }}">{{ cms.twitter.created_at|date('M d, Y. g:i a') }}</a>.</p>
       </div>
     </li>
@@ -75,7 +75,7 @@
       {# VIDEO #}
       {% elseif item._type == "video" %}
         <li class="home-video">
-          <a href="{{ url(item) }}">
+          <a href="{{ item.video_url }}" class="video-open" title="{{ item.description|markdown|striptags }}">
             <div class="video-thumb">
               <div class="image" style="background-image:url({{ item.thumbnail_url }});"></div>
             </div>

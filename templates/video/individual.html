@@ -12,62 +12,17 @@
 {# This sets our page <title>. It will append this video's name to the site title defined in base.html #}
 {% block title %}{% parent %} - {{ item.name }}{% endblock %}
 {% block content %}
-  <p><a href="{{ url('video') }}">View a list of all video</a></p>
-  <h1>{{ item.name }}</h1>
-  <ul>
-      <li>
-        <strong>Name: </strong>
-        {{ item.name }}
-      </li>
-      <li>
-        <strong>Create Date: </strong>
-        {# Format the date. You can use PHP's date function to format as needed. http://php.net/manual/en/function.date.php #}
-        {{ item.create_date|date('F d Y') }}
-      </li>
-      <li>
-        <strong>Last Updated: </strong>
-        {# Format the date. You can use PHP's date function to format as needed. http://php.net/manual/en/function.date.php #}
-        {{ item.last_updated|date('F d Y') }}
-      </li>
-      <li>
-        <strong>Publish Date: </strong>
-        {# Format the date. You can use PHP's date function to format as needed. http://php.net/manual/en/function.date.php #}
-        {{ item.publish_date|date('F d Y') }}
-      </li>
-      <li>
-        <strong>Mannually add a video to your feed...: </strong>
-        {{ item.mannually_add_a_video_to_your_feed }}
-      </li>
-      <li>
-        <strong>URL of your video: </strong>
-        {# Embed.ly content usually comes with more data. Info here: #}{# http://www.webhook.com/docs/widget-template-reference/#embedly #}{{ item.url_of_your_video.html|safe  }}      </li>
-      <li>
-        <strong>...Or set up automatic import of videos: </strong>
-        {{ item.or_set_up_automatic_import_of_videos }}
-      </li>
-      <li>
-        <strong>Video URL: </strong>
-        {{ item.video_url }}
-      </li>
-      <li>
-        <strong>Embed URL: </strong>
-        {{ item.embed_url }}
-      </li>
-      <li>
-        <strong>Thumbnail URL: </strong>
-        {{ item.thumbnail_url }}
-      </li>
-      <li>
-        <strong>Preview URL: </strong>
-        {{ item.preview_url }}
-      </li>
-      <li>
-        <strong>Slug: </strong>
-        {{ item.slug }}
-      </li>
-      <li>
-        <strong>Description: </strong>
-        {{ item.description|markdown }}
-      </li>
-  </ul>
+    <div class="video-individual">
+      <div class="video-main">
+        <div class="wy-video">
+          <iframe src="{{ item.embed_url }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="date">
+          {{ item.publish_date|date('F d Y') }}
+        </div>
+        <h1>{{ item.name }}</h1>
+        <div class="deck deck-smaller">{{ item.description|markdown }}</div>
+      </div>
+      <div class="video-list"></div>
+    </div>
 {% endblock %}
