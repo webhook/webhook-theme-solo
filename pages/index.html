@@ -31,7 +31,7 @@
   </div>
 
   <hr>
-  {% set editorial = merge(cms.article, cms.gallery) %}
+  {% set editorial = merge(cms.article, cms.gallery, cms.link) %}
 
   <ul class="home-feed">
     <li class="twitter">
@@ -47,23 +47,33 @@
       {# <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> #}
     </li>
     {% for item in editorial|sort('publish_date', true) %}
-    <li>
-      {% if item.images %}
-        <a href="{{ url(item)}}" class="image" style="background-image:url({{ item.images[0].image|imageSize(1050) }})">
-          <div class="mask"></div>
-          <div class="text">
-            <span class="title">{{ item.name }}</span>
-            <span class="description">{{ item.description|markdown|striptags|truncate(100) }}</span>
-            <span class="num">{{ item.images|size }} images</span>
-          </div>
-        </a>
-      {% else %}
-        <a href="{{ url(item) }}">
-          <h3>{{ item.name }}</h3>
-          {{ item.deck|markdown }}
-        </a>
+      {% if item._type == "gallery" %}
+        <li class="home-gallery">
+          <a href="{{ url(item)}}" class="image" style="background-image:url({{ item.images[0].image|imageSize(1050) }})">
+            <div class="mask"></div>
+            <div class="text">
+              <span class="title">{{ item.name }}</span>
+              <span class="description">{{ item.description|markdown|striptags|truncate(100) }}</span>
+              <span class="num">{{ item.images|size }} images</span>
+            </div>
+          </a>
+        </li>
+      {% elseif item._type == "article" %}
+        <li class="home-article">
+          <a href="{{ url(item) }}">
+            <h3>{{ item.name }}</h3>
+            {{ item.deck|markdown }}
+          </a>
+        </li>
+      {% elseif item._type == "link" %}
+        <li class="home-link">
+          <a href="{{ item.url }}">
+            <div class="type"><span class="fa fa-bookmark"></span> Bookmark</div>
+            <h3>{{ item.name }}</h3>
+            {{ item.description|markdown }}
+          </a>
+        </li>
       {% endif %}
-    </li>
     {% endfor %}
   </ul>
 </div>

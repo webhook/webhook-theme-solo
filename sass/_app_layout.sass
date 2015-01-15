@@ -106,6 +106,7 @@ h1
   text-align: center
   font-size: 250%
   opacity: 0
+  margin-bottom: $base-line-height / 2
   +animation(title-in .5s ease-in-out)
   +animation-fill-mode(forwards)
   +animation-delay(.25s)
@@ -255,6 +256,7 @@ article
     background: $white
     padding: $base-line-height
     border: solid 1px $table-border-color
+    margin-bottom: $base-line-height
     border-radius: 4px
     position: relative
     +clearfix
@@ -285,6 +287,20 @@ article
       position: absolute
       top: $base-line-height
       right: $base-line-height
+
+.home-feed .home-link
+  .type
+    font-family: $custom-font-family
+    font-size: 80%
+    color: $gray-lighter
+  p
+    border-left: solid 3px $gray-lighter
+    color: $gray-light
+    padding-left: $base-line-height / 2
+    margin-left: $base-line-height / 2
+
+
+.home-feed .home-gallery
   .image
     max-width: 150%
     width: 150%
@@ -311,7 +327,7 @@ article
       bottom: 0
       position: absolute
       width: 30%
-      background: rgba(255,255,255,.9)
+      background: rgba(255,255,255,1)
       z-index: $z-index-tooltip
       opacity: 0
       +transition(all .2s ease-in)
