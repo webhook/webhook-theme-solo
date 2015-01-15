@@ -244,11 +244,11 @@ article
     margin-bottom: $base-line-height
     display: block
     width: 100%
-  li a > h3
+  li a > h2
     margin-bottom: $base-line-height / 2
     color: $text-color
     +transition(color .2s ease-in)
-  li a:hover > h3
+  li a:hover > h2
     color: $red
   li a > p
     color: $gray
@@ -289,6 +289,8 @@ article
       right: $base-line-height
 
 .home-feed .home-link
+  a > h2
+    font-size: 100%
   .type
     font-family: $custom-font-family
     font-size: 80%

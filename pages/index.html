@@ -25,7 +25,7 @@
     <img src="{{ cms.aboutme.picture_of_you|imageCrop(100) }}" class="home-me">
   </div>
 
-  <h1>Hello. I'm {{ cms.aboutme.name }}.</h1>
+  <h1>Hello. I'm <a href="{{ url('aboutme') }}">{{ cms.aboutme.name }}</a>.</h1>
   <div class="deck deck-smaller">
     {{ cms.aboutme.homepage_hello|markdown }}
   </div>
@@ -61,7 +61,7 @@
       {% elseif item._type == "article" %}
         <li class="home-article">
           <a href="{{ url(item) }}">
-            <h3>{{ item.name }}</h3>
+            <h2>{{ item.name }}</h2>
             {{ item.deck|markdown }}
           </a>
         </li>
@@ -69,7 +69,7 @@
         <li class="home-link">
           <a href="{{ item.url }}">
             <div class="type"><span class="fa fa-bookmark"></span> Bookmark</div>
-            <h3>{{ item.name }}</h3>
+            <h2>{{ item.name }}</h2>
             {{ item.description|markdown }}
           </a>
         </li>
