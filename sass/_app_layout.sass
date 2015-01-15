@@ -1,3 +1,7 @@
+body
+  padding-top: $base-line-height * 2
+
+
 // Hamburger animation
 .ham-wrap
   width: 40px
@@ -50,6 +54,19 @@
   top: 9px
   width: 0%
   left: 50%
+
+header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  width: 100%
+  z-index: 1
+  opacity: 1
+  +transition(all .2s ease-in)
+header.hide
+  opacity: 0
+  top: -45px
 
 header nav
   border-bottom: solid 1px $table-border-color
