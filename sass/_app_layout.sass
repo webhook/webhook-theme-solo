@@ -270,63 +270,82 @@ article
     margin-bottom: $base-line-height
     display: block
     width: 100%
-  li a > h2
+  li a h2
     margin-bottom: $base-line-height / 2
     color: $text-color
     +transition(color .2s ease-in)
-  li a:hover > h2
+  li a:hover h2
     color: $red
-  li a > p
+  li a p
     color: $gray
-  li.twitter
-    background: $white
-    padding: $base-line-height
-    border: solid 1px $table-border-color
-    margin-bottom: $base-line-height
-    border-radius: 4px
-    position: relative
-    +clearfix
-    .twitter-avatar
-      width: 50px
-      float: left
-    .twitter-avatar img
-      border-radius: 4px
-    .twitter-message
-      margin-left: 74px
-    .twitter-date
-      text-align: right
-      font-size: 80%
-      font-family: $custom-font-family
-      color: $gray-light
-      a
-        color: $blue
-    .twitter-name
-      font-weight: bold
-      color: $blue
-      display: inline-block
-      margin-bottom: $base-line-height / 2
-    p
-      margin-bottom: $base-line-height / 4
-    p:last-child
-      margin-bottom: 0
-    .twitter-follow-button
-      position: absolute
-      top: $base-line-height
-      right: $base-line-height
-
-.home-feed .home-link
-  a > h2
-    font-size: 100%
   .type
     font-family: $custom-font-family
     font-size: 80%
     color: $gray-lighter
+
+.home-feed .twitter
+  background: $white
+  padding: $base-line-height
+  border: solid 1px $table-border-color
+  margin-bottom: $base-line-height
+  border-radius: 4px
+  position: relative
+  +clearfix
+  .twitter-avatar
+    width: 50px
+    float: left
+  .twitter-avatar img
+    border-radius: 4px
+  .twitter-message
+    margin-left: 74px
+  .twitter-date
+    text-align: right
+    font-size: 80%
+    font-family: $custom-font-family
+    color: $gray-light
+    a
+      color: $blue
+  .twitter-name
+    font-weight: bold
+    color: $blue
+    display: inline-block
+    margin-bottom: $base-line-height / 2
+    font-family: $custom-font-family
+  p
+    margin-bottom: $base-line-height / 4
+  p:last-child
+    margin-bottom: 0
+  .twitter-follow-button
+    position: absolute
+    top: $base-line-height
+    right: $base-line-height
+
+.home-feed .home-link
+  a > h2
+    font-size: 100%
   p
     border-left: solid 3px $gray-lighter
     color: $gray-light
     padding-left: $base-line-height / 2
     margin-left: $base-line-height
 
+.home-feed .home-video
+  a
+    +outer-container
+  .image
+    padding-bottom: 56.25%
+    width: 100%
+    background-size: 100%
+    background-position: center
+  .video-thumb
+    +span-columns(4)
+  .video-text
+    +span-columns(8)
+    +omega
+    h2
+      font-size: 100%
+  p:last-child
+    margin-bottom: 0
 
 .home-feed .home-gallery
   .image
@@ -377,6 +396,8 @@ article
         color: $link-color
       .num
         display: block
+        font-family: $custom-font-family
+        font-size: 80%
       .description
         color: $gray
         line-height: 1.5

@@ -35,18 +35,35 @@
         {{ item.publish_date|date('F d Y') }}
       </li>
       <li>
-        <strong>Video id: </strong>
-        {{ item.video_id }}
+        <strong>Mannually add a video to your feed...: </strong>
+        {{ item.mannually_add_a_video_to_your_feed }}
       </li>
       <li>
-        <strong>URL: </strong>
-        {{ item.url }}
+        <strong>URL of your video: </strong>
+        {# Embed.ly content usually comes with more data. Info here: #}{# http://www.webhook.com/docs/widget-template-reference/#embedly #}{{ item.url_of_your_video.html|safe  }}      </li>
+      <li>
+        <strong>...Or set up automatic import of videos: </strong>
+        {{ item.or_set_up_automatic_import_of_videos }}
       </li>
       <li>
-        <strong>Image: </strong>
-        {# You can pull out a lot more information from the image property. Info here: #}
-        {# http://www.webhook.com/docs/widget-template-reference/#image #}
-        <img src="{{ item.image|imageSize(200) }}" />
+        <strong>Video URL: </strong>
+        {{ item.video_url }}
+      </li>
+      <li>
+        <strong>Embed URL: </strong>
+        {{ item.embed_url }}
+      </li>
+      <li>
+        <strong>Thumbnail URL: </strong>
+        {{ item.thumbnail_url }}
+      </li>
+      <li>
+        <strong>Preview URL: </strong>
+        {{ item.preview_url }}
+      </li>
+      <li>
+        <strong>Slug: </strong>
+        {{ item.slug }}
       </li>
       <li>
         <strong>Description: </strong>

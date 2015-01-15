@@ -31,7 +31,7 @@
   </div>
 
   <hr>
-  {% set editorial = merge(cms.article, cms.gallery, cms.link) %}
+  {% set editorial = merge(cms.article, cms.gallery, cms.link, cms.video) %}
 
   <ul class="home-feed">
     <li class="twitter">
@@ -73,6 +73,19 @@
             {{ item.description|markdown }}
           </a>
         </li>
+        {% elseif item._type == "video" %}
+          <li class="home-video">
+            <a href="{{ url(item) }}">
+              <div class="video-thumb">
+                <div class="image" style="background-image:url({{ item.thumbnail_url }});"></div>
+              </div>
+              <div class="video-text">
+                <div class="type"><span class="fa fa-youtube-play"></span> Youtube</div>
+                <h2>{{ item.name }}</h2>
+                {{ item.description|markdown }}
+              </div>
+            </a>
+          </li>
       {% endif %}
     {% endfor %}
   </ul>
