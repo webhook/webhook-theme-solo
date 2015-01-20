@@ -18,50 +18,18 @@
 
 {% block body_attributes %}data-search-index="false"{% endblock %}
 
-{% block head_extra %}
-
-  {# STYLES FOR THE SEARCH RESULTS. #}
-  {# Feel free to replace and put in a css file. #}
-
-  {% parent %}
-  <style>
-    .wh-search-results dt {
-      font-size: 125%;
-      font-weight: bold;
-      border-bottom: solid 1px #ccc;
-      padding: 10px 0px;
-    }
-    .wh-search-results dd {
-      margin-left: 0;
-    }
-    .wh-search-results a {
-      text-decoration: none;
-      color: #000;
-      border-bottom: solid 1px #ccc;
-      padding: 10px 0px;
-      display: block;
-    }
-    .wh-search-term {
-      background: #ddd;
-      display: inline-block;
-      font-weight: bold;
-    }
-    .wh-search-url {
-      font-size: 80%;
-      color: #666;
-    }
-    .wh-search-term-in-page {
-      font-weight: bold;
-    }
-  </style>
-
-{% endblock %}
-
 {% block content %}
 
-  {# SEARCH RESULTS WILL GO IN HERE. #}
+  <form action="/search-results/" method="get" data-search-index="false" class="search-form">
+    <div class="container">
+       <input type="text" name="q" placeholder="Search here, hit enter." id="tipue_search_input" />
+    </div>
+  </form>
+  <div class="container">
+    {# SEARCH RESULTS WILL GO IN HERE. #}
 
-  <div id="tipue_search_content"></div>
+    <div id="tipue_search_content"></div>
+  </div>
 
 {% endblock %}
 

@@ -453,3 +453,43 @@ footer
   .video-list
     +span-columns(4)
     +omega
+
+.search-form
+  background: $white
+  margin-top: -$base-line-height * 3
+  padding-top: $base-line-height * 3
+  padding-bottom: $base-line-height
+  margin-bottom: $base-line-height * 2
+  input[type=text]
+    border: none
+    box-shadow: none
+    border-bottom: dotted 2px $gray-darker
+    width: 100%
+    font-size: 250%
+    font-family: $custom-font-family
+
+.wh-search-results
+  dt
+    font-size: 125%
+    font-weight: bold
+    border-bottom: solid 1px #ccc
+    padding: 10px 0px
+  dd
+    margin-left: 0
+  a
+    text-decoration: none
+    color: #000
+    border-bottom: solid 1px #ccc
+    padding: 10px 0px
+    display: block
+  .wh-search-term
+    background: #ddd
+    display: inline-block
+    font-weight: bold
+  .wh-search-url
+    font-size: 80%
+    color: #666
+  .wh-search-term-in-page
+    font-weight: bold
+
+

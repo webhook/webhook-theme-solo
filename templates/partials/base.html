@@ -5,8 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
   {# Grab the title and description from the CMS general settings. #}
-  {% set site_title = getSetting('siteName')%}
-  {% set site_description = getSetting('siteDescription')%}
+  {% set site_title = getSetting('site_name')%}
+  {% set site_description = getSetting('site_description')%}
 
   <head>
     <meta charset="utf-8">
@@ -45,7 +45,7 @@
       {% include "templates/partials/footer.html" %}
 
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-      <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js"></script>
 
       <!-- build:js /static/javascript/app.min.js -->
       <script src="/static/javascript/webhook-js/webhook-affix.js"></script>
