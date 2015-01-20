@@ -1,0 +1,44 @@
+{# ------------------------------------------------------- #}
+{# ONE OFF VIEW aboutme #}
+{# This page can use any data from http:localhost:2000/cms/#/form/aboutme/ #}
+{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
+{# http://paularmstrong.github.io/swig/docs/tags/ #}
+{# Learn about calling data into Webhook pages here: #}
+{# http://www.webhook.com/docs/template-rules-and-filters/ #}
+{# ------------------------------------------------------- #}
+{# Confused what extends and blocks do? Watch a primer: #}
+{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
+{% extends "templates/partials/base.html" %}
+{# This sets our page <title>. It will append this aboutme's name to the site title defined in base.html #}
+{% block title %}{% parent %} - {{ cms.aboutme.name }}{% endblock %}
+{% block content %}
+  <article>
+   <h1>More about {{ cms.aboutme.name }}</h1>
+   <div class="deck deck-smaller wy-text-center">
+     <p>I'm hail from <strong>{{ cms.aboutme.hometown }}</strong>. Send me an <a href="mailto:{{ cms.aboutme.email }}">email</a>.</p>
+   </div>
+   <img src="{{ cms.aboutme.bio_picture.url }}">
+   <hr>
+   {{ cms.aboutme.bio|markdown }}
+  </article>
+        {{ cms.aboutme.github }}
+        {{ cms.aboutme.instagram }}
+        {{ cms.aboutme.reddit }}
+        {{ cms.aboutme.twitter }}
+        {{ cms.aboutme.steam }}
+        {{ cms.aboutme.youtube }}
+        <h2>Some of my work</h2>
+        <ul class="work">
+        {% for row in cms.aboutme.notable_work %}
+              <strong>Name: </strong>
+              {{ row.time_period }}
+              {{ row.url }}
+              {{ row.description|markdown }}
+              {# You can pull out a lot more information from the image property. Info here: #}
+                {# http://www.webhook.com/docs/widget-template-reference/#image #}
+                <img src="{{ row.image|imageSize(200) }}" />
+            </li>
+        {% endfor %}
+        </ul>
+  </ul>
+{% endblock %}
