@@ -472,8 +472,15 @@ footer
   dt
     font-size: 125%
     font-weight: bold
-    border-bottom: solid 1px #ccc
     padding: 10px 0px
+    font-family: $custom-font-family
+    &:after
+      content: ""
+      width: 50%
+      margin: $base-line-height auto
+      height: 1px
+      background: $table-border-color
+      display: block
   dd
     margin-left: 0
   h2
@@ -482,14 +489,13 @@ footer
   a
     text-decoration: none
     color: #000
-    border-bottom: solid 1px #ccc
-    padding: 10px 0px
     display: block
   a:hover
     h2
       color: $red
   p
     color: $gray-light
+    font-size: 90%
   .wh-search-term
     background: #ddd
     display: inline-block
@@ -498,6 +504,7 @@ footer
     font-size: 80%
     color: #666
     font-family: $custom-font-family
+    margin-bottom: $base-line-height / 2
   .wh-search-term-in-page
     font-weight: bold
 
