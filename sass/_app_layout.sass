@@ -440,12 +440,10 @@ hr
 footer
   background: $white
   padding: $base-line-height
-  margin-top: $base-line-height * 4
   position: absolute
   left: 0
   right: 0
   bottom: 0
-  height: 100px
 .video-individual
   +outer-container
   .video-main
@@ -508,4 +506,15 @@ footer
   .wh-search-term-in-page
     font-weight: bold
 
-
+.built-with-webhook
+  text-align: center
+  display: block
+  color: $text-color !important
+  font-family: $custom-font-family
+  +clearfix
+  .wh-logo
+    +wh-logo(20px, $gray-dark)
+    display: inline-block
+  span
+    vertical-align: middle
+    font-size: 90%
