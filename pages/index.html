@@ -80,7 +80,14 @@
               <div class="image" style="background-image:url({{ item.thumbnail_url }});"></div>
             </div>
             <div class="video-text">
-              <div class="type"><span class="fa fa-youtube-play"></span> Youtube</div>
+              <div class="type">
+                {% if item.source == "YouTube" %}
+                  <span class="fa fa-youtube-play"></span>
+                {% else %}
+                  <span class="fa fa-vimeo-square"></span>
+                {% endif %}
+                {{ item.source }}
+              </div>
               <h2>{{ item.name }}</h2>
               {{ item.description|markdown }}
             </div>
