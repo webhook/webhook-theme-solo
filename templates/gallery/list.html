@@ -19,26 +19,34 @@
 
 {% block content %}
 
-  {# The first thing we do is call gallery data from the CMS. #}
-  {% set data = cms.gallery %}
+  <div class="container">
+    <article>
+      <div class="date">
+        {% set last = cms.gallery|last %}
+        Last update {{ last.publish_date|date('M d, Y.') }}
+      </div>
+      <h1>Photos</h1>
+      <div class="deck deck-smaller wy-text-center">
+        <p>Follow me on <a href="http://www.twitter.com/{{ cms.aboutme.twitter }}/">Twitter</a> for updates.</p>
+      </div>
+      <hr>
+    </article>
 
-  {# Next we sort the data by publish_date. The true bit reverses it so it's newest first. Learn more: #}
-  {# http://www.webhook.com/docs/template-rules-and-filters/#sortproperty_reverseorder #}
-  {% set data = data|sort('publish_date', true) %}
+    <ul class="home-feed">
+      {% for item in cms.gallery|sort('publish_date', true) %}
+      <li class="home-gallery">
+      <a href="{{ url(item)}}" class="image" style="background-image:url({{ item.images[0].image|imageSize(1050) }})">
+        <div class="mask"></div>
+        <div class="text">
+          <span class="title">{{ item.name }}</span>
+          <span class="description">{{ item.description|markdown|striptags|truncate(100) }}</span>
+          <span class="num">{{ item.images|size }} images</span>
+        </div>
+      </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 
-  {# This is how you set pagination. It's always important to do this after your sort. #}
-  {% set data = paginate(data, 5) %}
-
-  <h1>List of gallery</h1>
-
-  {# This forloop can use any data from http:localhost:2000/cms/#/form/gallery/ #}
-  <ul>
-    {% for object in data %}
-      <li><a href="{{ url(object) }}">{{ object.name }}</a></li>
-    {% endfor %}
-  </ul>
-
-  {# The actual pagination template, feel free to edit or replace the default one. #}
-  {% include "templates/partials/paginator.html" %}
 
 {% endblock %}

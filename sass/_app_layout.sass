@@ -1,5 +1,7 @@
 body
-  padding-top: $base-line-height * 3
+  padding: $base-line-height * 3 0 150px 0
+  min-height: 100%
+  position: relative
 
 
 // Hamburger animation
@@ -433,9 +435,14 @@ hr
   img
     width: 100%
 footer
-  background: $gray-darker
+  background: $white
   padding: $base-line-height
   margin-top: $base-line-height * 4
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  height: 100px
 .video-individual
   +outer-container
   .video-main

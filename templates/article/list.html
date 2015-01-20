@@ -19,10 +19,16 @@
 
 {% block content %}
 <div class="container">
-  <h1>Blog</h1>
-  <div class="deck deck-smaller wy-text-center">
-    <p>Recieve updates to this blog through <a href="/rss/">RSS</a> or <a href="http://www.twitter.com/{{ cms.aboutme.twitter }}/">Twitter</a>.</p>
-  </div>
+  <article>
+    <div class="date">
+      {% set last = cms.article|last %}
+      Last update {{ last.publish_date|date('M d, Y.') }}
+    </div>
+    <h1>Blog</h1>
+    <div class="deck deck-smaller wy-text-center">
+      <p>Recieve updates to this blog through <a href="/rss/">RSS</a> or <a href="http://www.twitter.com/{{ cms.aboutme.twitter }}/">Twitter</a>.</p>
+    </div>
+  </article>
   <hr>
 
   <ul class="home-feed">

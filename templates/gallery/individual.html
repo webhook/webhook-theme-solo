@@ -39,7 +39,7 @@
     <hr>
   </article>
 
-  <ul class="gallery">
+  <ul class="gallery swipe">
   {% for row in item.images %}
     <li>
       <a href="{{ row.image.url }}" title="{{ row.caption|markdown|striptags }}">
