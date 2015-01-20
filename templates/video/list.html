@@ -1,6 +1,6 @@
 {# ------------------------------------------------------- #}
 
-{# LIST VIEW OF ALL video #}
+{# LIST VIEW OF ALL VIDEO #}
 
 {# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
 {# http://paularmstrong.github.io/swig/docs/tags/ #}
@@ -14,31 +14,48 @@
 {# http://www.webhook.com/docs/template-inheritance-blocks/ #}
 {% extends "templates/partials/base.html" %}
 
-{# This sets our page <title>. It will append video to the site title defined in base.html #}
 {% block title %}{% parent %} - video{% endblock %}
 
 {% block content %}
 
-  {# The first thing we do is call video data from the CMS. #}
-  {% set data = cms.video %}
+  <div class="container">
+    <article>
+      <div class="date">
+        {% set last = cms.video|last %}
+        Last update {{ last.publish_date|date('M d, Y.') }}
+      </div>
+      <h1>Videos</h1>
+      <div class="deck deck-smaller wy-text-center">
+        <p>Follow me on <a href="http://www.twitter.com/{{ cms.aboutme.twitter }}/">Twitter</a> for updates.</p>
+      </div>
+      <hr>
+    </article>
 
-  {# Next we sort the data by publish_date. The true bit reverses it so it's newest first. Learn more: #}
-  {# http://www.webhook.com/docs/template-rules-and-filters/#sortproperty_reverseorder #}
-  {% set data = data|sort('publish_date', true) %}
+    <ul class="home-feed">
+      {% for item in cms.video|sort('publish_date', true) %}
+        <li class="home-video">
+          <a href="{{ item.video_url }}" class="video-open" title="{{ item.description|markdown|striptags }}">
+            <div class="video-thumb">
+              <div class="image" style="background-image:url({{ item.thumbnail_url }});"></div>
+            </div>
+            <div class="video-text">
+              <div class="type">
+                {% if item.source == "YouTube" %}
+                  <span class="fa fa-youtube-play"></span>
+                {% else %}
+                  <span class="fa fa-vimeo-square"></span>
+                {% endif %}
+                {{ item.source }}
+              </div>
+              <h2>{{ item.name }}</h2>
+              {{ item.description|markdown }}
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 
-  {# This is how you set pagination. It's always important to do this after your sort. #}
-  {% set data = paginate(data, 5) %}
-
-  <h1>List of video</h1>
-
-  {# This forloop can use any data from http:localhost:2000/cms/#/form/video/ #}
-  <ul>
-    {% for object in data %}
-      <li><a href="{{ url(object) }}">{{ object.name }}</a></li>
-    {% endfor %}
-  </ul>
-
-  {# The actual pagination template, feel free to edit or replace the default one. #}
-  {% include "templates/partials/paginator.html" %}
 
 {% endblock %}
+
