@@ -1,0 +1,49 @@
+{# ------------------------------------------------------- #}
+
+{# LIST VIEW OF ALL article #}
+
+{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
+{# http://paularmstrong.github.io/swig/docs/tags/ #}
+
+{# Learn about calling data into Webhook pages here: #}
+{# http://www.webhook.com/docs/template-rules-and-filters/ #}
+
+{# ------------------------------------------------------- #}
+
+{# Confused what extends and blocks do? Watch a primer: #}
+{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
+{% extends "templates/partials/base.html" %}
+
+{# This sets our page <title>. It will append article to the site title defined in base.html #}
+{% block title %}{% parent %} Links of note{% endblock %}
+
+{% block content %}
+<div class="container">
+  <article>
+    <div class="date">
+      {% set last = cms.link|last %}
+      Last update {{ last.publish_date|date('M d, Y.') }}
+    </div>
+    <h1>Links of note</h1>
+    <div class="deck deck-smaller wy-text-center">
+      <p>Consider it my own personal web-ring.</p>
+    </div>
+  </article>
+  <hr>
+
+  <ul class="home-feed">
+    {% for item in cms.link %}
+      <li class="home-link">
+        <a href="{{ item.url }}">
+          <div class="type"><span class="fa fa-bookmark"></span> Bookmark</div>
+          <h2>{{ item.name }} <span class="fa fa-external-link-square"></span></h2>
+          {{ item.description|markdown }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
+{% endblock %}
+
