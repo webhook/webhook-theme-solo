@@ -18,27 +18,24 @@
 {% block title %}{% parent %} - article{% endblock %}
 
 {% block content %}
+<div class="container">
+  <h1>Blog</h1>
+  <div class="deck deck-smaller wy-text-center">
+    <p>Recieve updates to this blog through <a href="/rss/">RSS</a> or <a href="http://www.twitter.com/{{ cms.aboutme.twitter }}/">Twitter</a>.</p>
+  </div>
+  <hr>
 
-  {# The first thing we do is call article data from the CMS. #}
-  {% set data = cms.article %}
-
-  {# Next we sort the data by publish_date. The true bit reverses it so it's newest first. Learn more: #}
-  {# http://www.webhook.com/docs/template-rules-and-filters/#sortproperty_reverseorder #}
-  {% set data = data|sort('publish_date', true) %}
-
-  {# This is how you set pagination. It's always important to do this after your sort. #}
-  {% set data = paginate(data, 5) %}
-
-  <h1>List of article</h1>
-
-  {# This forloop can use any data from http:localhost:2000/cms/#/form/article/ #}
-  <ul>
-    {% for object in data %}
-      <li><a href="{{ url(object) }}">{{ object.name }}</a></li>
+  <ul class="home-feed">
+    {% for item in cms.article %}
+    <li class="home-article">
+    <a href="{{ url(item) }}">
+      <h2>{{ item.name }}</h2>
+      {{ item.deck|markdown }}
+    </a>
+    </li>
     {% endfor %}
   </ul>
+</div>
 
-  {# The actual pagination template, feel free to edit or replace the default one. #}
-  {% include "templates/partials/paginator.html" %}
 
 {% endblock %}
