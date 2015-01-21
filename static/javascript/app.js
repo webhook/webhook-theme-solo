@@ -36,6 +36,13 @@ $(document).ready(function() {
     wScrollBefore = wScrollCurrent;
   });
 
+  // Tweet time
+  if ($('#tweetTime').length) {
+    var tweetTime = moment.utc($('#tweetTime').data('tweet-time'));
+    tweetTime = tweetTime.local();
+    tweetTime = moment(tweetTime).format('MMM Do, YYYY. h:mm a');
+    $('#tweetTime').text(tweetTime);
+  }
 });
 
 
