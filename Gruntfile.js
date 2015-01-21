@@ -44,6 +44,11 @@ module.exports = function(grunt) {
         files: [
           {expand: true, src: ['bower_components/webhook-js/src/webhook-affix.js'], dest: 'static/javascript/webhook-js/', flatten: true, filter: 'isFile'}
         ]
+      },
+      moment: {
+        files: [
+          {expand: true, src: ['bower_components/moment/min/moment-with-locales.js'], dest: 'static/javascript/moment/', flatten: true, filter: 'isFile'}
+        ]
       }
     },
     watch: {

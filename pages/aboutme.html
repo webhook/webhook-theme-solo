@@ -17,7 +17,7 @@
     <div class="deck deck-smaller wy-text-center">
      <p>I hail from <strong>{{ cms.aboutme.hometown }}</strong>. Send me an <a href="mailto:{{ cms.aboutme.email }}">email</a>.</p>
     </div>
-    <img src="{{ cms.aboutme.bio_picture.url }}">
+    <img src="{{ cms.aboutme.bio_picture|imageSize(700) }}">
     <ul class="social">
       {% if cms.aboutme.facebook %}
         <li><a href="http://www.facebook.com/{{ cms.aboutme.facebook }}" class="fa fa-facebook"></a></li>

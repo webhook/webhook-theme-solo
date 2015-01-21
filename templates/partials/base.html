@@ -7,6 +7,7 @@
   {# Grab the title and description from the CMS general settings. #}
   {% set site_title = getSetting('site_name')%}
   {% set site_description = getSetting('site_description')%}
+  {% set site_analytics = getSetting('analytics_id')%}
 
   <head>
     <meta charset="utf-8">
@@ -50,9 +51,11 @@
       <!-- build:js /static/javascript/app.min.js -->
       <script src="/static/javascript/webhook-js/webhook-affix.js"></script>
       <script src="/static/javascript/swipebox/jquery.swipebox.js"></script>
+      <script src="/static/javascript/moment/moment-with-locales.js"></script>
       <script src="/static/javascript/app.js"></script>
       <!-- endbuild -->
 
+      {# Highlight JS for syntax highlighting in blogs. #}
       <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
       <script>hljs.initHighlightingOnLoad();</script>
 
@@ -60,7 +63,7 @@
 
       {# Google Analytics code. Feel free to remove. #}
       <script>
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        var _gaq=[['_setAccount','{{ site_analytics }}'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
         g.src='//www.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));
