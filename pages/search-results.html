@@ -22,7 +22,7 @@
 
   <form action="/search-results/" method="get" data-search-index="false" class="search-form">
     <div class="container">
-       <input type="text" name="q" placeholder="Search here, hit enter." id="tipue_search_input" />
+       <input type="text" name="q" placeholder="Search" id="tipue_search_input" />
     </div>
   </form>
   <div class="container">
@@ -39,6 +39,7 @@
     <script src="http://cms.webhook.com/cdn/js/webhook-tipue.min.js"></script>
 
     <script>
+    $( "#tipue_search_input" ).focus();
     $(document).ready(function() {
          $('#tipue_search_input').tipuesearch({
             highlightEveryTerm: true,

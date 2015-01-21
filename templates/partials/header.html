@@ -15,11 +15,18 @@
     </ul>
     <ul class="menu">
       <li><a href="/aboutme/">About</a></li>
-      <li><a href="/article/">Blog</a></li>
-      <li><a href="/gallery/">Photos</a></li>
-      <li><a href="/video/">Video</a></li>
-      <li><a href="/link/">Links</a></li>
-      <li><a href="mailto:{{ cms.aboutme.email }}">Contact</a></li>
+      {% if cms.article|size > 0 %}
+        <li><a href="/article/">Blog</a></li>
+      {% endif %}
+      {% if cms.gallery|size > 0 %}
+        <li><a href="/gallery/">Photos</a></li>
+      {% endif %}
+      {% if cms.video|size > 0 %}
+        <li><a href="/video/">Video</a></li>
+      {% endif %}
+      {% if cms.link|size > 0 %}
+        <li><a href="/link/">Links</a></li>
+      {% endif %}
       <li><a href="/search-results" class="fa fa-search"></a></li>
     </ul>
   </nav>
