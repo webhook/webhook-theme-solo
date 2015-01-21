@@ -5,21 +5,16 @@ body
 
 
 // Hamburger animation
-.ham-wrap
-  width: 40px
-  height: 40px
-  padding: 5px
-  background: $white
-  display: none
 .ham
   width: 30px
   height: 30px
   position: relative
-  top: 5px
   +transform(rotate(0deg))
   +transition(all .5s ease-in-out)
   cursor: pointer
-  margin: auto
+  margin-top: 10px
+  margin-right: 10px
+  float: right
 
 .ham span
   display: block
@@ -566,3 +561,24 @@ footer
     .image .mask, .image .text
       right: -50%
       width: 50%
+
++media($mobile)
+  .home-feed .home-gallery
+    .image .mask, .image .text
+      right: -100%
+      width: 100%
+  .home-feed .home-video
+    .video-thumb
+      float: right
+      margin: 0
+    .video-text
+      margin: 0
+      p
+        display: none
+  header nav
+    .name li:last-child
+      display: none
+    .menu
+      display: none
+  header .ham-wrap
+    display: block

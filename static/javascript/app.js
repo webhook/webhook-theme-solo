@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   // Swipebox triggers
   $( '.swipe a:has(img), article p a:has(img), figure a:has(img), .video-open' ).swipebox({hideBarsDelay:999999});
-  $('.circle').click(function(){
+  $('.ham').click(function(){
     $(this).toggleClass('open');
   });
 
