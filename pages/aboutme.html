@@ -27,14 +27,16 @@
     <ul class="work">
       {% for row in cms.aboutme.notable_work %}
         <li>
-          <div class="work-image">
-            <img src="{{ row.image|imageSize(200) }}" />
-          </div>
-          <div class="work-text">
-            <h3><a href="{{ row.url }}">{{ row.name }}</a></h3>
-            <div class="time-period">{{ row.time_period }}</div>
-            {{ row.description|markdown }}
-          </div>
+          <h3>
+            {% if row.url %}
+              <a href="{{ row.url }}">{{ row.name }}</a>
+            {% else %}
+              {{ row.name }}
+            {% endif %}
+            <span class="time-period">{{ row.time_period }}</span>
+          </h3>
+          <p class="role">{{ row.role }}</p>
+          {{ row.description|markdown }}
         </li>
       {% endfor %}
     </ul>
