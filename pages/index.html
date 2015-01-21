@@ -20,16 +20,18 @@
     {# TWITTER #}
     {# TWITTER #}
     {# TWITTER #}
-    <li class="twitter">
-      <a href="http://www.twitter.com/{{ cms.twitter.name }}" class="twitter-avatar">
-        <img src="{{ cms.twitter.user_profile_image_url }}">
-      </a>
-      <div class="twitter-message">
-        <span class="twitter-name"><a href="http://www.twitter.com/{{ cms.twitter.name }}">@{{ cms.twitter.name }}</a><span class="fa fa-twitter"></span>.</span>
-        <p>{{ cms.twitter.text|markdown }}</p>
-        <p class="twitter-date">My last tweet published <a href="{{ cms.twitter.url }}" id="tweetTime" data-tweet-time="{{ cms.twitter.created_at }}">{{ cms.twitter.created_at|date('M d, Y. g:i a') }}</a>.</p>
-      </div>
-    </li>
+    {% if cms.twitter.text %}
+      <li class="twitter">
+        <a href="http://www.twitter.com/{{ cms.twitter.name }}" class="twitter-avatar">
+          <img src="{{ cms.twitter.user_profile_image_url }}">
+        </a>
+        <div class="twitter-message">
+          <span class="twitter-name"><a href="http://www.twitter.com/{{ cms.twitter.name }}">@{{ cms.twitter.name }}</a><span class="fa fa-twitter"></span>.</span>
+          <p>{{ cms.twitter.text|markdown }}</p>
+          <p class="twitter-date">My last tweet published <a href="{{ cms.twitter.url }}" id="tweetTime" data-tweet-time="{{ cms.twitter.created_at }}">{{ cms.twitter.created_at|date('M d, Y. g:i a') }}</a>.</p>
+        </div>
+      </li>
+    {% endif %}
 
     {# MERGE A BUNCH OF CMS CONTENT TOGETHER INTO ONE FEED #}
     {% set editorial = merge(cms.article, cms.gallery, cms.link, cms.video) %}

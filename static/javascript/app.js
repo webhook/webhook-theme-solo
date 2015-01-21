@@ -5,6 +5,8 @@ $(document).ready(function() {
   $('.circle').click(function(){
     $(this).toggleClass('open');
   });
+
+  // Highlight anything in pre code
   $('pre code').each(function(i, block) {
     hljs.highlightBlock(block);
   });
@@ -36,7 +38,7 @@ $(document).ready(function() {
     wScrollBefore = wScrollCurrent;
   });
 
-  // Tweet time
+  // Localize the tweet time
   if ($('#tweetTime').length) {
     var tweetTime = moment.utc($('#tweetTime').data('tweet-time'));
     tweetTime = tweetTime.local();
