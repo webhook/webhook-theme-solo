@@ -374,7 +374,7 @@ article
     overflow: hidden
     border-radius: 4px
     +filter(grayscale(100%))
-    +transition(background-position, .5s ease-in)
+    +transition(all .5s ease-in)
     &:hover
       +filter(grayscale(0%))
       .mask
@@ -559,6 +559,10 @@ footer
 +media($tablet)
   .container, article
     padding: 0 $gutter
-  .home-feed .home-gallery .image
-    width: 100%
-    margin: $base-line-height 0
+  .home-feed .home-gallery
+    .image
+      width: 100%
+      margin: $base-line-height 0
+    .image .mask, .image .text
+      right: -50%
+      width: 50%
