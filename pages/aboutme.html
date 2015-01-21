@@ -32,7 +32,10 @@
     <hr>
     <h2>Some of my work</h2>
     {{ cms.aboutme.resume_intro|markdown }}
-
+    {% if cms.aboutme.formal_resume %}
+      <a href="{{ cms.aboutme.formal_resume.url }}" class="btn btn-neutral">Download my resume</a>
+    {% endif %}
+    <hr>
     <ul class="work">
       {% for row in cms.aboutme.notable_work %}
         <li>

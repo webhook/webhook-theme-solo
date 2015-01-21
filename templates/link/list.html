@@ -32,7 +32,7 @@
   <hr>
 
   <ul class="home-feed">
-    {% for item in cms.link %}
+    {% for item in cms.link|sort('publish_date', true) %}
       <li class="home-link">
         <a href="{{ item.url }}">
           <div class="type"><span class="fa fa-bookmark"></span> Bookmark</div>

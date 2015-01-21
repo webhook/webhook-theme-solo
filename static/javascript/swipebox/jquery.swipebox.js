@@ -121,7 +121,7 @@
 
 				if(curHash) {
 					curHash = curHash.slice(1);
-					
+
 					$(elem).each( function() {
 
 						var href = null;
