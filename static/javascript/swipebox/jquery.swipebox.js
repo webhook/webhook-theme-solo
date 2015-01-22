@@ -560,6 +560,21 @@
 					slider.animate( { left : ( -index*100 )+'%' } );
 				}
 
+				if($( '#swipebox-slider .slide.current' ).length > 0) {
+					var curSlide = $( '#swipebox-slider .slide.current' );
+
+					var videoIframe = curSlide.find('iframe');
+					if(videoIframe.length > 0) {
+						if(videoIframe.hasClass('js-youtube-video')) {
+							var youtube_command = window.JSON.stringify( { event: "command", func: "pauseVideo", args: "" } );
+							videoIframe[0].contentWindow.postMessage( youtube_command, '*' );
+						} else if(videoIframe.hasClass('js-vimeo-video')) {
+							var vimeo_command = window.JSON.stringify( { method: "pause", value: "" } );
+							videoIframe[0].contentWindow.postMessage( vimeo_command, '*' );
+						}
+					}
+				}
+
 				$( '#swipebox-slider .slide' ).removeClass( 'current' );
 				$( '#swipebox-slider .slide' ).eq( index ).addClass( 'current' );
 				this.setTitle( index );
@@ -676,11 +691,11 @@
 					if ( youtubeShortUrl ) {
 						youtubeUrl = youtubeShortUrl;
 					}
-					iframe = '<iframe width="560" height="315" src="//www.youtube.com/embed/' + youtubeUrl[1] + '" frameborder="0" allowfullscreen></iframe>';
+					iframe = '<iframe class="js-youtube-video" width="560" height="315" src="//www.youtube.com/embed/' + youtubeUrl[1] + '?enablejsapi=1" frameborder="0" allowfullscreen></iframe>';
 
 				} else if ( vimeoUrl ) {
 
-					iframe = '<iframe width="560" height="315"  src="//player.vimeo.com/video/' + vimeoUrl[1] + '?byline=0&amp;portrait=0&amp;color='+plugin.settings.vimeoColor+'" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
+					iframe = '<iframe class="js-vimeo-video" width="560" height="315"  src="//player.vimeo.com/video/' + vimeoUrl[1] + '?api=1&byline=0&amp;portrait=0&amp;color='+plugin.settings.vimeoColor+'" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
 
 				}
 
