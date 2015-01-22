@@ -6,7 +6,7 @@ $(document).ready(function() {
   }
   $('.ham').click(function(){
     $(this).toggleClass('open');
-    $('header nav .menu').toggle();
+    $('header nav .menu').toggleClass('active');
   });
   $('.search-icon').click(function(){
     $('.search-form').toggleClass('active');
@@ -38,7 +38,7 @@ $(document).ready(function() {
     else if(wScrollDiff > 0)
       el.removeClass('hide')
     // scroll down
-    else if(wScrollDiff < 0)
+    else if((wScrollDiff < 0) && ($('nav .menu.active').length) == 0)
       el.addClass('hide')
 
     wScrollBefore = wScrollCurrent;
