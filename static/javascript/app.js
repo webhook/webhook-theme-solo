@@ -1,13 +1,15 @@
 $(document).ready(function() {
 
   // Swipebox should only show or certain elements when not in mobile.
-  if ($('nav .menu').css("display") !== "none" ){
-    $( '.swipe a:has(img), article p a:has(img), figure a:has(img), .video-open' ).swipebox({hideBarsDelay:999999});
-  }
+  $( '.swipe a:has(img), article p a:has(img), figure a:has(img), .video-open' ).swipebox({hideBarsDelay:999999});
+
+  // Hamburger menu in mobile
   $('.ham').click(function(){
     $(this).toggleClass('open');
     $('header nav .menu').toggleClass('active');
   });
+
+  // Search
   $('.search-icon').click(function(){
     $('.search-form').toggleClass('active');
   });
