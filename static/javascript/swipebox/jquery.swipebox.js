@@ -1,3 +1,9 @@
+// Note, this is a bit of a fork of Swipebox for the use of this theme.
+// - CSS changed pretty drastically.
+// - Builds URLs you can pass for each image/video.
+// dave.snider@gmail.com
+
+
 /*! Swipebox v1.2.9 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox */
 
 ;( function ( window, document, $, undefined ) {

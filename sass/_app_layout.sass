@@ -15,6 +15,7 @@ body
   margin-top: 10px
   margin-right: 10px
   float: right
+  display: none
 
 .ham span
   display: block
@@ -561,6 +562,8 @@ footer
     .image .mask, .image .text
       right: -50%
       width: 50%
+  .gallery li
+    width: 50%
 
 +media($mobile)
   .home-feed .home-gallery
@@ -580,5 +583,7 @@ footer
       display: none
     .menu
       display: none
-  header .ham-wrap
+  header .ham
     display: block
+  .gallery li
+    width: 100%
