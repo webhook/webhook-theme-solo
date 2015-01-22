@@ -564,6 +564,30 @@ footer
       width: 50%
   .gallery li
     width: 50%
+  article
+    img[alt="center"]
+      max-width: 100%
+      margin: 0
+    img[alt="full"]
+      width: 100%
+      max-width: 100%
+      position: static
+      left: auto
+      margin: 0
+      border-radius: 0
+    img[alt="right"]
+      width: 33%
+      max-width: 33%
+      margin: 0 0 $base-line-height $base-line-height
+      float: right
+    img[alt="left"]
+      width: 33%
+      max-width: 33%
+      margin: 0 $base-line-height $base-line-height 0
+      float: left
+    pre
+      max-width: 100%
+      margin: $base-line-height * 2 0
 
 +media($mobile)
   .home-feed .home-gallery
@@ -587,3 +611,8 @@ footer
     display: block
   .gallery li
     width: 100%
+  article
+    img[alt="right"], img[alt="left"]
+      width: 100%
+      max-width: 100%
+      margin: 0 0 $base-line-height 0
