@@ -20,7 +20,7 @@
   {% set editorial = editorial|sort('publish_date', true) %}
   {% set editorial = paginate(editorial, 10) %}
 
-  <ul class="home-feed" data-next-page="{{ getPageUrl(getCurPage() + 1) }}">
+  <ul class="home-feed" data-next-page="{{ getPageUrl(getCurPage() + 1) }}" data-max-page="{{ getPageUrl(getMaxPage()) }}">
 
     {# TWITTER #}
     {# TWITTER #}
@@ -100,6 +100,7 @@
       {% endif %}
     {% endfor %}
   </ul>
+  <div id="load-more-spinner" class="wy-spinner" style="display: none;"></div>
 </div>
 {% endblock %}
 
@@ -107,6 +108,8 @@
 <script>
   $(document).ready(function() {
     var nextPage = $('.home-feed').attr('data-next-page');
+    var maxPage = $('.home-feed').attr('data-max-page');
+
     var finishedLoading = false;
     var loading = false;
     $(window).scroll( function() {
@@ -120,13 +123,18 @@
       if(scrollBottom > bottomOfContainer)
       {
         loading = true;
-         // $('div#loadmoreajaxloader').show();
+        $('#load-more-spinner').show();
+
         $.ajax({
           url: nextPage,
           success: function(html)
           {
               if(html) {
                   var targetHtml = $(html).find('.home-feed');
+
+                  if(nextPage === maxPage) {
+                    finishedLoading = true;
+                  }
 
                   nextPage = targetHtml.attr('data-next-page');
 
@@ -135,14 +143,12 @@
                     $(".home-feed").append(targetHtml.html());
                   } else {
                     finishedLoading = true;
-                    console.log('finished loading');
                   }
 
-                  //$('div#loadmoreajaxloader').hide();
+                  $('#load-more-spinner').hide();
               } else {
                   finishedLoading = true;
-                  console.log('finished loading');
-               //   $('div#loadmoreajaxloader').html('<center>No more posts to show.</center>');
+                  $('#load-more-spinner').hide();
               }
 
               loading = false;
