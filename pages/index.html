@@ -15,7 +15,12 @@
 
   <hr>
 
-  <ul class="home-feed">
+  {# MERGE A BUNCH OF CMS CONTENT TOGETHER INTO ONE FEED #}
+  {% set editorial = merge(cms.article, cms.gallery, cms.link, cms.video) %}
+  {% set editorial = editorial|sort('publish_date', true) %}
+  {% set editorial = paginate(editorial, 10) %}
+
+  <ul class="home-feed" data-next-page="{{ getPageUrl(getCurPage() + 1) }}">
 
     {# TWITTER #}
     {# TWITTER #}
@@ -33,10 +38,7 @@
       </li>
     {% endif %}
 
-    {# MERGE A BUNCH OF CMS CONTENT TOGETHER INTO ONE FEED #}
-    {% set editorial = merge(cms.article, cms.gallery, cms.link, cms.video) %}
-
-    {% for item in editorial|sort('publish_date', true) %}
+    {% for item in editorial %}
       {# GALLERY #}
       {# GALLERY #}
       {# GALLERY #}
@@ -99,4 +101,55 @@
     {% endfor %}
   </ul>
 </div>
+{% endblock %}
+
+{% block scripts_extra %}
+<script>
+  $(document).ready(function() {
+    var nextPage = $('.home-feed').attr('data-next-page');
+    var finishedLoading = false;
+    var loading = false;
+    $(window).scroll( function() {
+      if(loading || finishedLoading) {
+        return;
+      }
+
+      var container = $('.home-feed');
+      var bottomOfContainer = container.position().top + container.outerHeight(true);
+      var scrollBottom = $(window).scrollTop() + $(window).height();
+      if(scrollBottom > bottomOfContainer)
+      {
+        loading = true;
+         // $('div#loadmoreajaxloader').show();
+        $.ajax({
+          url: nextPage,
+          success: function(html)
+          {
+              if(html) {
+                  var targetHtml = $(html).find('.home-feed');
+
+                  nextPage = targetHtml.attr('data-next-page');
+
+                  if(nextPage) {
+                    targetHtml.find('li').first().remove();
+                    $(".home-feed").append(targetHtml.html());
+                  } else {
+                    finishedLoading = true;
+                    console.log('finished loading');
+                  }
+
+                  //$('div#loadmoreajaxloader').hide();
+              } else {
+                  finishedLoading = true;
+                  console.log('finished loading');
+               //   $('div#loadmoreajaxloader').html('<center>No more posts to show.</center>');
+              }
+
+              loading = false;
+          }
+        });
+      }
+    });
+  });
+</script>
 {% endblock %}
