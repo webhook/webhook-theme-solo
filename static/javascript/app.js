@@ -6,6 +6,7 @@ $(document).ready(function() {
   }
   $('.ham').click(function(){
     $(this).toggleClass('open');
+    $('header nav .menu').toggle();
   });
 
   // Highlight anything in pre code

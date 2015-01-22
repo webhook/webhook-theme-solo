@@ -603,10 +603,29 @@ footer
       p
         display: none
   header nav
+    z-index: 5
     .name li:last-child
       display: none
     .menu
+      z-index: 2
+      position: fixed
+      top: 45px
+      left: 0
+      bottom: 0
+      right: 0
+      height: 100vh
+      width: 100vw
+      background: $gray-dark
       display: none
+    .menu li
+      display: block
+      width: 100%
+      border-bottom: solid 1px $gray-darker
+      border-top: solid 1px lighten($gray-dark, 5%)
+      padding: 0
+      a
+        display: block
+        padding: $base-line-height / 2
   header .ham
     display: block
   .gallery li
