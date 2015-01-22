@@ -8,6 +8,9 @@ $(document).ready(function() {
     $(this).toggleClass('open');
     $('header nav .menu').toggle();
   });
+  $('.search-icon').click(function(){
+    $('.search-form').toggleClass('active');
+  });
 
   // Highlight anything in pre code
   $('pre code').each(function(i, block) {

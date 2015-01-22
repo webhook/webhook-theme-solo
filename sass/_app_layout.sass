@@ -79,16 +79,24 @@ header nav ul
     float: left
     li
       padding: $base-line-height / 2 $base-line-height / 4
-      &:nth-child(2) a
-        font-weight: bold
-      &:nth-child(3) a
-        text-transform: initial
-        color: $gray-light
+    li:nth-child(2) a
+      font-weight: bold
+    li:nth-child(3) a
+      text-transform: initial
+      color: $gray-light
   &.menu
     float: right
+    padding-right: $base-line-height / 4
   li
     display: inline-block
     padding: $base-line-height / 2
+  li.search-icon
+    padding-right: 0
+  li.search-form
+    padding: 0
+    display: none
+  li.search-form.active
+    display: inline-block
   a
     display: inline-block
     color: $gray-lighter
@@ -110,11 +118,12 @@ header nav ul
       text-align: center
       color: $gray-darker
 header input[type=text]
-  background: transparent
+  background: $gray
+  border-radius: 4px
   border: none
   box-shadow: 0 0 0 transparent
-header form
-  display: none
+  color: $gray-lighter
+  font-family: $custom-font-family
 article, .container
   max-width: 700px
   margin: auto
@@ -448,20 +457,6 @@ footer
     +span-columns(4)
     +omega
 
-.search-form
-  background: $gray-dark
-  margin-top: -$base-line-height * 3
-  padding-top: $base-line-height * 3
-  padding-bottom: $base-line-height
-  margin-bottom: $base-line-height * 2
-  input[type=text]
-    border: none
-    box-shadow: none
-    background: $gray-darker
-    color: $gray-light
-    width: 100%
-    font-size: 250%
-    font-family: $custom-font-family
 
 .wh-search-results
   dt
@@ -626,6 +621,17 @@ footer
       a
         display: block
         padding: $base-line-height / 2
+    .menu li.search-icon
+      display: none
+    .menu li.search-form
+      display: block
+      border-bottom: none
+      text-align: center
+      padding-top: $base-line-height
+      input[type=text]
+        width: 90%
+        margin: auto
+        border-radius: 50px
   header .ham
     display: block
   .gallery li

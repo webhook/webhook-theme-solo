@@ -21,7 +21,12 @@
       {% if cms.link|size > 0 %}
         <li><a href="/link/">Links</a></li>
       {% endif %}
-      <li><a href="/search-results" class="fa fa-search"></a></li>
+      <li class="search-icon"><a class="fa fa-search"></a></li>
+      <li class="search-form">
+        <form action="/search-results/" method="get" data-search-index="false">
+           <input type="text" name="q" placeholder="Search" id="tipue_search_input" />
+        </form>
+      </li>
     </ul>
     <div class="ham">
       <span></span>
