@@ -61,6 +61,7 @@ header
   width: 100%
   z-index: 1
   opacity: 1
+  +transition(all .2s ease-in)
 header.hide
   opacity: 0
   top: -45px
@@ -550,10 +551,6 @@ footer
     +transition(color .2s ease-in-out)
   a:hover
     color: $text-color
-
-+media($desktop)
-  header
-    +transition(all .2s ease-in)
 
 +media($tablet)
   .container, article
