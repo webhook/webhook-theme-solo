@@ -46,6 +46,14 @@ $(document).ready(function() {
     wScrollBefore = wScrollCurrent;
   });
 
+  if($('.twitter-message .js-tweet-body').length > 0) {
+    var tweetHTML = $('.twitter-message .js-tweet-body').html();
+
+    tweetHTML = tweetHTML.replace(/@([^\s]+)/, '<a target="_blank" href="https://twitter.com/$1">$&</a>');
+
+    $('.twitter-message .js-tweet-body').html(tweetHTML);
+  }
+
   // Localize the tweet time
   if ($('#tweetTime').length) {
     var tweetTime = moment.utc($('#tweetTime').data('tweet-time'));
