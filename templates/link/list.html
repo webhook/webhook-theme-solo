@@ -31,8 +31,12 @@
   </article>
   <hr>
 
-  <ul class="home-feed">
-    {% for item in cms.link|sort('publish_date', true) %}
+  {% set editorial = cms.link %}
+  {% set editorial = editorial|sort('publish_date', true) %}
+  {% set editorial = paginate(editorial, 10) %}
+
+  <ul class="home-feed js-paginate" data-next-page="{{ getPageUrl(getCurPage() + 1) }}" data-max-page="{{ getPageUrl(getMaxPage()) }}">
+    {% for item in editorial %}
       <li class="home-link">
         <a href="{{ item.url }}">
           <div class="type"><span class="fa fa-bookmark"></span> Bookmark</div>

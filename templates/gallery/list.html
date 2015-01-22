@@ -31,8 +31,13 @@
       <hr>
     </article>
 
-    <ul class="home-feed">
-      {% for item in cms.gallery|sort('publish_date', true) %}
+
+  {% set editorial = cms.gallery %}
+  {% set editorial = editorial|sort('publish_date', true) %}
+  {% set editorial = paginate(editorial, 10) %}
+
+    <ul class="home-feed js-paginate" data-next-page="{{ getPageUrl(getCurPage() + 1) }}" data-max-page="{{ getPageUrl(getMaxPage()) }}">
+      {% for item in editorial %}
       <li class="home-gallery">
       <a href="{{ url(item)}}" class="image" style="background-image:url({{ item.images[0].image|imageSize(1050) }})">
         <div class="mask"></div>
