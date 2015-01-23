@@ -26,25 +26,25 @@
     {# TWITTER #}
     {# TWITTER #}
     {# TWITTER #}
-    {# {% if !cms.twitter.text && cms.twitter.name %} #}
-    <li class="twitter twitter-iframe">
-      <a class="twitter-timeline" href="https://twitter.com/{{ cms.twitter.name }}" data-widget-id="443912644651528192" data-screen-name="{{ cms.twitter.name }}" data-show-replies="false" data-tweet-limit="1" data-chrome="noheader nofooter noborders noscrollbar transparent">
-      Tweets by @{{ cms.twitter.name }}
-      </a>
-      <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
-    </li>
-    {# {% elseif cms.twitter.text %} #}
-    {#   <li class="twitter"> #}
-    {#     <a href="http://www.twitter.com/{{ cms.twitter.name }}" class="twitter-avatar"> #}
-    {#       <img src="{{ cms.twitter.user_profile_image_url }}"> #}
-    {#     </a> #}
-    {#     <div class="twitter-message"> #}
-    {#       <span class="twitter-name"><a href="http://www.twitter.com/{{ cms.twitter.name }}">@{{ cms.twitter.name }}</a><span class="fa fa-twitter"></span></span> #}
-    {#       <p class="js-tweet-body" data-linkify="this">{{ cms.twitter.text|safe }}</p> #}
-    {#       <p class="twitter-date">My last tweet published <a href="{{ cms.twitter.url }}" id="tweetTime" data-tweet-time="{{ cms.twitter.created_at }}">{{ cms.twitter.created_at|date('M d, Y. g:i a') }}</a>.</p> #}
-    {#     </div> #}
-    {#   </li> #}
-    {# {% endif %} #}
+    {% if !cms.twitter.text && cms.twitter.name %}
+      <li class="twitter twitter-iframe">
+        <a class="twitter-timeline" href="https://twitter.com/{{ cms.twitter.name }}" data-widget-id="443912644651528192" data-screen-name="{{ cms.twitter.name }}" data-show-replies="false" data-tweet-limit="1" data-chrome="noheader nofooter noborders noscrollbar transparent">
+        Tweets by @{{ cms.twitter.name }}
+        </a>
+        <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
+      </li>
+    {% elseif cms.twitter.text %}
+      <li class="twitter">
+        <a href="http://www.twitter.com/{{ cms.twitter.name }}" class="twitter-avatar">
+          <img src="{{ cms.twitter.user_profile_image_url }}">
+        </a>
+        <div class="twitter-message">
+          <span class="twitter-name"><a href="http://www.twitter.com/{{ cms.twitter.name }}">@{{ cms.twitter.name }}</a><span class="fa fa-twitter"></span></span>
+          <p class="js-tweet-body" data-linkify="this">{{ cms.twitter.text|safe }}</p>
+          <p class="twitter-date">My last tweet published <a href="{{ cms.twitter.url }}" id="tweetTime" data-tweet-time="{{ cms.twitter.created_at }}">{{ cms.twitter.created_at|date('M d, Y. g:i a') }}</a>.</p>
+        </div>
+      </li>
+    {% endif %}
 
     {% for item in editorial %}
       {# GALLERY #}
