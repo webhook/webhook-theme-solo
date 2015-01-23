@@ -1,21 +1,56 @@
 {# This partial gets included on the homepage and the list view for this type #}
 <li class="home-video">
-  <a href="{{ item.video_url }}" class="video-open" title="{{ item.description|markdown|striptags }}">
-    <div class="video-thumb">
-      <div class="image" style="background-image:url({{ item.thumbnail_url }});"></div>
-    </div>
-    <div class="video-text">
-      <div class="type">
-        {% if item.source == "YouTube" %}
-          <span class="fa fa-youtube-play"></span>
-        {% else %}
-          <span class="fa fa-vimeo-square"></span>
-        {% endif %}
-        {{ item.source }}
+
+  {# VIDEO FROM EMBEDLY #}
+  {# VIDEO FROM EMBEDLY #}
+  {# VIDEO FROM EMBEDLY #}
+  {% if item.url_of_your_video %}
+    <a href="{{ item.url_of_your_video.video_url }}" class="video-open" title="{{ item.url_of_your_video.description }}">
+      <div class="video-thumb">
+        <div class="image" style="background-image:url({{ item.url_of_your_video.thumbnail_url }});"></div>
       </div>
-      <h2>{{ item.name }}</h2>
-      {{ item.description|markdown }}
-    </div>
-  </a>
+      <div class="video-text">
+        <div class="type">
+          {% if item.url_of_your_video.provider_name == "YouTube" %}
+          <span class="fa fa-youtube-play"></span>
+          {% elseif item.url_of_your_video.provider_name == "Vimeo" %}
+          <span class="fa fa-vimeo-square"></span>
+          {% else %}
+          <span class="fa fa-youtube-play"></span>
+          {% endif %}
+          {{ item.url_of_your_video.provider_name }}
+        </div>
+        <h2>{{ item.name }}</h2>
+        <p>{{ item.url_of_your_video.description|truncate(150) }}</p>
+      </div>
+    </a>
+  {# VIDEO FROM API #}
+  {# VIDEO FROM API #}
+  {# VIDEO FROM API #}
+  {% else %}
+    <a href="{{ item.video_url }}" class="video-open" title="{{ item.description|markdown|striptags }}">
+      <div class="video-thumb">
+        <div class="image" style="background-image:url({{ item.thumbnail_url }});"></div>
+      </div>
+      <div class="video-text">
+        <div class="type">
+          {% if item.source == "YouTube" %}
+            <span class="fa fa-youtube-play"></span>
+          {% elseif item.source == "Vimeo" %}
+            <span class="fa fa-vimeo-square"></span>
+          {% else %}
+            <span class="fa fa-youtube-play"></span>
+          {% endif %}
+          {% if item.source %}
+            {{ item.source }}
+          {% else %}
+            Video
+          {% endif %}
+        </div>
+        <h2>{{ item.name }}</h2>
+        {{ item.description|markdown }}
+      </div>
+    </a>
+  {% endif %}
 </li>
 
