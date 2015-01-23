@@ -4261,6 +4261,14 @@ article pre {
   color: #ccc;
 }
 
+.home-feed .twitter.twitter-iframe {
+  padding: 12px 24px !important;
+  min-height: 122px;
+}
+.home-feed .twitter.twitter-iframe iframe {
+  width: 100% !important;
+}
+
 .home-feed .twitter {
   background: #fff;
   padding: 24px;
