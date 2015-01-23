@@ -1,5 +1,5 @@
 // Note, this is a bit of a fork of Swipebox for the use of this theme.
-// - CSS changed pretty drastically.
+// - CSS changed pretty drastically. Some of the markup has been changed.
 // - Builds URLs you can pass for each image/video.
 // dave.snider@gmail.com
 
@@ -41,7 +41,7 @@
 					<div id="swipebox-slider"></div>\
 					<div id="swipebox-caption"></div>\
 					<div id="swipebox-action">\
-						<a id="swipebox-close">DS</a>\
+						<a id="swipebox-close">' + window.themeInitials + '</a>\
 						<a id="swipebox-prev"></a>\
 						<a id="swipebox-next"></a>\
 					</div>\

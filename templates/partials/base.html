@@ -31,6 +31,11 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
 
+    {# Your initials get used in some of the JS. This sets it as a JS var. #}
+    <script>
+      window.themeInitials = "{{ cms.aboutme.initials }}";
+    </script>
+
     {% block head_extra %}{% endblock %}
   </head>
   <body>
