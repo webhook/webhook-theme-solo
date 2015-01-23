@@ -1,875 +1,1355 @@
 {
-  "aboutme": {
-    "controls": [
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Name",
-        "locked": true,
-        "name": "name",
-        "placeholder": "Han Solo",
-        "required": true,
-        "showInCms": true
+  "data": {
+    "aboutme": {
+      "_sort_create_date": 1421993100,
+      "_sort_last_updated": 1421993160,
+      "bio": "Han Solo, along with his friend Chewbacca, was hired by Obi-Wan Kenobi and Luke Skywalker to provide passage to Alderaan. Han boasted that his starship, the Millennium Falcon, could make the Kessel Run in less than 12 parsecs; whether that was true is unknown, but he needed the job. The smuggler was deep in debt to crime lord Jabba the Hutt, who had placed a bounty on his head. In a sit-down standoff at the Mos Eisley cantina, Han blasted Greedo, one of Jabba’s bounty hunters looking to collect a handsome sum for the Corellian. He later had a run in with the gangster himself, convincing Jabba to give him more time -- though it would cost 15% extra.\n\nThe group departed Tatooine, blasting their way out past Imperial stormtroopers who were searching for Luke’s droids. On the trip, it became clear that Han didn’t believe in the Force, saying, “There's no mystical energy field that controls my destiny.” Finally, they arrived at Alderaan -- or where Alderaan should have been. It had been completely blown away by the Empire’s Death Star, and the Millennium Falcon was soon caught in the space station’s tractor beam. On the Death Star, they rescued Princess Leia Organa -- with whom Han bickered intensely -- but lost Obi-Wan. \n\nThey escaped to Yavin 4, location of the hidden Rebel base, and delivered stolen Death Star plans to the Alliance. While the fledgling group was planning an attack on the Imperial outpost, Han collected a reward for rescuing the Princess and planned to leave -- a decision that disappointed his new friends. “I know what I’m doing,” he told Chewbacca. Toward the battle’s end, with Luke about to be blasted by Darth Vader, Han and Chewie returned in the Millennium Falcon. They cleared the TIE fighters off Luke’s tail, and he delivered a precise shot, destroying the dreaded Death Star.",
+      "bio_picture": {
+        "height": 820,
+        "resize_url": "http://lh3.ggpht.com/Y7DIRW5VQiSHODePupf_v2_zV5u-eIGrXcyGta1IRyqPyiwsAFBznKUmU8aIBah7GG8dF8cdps7e_Mtqo_UYklh5y7eing",
+        "url": "/webhook-uploads/1421992488311_star-wars-episode-vi-han-solo.jpg",
+        "width": 1920
       },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Create Date",
-        "locked": true,
-        "name": "create_date",
-        "required": true,
-        "showInCms": false
+      "create_date": "2015-01-22T22:05:00-08:00",
+      "email": "totallyfakeemailforhansolo@hansolo.com",
+      "facebook": "",
+      "github": "hansolo",
+      "homepage_hello": "Hokey religions and ancient weapons are no match for a good blaster at your side.",
+      "hometown": "A galaxy far,  far, away",
+      "initials": "HS",
+      "last_updated": "2015-01-22T22:06:00-08:00",
+      "name": "Han Solo",
+      "notable_work": [
+        {
+          "description": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a wookiee and two droids to save the universe from the Empire's world-destroying battle-station, while also attempting to rescue Princess Leia from the evil Darth Vader.",
+          "name": "A New Hope",
+          "role": "Scoundrel",
+          "time_period": "1997",
+          "url": "http://www.imdb.com/title/tt0076759/?ref_=nv_sr_2"
+        },
+        {
+          "description": "After the rebels have been brutally overpowered by the Empire on their newly established base, Luke Skywalker takes advanced Jedi training with Master Yoda, while his friends are pursued by Darth Vader as part of his plan to capture Luke.",
+          "name": "The Empire Strikes Back",
+          "role": "Scoundrel",
+          "time_period": "1980",
+          "url": "http://www.imdb.com/title/tt0080684/?ref_=fn_al_tt_2"
+        },
+        {
+          "description": "After rescuing Han Solo from the palace of Jabba the Hutt, the rebels attempt to destroy the second Death Star, while Luke struggles to make Vader shake off of the dark side of the Force.",
+          "name": "Return of the Jedi",
+          "role": "General",
+          "time_period": "1983",
+          "url": "http://www.imdb.com/title/tt0086190/?ref_=fn_al_tt_3"
+        }
+      ],
+      "picture_of_you": {
+        "height": 292,
+        "resize_url": "http://lh3.ggpht.com/moGmBkpNSaCwN7zL61C_5CgsiH-hpvvA5pzSrUDVY1k23hF9jXl-ahxYg7JSCLpfSfpaGPuockYU4TUnpU_mppWrLX2WVQ",
+        "size": 68886,
+        "type": "image/png",
+        "url": "/webhook-uploads/1421992318614_avatar.png",
+        "width": 292
       },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Last Updated",
-        "locked": true,
-        "name": "last_updated",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "instruction",
-        "help": "This information will show up on your homepage as well as in your site's header.",
-        "hidden": false,
-        "label": "Homepage",
-        "locked": false,
-        "name": "homepage",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "image",
-        "help": "Should be squarish. We'll crop this down to a  circle for your homepage.",
-        "hidden": false,
-        "label": "Picture of you",
-        "locked": false,
-        "name": "picture_of_you",
-        "required": false,
-        "showInCms": true
-      },
-      {
-        "controlType": "textfield",
-        "help": "We'll use your initials to build a small circular logo.",
-        "hidden": false,
-        "label": "Initials",
-        "locked": false,
-        "name": "initials",
-        "placeholder": "HS",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "markdown",
-        "help": "This is a short intro to welcome users to your homepage. Keep it short.",
-        "hidden": false,
-        "label": "Homepage hello",
-        "locked": false,
-        "name": "homepage_hello",
-        "placeholder": "",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "instruction",
-        "help": "The below information will show up on your About Me page.",
-        "hidden": false,
-        "label": "About me page",
-        "locked": false,
-        "name": "about_me_page",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Hometown",
-        "locked": false,
-        "name": "hometown",
-        "placeholder": "A galaxy far, far away",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "image",
-        "help": "A largish, wide image of you. Will show up on your about page.",
-        "hidden": false,
-        "label": "Bio picture",
-        "locked": false,
-        "name": "bio_picture",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "markdown",
-        "help": "Tell us who you are.",
-        "hidden": false,
-        "label": "Bio",
-        "locked": false,
-        "name": "bio",
-        "placeholder": "",
-        "required": false,
-        "showInCms": true
-      },
-      {
-        "controlType": "email",
-        "hidden": false,
-        "label": "Email",
-        "locked": false,
-        "name": "email",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "instruction",
-        "help": "If you'd like to link our to your other online personas, simply add the username for the service below.",
-        "hidden": false,
-        "label": "Online personas",
-        "locked": false,
-        "name": "online_personas",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Facebook",
-        "locked": false,
-        "name": "facebook",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Github",
-        "locked": false,
-        "name": "github",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Instagram",
-        "locked": false,
-        "name": "instagram",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Reddit",
-        "locked": false,
-        "name": "reddit",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Twitter",
-        "locked": false,
-        "name": "twitter",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Steam",
-        "locked": false,
-        "name": "steam",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Vimeo",
-        "locked": false,
-        "name": "vimeo",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Youtube",
-        "locked": false,
-        "name": "youtube",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "instruction",
-        "help": "All of this is totally optional. But we can build out a mini-resume for you if you want to fill out the stuff below.",
-        "hidden": false,
-        "label": "Mini Resume",
-        "locked": false,
-        "name": "mini_resume",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "markdown",
-        "hidden": false,
-        "label": "Resume intro",
-        "locked": false,
-        "name": "resume_intro",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "file",
-        "help": "Can be a PDF or Doc or whatever you want to use.",
-        "hidden": false,
-        "label": "Formal resume",
-        "locked": false,
-        "name": "formal_resume",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "grid",
-        "controls": [
+      "preview_url": "c18b6458-630f-c60d-c2d6-727001bab968",
+      "reddit": "hansolo",
+      "resume_intro": "I'm a pilot with experience in getting goods from one part of the galaxy to the other. I once made the Kessel Run in 12 Parsecs. Lately I'm looking for something with a little more adventure. Saving a princess perhaps.",
+      "steam": "hansolo",
+      "twitter": "hansolo",
+      "youtube": "hansolo"
+    },
+    "gallery": {
+      "-JgKUZ115I0R3OjzZ4Vk": {
+        "_sort_create_date": 1421994720,
+        "_sort_last_updated": 1421994900,
+        "_sort_publish_date": 1421994720,
+        "create_date": "2015-01-22T22:32:00-08:00",
+        "description": "Just some pics of me hanging out, looking cool. My favorite one is of me and my buddy Lando. That guy, can you believe he turned us in to Darth Vadar? He said he didn't have any choice.",
+        "images": [
           {
-            "controlType": "textfield",
-            "help": "Name of the project or place of work.",
-            "hidden": false,
-            "label": "Name",
-            "locked": false,
-            "name": "name",
-            "placeholder": "",
-            "required": true,
-            "showInCms": true
+            "caption": "That Billy Dee, what a jokester.",
+            "image": {
+              "height": 1972,
+              "resize_url": "http://lh4.ggpht.com/mt0k0DYsac_vka7sYIFFFDRgJYrc9OOUBd4saUqC3V_isPy_6bIoE2u49yuGzJdGcrgzYgXFY2tLEn4FYbMiJykj3yQ",
+              "url": "/webhook-uploads/1421994607201_lando-calrissian-and-harrison-ford-han-solo-in-star-wars-the-empire-strikes-back.jpg",
+              "width": 2952
+            }
           },
           {
-            "controlType": "textfield",
-            "help": "You can write in whatever time format you want.",
-            "hidden": false,
-            "label": "Time period",
-            "locked": false,
-            "name": "time_period",
-            "placeholder": "May 2012 - Present",
-            "required": true,
-            "showInCms": false
+            "image": {
+              "height": 886,
+              "resize_url": "http://lh5.ggpht.com/12huRkUCOlJN_DsCSoPN6jYNw2QgHJf7UDVKn47WFNj3DBu_YZchmA4amgOkJcerOJolsK_xIfItu06NNeDDaK0RR0E",
+              "url": "/webhook-uploads/1421994638081_2013-02-15-han_solo-e1360948342857.jpg",
+              "width": 1458
+            }
           },
           {
-            "controlType": "textfield",
-            "help": "What was your role or title?",
-            "hidden": false,
-            "label": "Role",
-            "locked": false,
-            "name": "role",
-            "required": false,
-            "showInCms": true
+            "caption": "",
+            "image": {
+              "height": 1200,
+              "resize_url": "http://lh6.ggpht.com/1Cn_7w6us2oXz-oDJeASzgeQ10lGq4op-0RiVBYzPTF4GEet_Eclt3jIOIaxMnfsdkXzYgHzlOXAGT1gkq7EkDnXeFzg",
+              "url": "/webhook-uploads/1421994653186_Original-Trilogy-Han-Solo-07.jpg",
+              "width": 1600
+            }
           },
           {
-            "controlType": "url",
-            "help": "Optional link if needed.",
-            "hidden": false,
-            "label": "URL",
-            "locked": false,
-            "name": "url",
-            "required": false,
-            "showInCms": false
+            "image": {
+              "height": 768,
+              "resize_url": "http://lh4.ggpht.com/dSkRVbj1huLrd85lQgTbGAohGwkbB1cvKro-PZd2scqRKZb4sowe7UjEB2arhVQtHvDq9OXV_c22zXIE6IyKWJKZnOc",
+              "url": "/webhook-uploads/1421994670510_starwarschewbacca-dan-han-solo-ikon-dalam-film-star-wars094.jpeg",
+              "width": 1024
+            }
           },
           {
-            "controlType": "markdown",
-            "hidden": false,
-            "label": "Description",
-            "locked": false,
-            "name": "description",
-            "required": false,
-            "showInCms": true
+            "image": {
+              "height": 820,
+              "resize_url": "http://lh5.ggpht.com/p-YyqlJpUnt-ANITTZBfhOgWTbqPOkgHmwIuuxWtfVR7n8SGWRnyGpb6yEIRnm-tCxZr3NzFKP7Z8zaxDhYqyO-RZac",
+              "url": "/webhook-uploads/1421994682398_star-wars-episode-vi-han-solo.jpg",
+              "width": 1920
+            }
+          },
+          {
+            "image": {
+              "height": 778,
+              "resize_url": "http://lh6.ggpht.com/0WipEb1iLOKRYumz7U4JYSzDEkM3GHsK06IJgSv7Xb7FYMUnhbCpOeXnowBYyFIH7m2GKd4UQHDl-IQ9dxOIh77TwdY",
+              "url": "/webhook-uploads/1421994708476_han-solo.jpg",
+              "width": 1200
+            }
+          },
+          {
+            "image": {
+              "height": 816,
+              "resize_url": "http://lh4.ggpht.com/waF_peJ7maSntcDoZaNJURWEfSyxNQo3GJ7rWUeH8qwgZMR1ymQeKo-hjbCo41x3NWWj_tK4MWeQzw05dab4JfYjymz0cw",
+              "url": "/webhook-uploads/1421994730601_HanJabbaDockingBay94.png",
+              "width": 1918
+            }
+          },
+          {
+            "image": {
+              "height": 1200,
+              "resize_url": "http://lh3.ggpht.com/5fB8DWeToi5cdK-cbKDz9HytYulIIf08zihOiXU177VTI0EzSal1NRzNTqAmrM8MhbvhsGNUhpgpcvl3e--8NhRpdBcm",
+              "url": "/webhook-uploads/1421994741748_original-trilogy-han-solo-06-first-look-han-solo-costume-for-star-wars-7-revealed.jpeg%3Fwidth%3D1600%26height%3D1200",
+              "width": 1600
+            }
+          },
+          {
+            "image": {
+              "height": 877,
+              "resize_url": "http://lh4.ggpht.com/hT5Qy3xFOaV7zM9nK7Ny7gMAJIWf9OOD3yRgn48yTsfO8mB0WJYIVxQfWV6zjTkeCJWmzOoXIrcU0Ra2zNokFKUfAV4",
+              "url": "/webhook-uploads/1421994762487_image_604cd112.jpeg%3Fheight%3D877%26width%3D1560%26x%3D0%26y%3D0",
+              "width": 1560
+            }
           }
         ],
-        "help": "You can drag and drop to sort objects.",
-        "hidden": false,
-        "label": "Notable work",
-        "locked": false,
-        "name": "notable_work",
-        "placeholder": "",
-        "required": false,
-        "showInCms": false
+        "isDraft": false,
+        "last_updated": "2015-01-22T22:35:00-08:00",
+        "name": "Portraits of me",
+        "preview_url": "400506db-e5b7-c084-0fea-078310abed8b",
+        "publish_date": "2015-01-22T22:32:00-08:00"
       },
-      {
-        "controlType": "textfield",
-        "hidden": true,
-        "label": "Preview URL",
-        "locked": true,
-        "name": "preview_url",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": true,
-        "label": "Slug",
-        "locked": true,
-        "name": "slug",
-        "required": false,
-        "showInCms": false
-      }
-    ],
-    "name": "about me",
-    "oneOff": true,
-    "oneOffMD5": "9cc7e28839b916efd9ec9c4d371cfb6a"
-  },
-  "article": {
-    "controls": [
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Name",
-        "locked": true,
-        "name": "name",
-        "placeholder": "Title of your article",
-        "required": true,
-        "showInCms": true
-      },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Create Date",
-        "locked": true,
-        "name": "create_date",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Last Updated",
-        "locked": true,
-        "name": "last_updated",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Publish Date",
-        "locked": true,
-        "name": "publish_date",
-        "required": false,
-        "showInCms": true
-      },
-      {
-        "controlType": "markdown",
-        "help": "The short description of this article.",
-        "hidden": false,
-        "label": "Deck",
-        "locked": false,
-        "name": "deck",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "markdown",
-        "help": "For image alignment, use [full],[center],[left] and [right]. Example `![center](myimage.jpg)`",
-        "hidden": false,
-        "label": "Body",
-        "locked": false,
-        "name": "body",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "image",
-        "help": "Add an image ONLY if you want to use a featured\"Big Hero\" image at the top.",
-        "hidden": false,
-        "label": "Optional big hero image.",
-        "locked": false,
-        "name": "optional_big_hero_image",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": true,
-        "label": "Preview URL",
-        "locked": true,
-        "name": "preview_url",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": true,
-        "label": "Slug",
-        "locked": true,
-        "name": "slug",
-        "required": false,
-        "showInCms": false
-      }
-    ],
-    "individualMD5": "a2f96de4e8bc563e61f7b9787e6c295a",
-    "listMD5": "1ff53b61c46576f7e3336e1d07a8ca3f",
-    "name": "article",
-    "oneOff": false
-  },
-  "gallery": {
-    "controls": [
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Name",
-        "locked": true,
-        "name": "name",
-        "placeholder": "Title of your gallery",
-        "required": true,
-        "showInCms": true
-      },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Create Date",
-        "locked": true,
-        "name": "create_date",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Last Updated",
-        "locked": true,
-        "name": "last_updated",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Publish Date",
-        "locked": true,
-        "name": "publish_date",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "markdown",
-        "hidden": false,
-        "label": "Description",
-        "locked": false,
-        "name": "description",
-        "required": false,
-        "showInCms": true
-      },
-      {
-        "controlType": "grid",
-        "controls": [
+      "-JgKWPcHdjyAXDUE7BGE": {
+        "_sort_create_date": 1421995200,
+        "_sort_last_updated": 1421995260,
+        "_sort_publish_date": 1421993700,
+        "create_date": "2015-01-22T22:40:00-08:00",
+        "description": "Someone told me about this movie Spaceballs. I guess they thought it was funny. I dunno, Bill Pullman? You think he looks like me?",
+        "images": [
           {
-            "controlType": "image",
-            "hidden": false,
-            "label": "Image",
-            "locked": false,
-            "name": "image",
-            "required": false,
-            "showInCms": true
+            "image": {
+              "height": 1080,
+              "resize_url": "http://lh5.ggpht.com/YRgE3jh3pu7-Gl3p7sc_RkcU6SrwEuewjAYaZFsEf_RTOWN2DTR2YqIJuvWdI0nSX1pwW7s_jRLLMMAiOl3yH8NU4gnzRg",
+              "url": "/webhook-uploads/1421995181063_spaceballs-darkhelmet.jpeg",
+              "width": 1920
+            }
           },
           {
-            "controlType": "markdown",
-            "hidden": false,
-            "label": "Caption",
-            "locked": false,
-            "name": "caption",
-            "required": false,
-            "showInCms": true
+            "image": {
+              "height": 745,
+              "resize_url": "http://lh6.ggpht.com/DtpWslG32m6RH7mR9f5SIaNCd0_Jar5824KAO7HESc5T3wOjAdVFztXH48cE0Gi77Dq0jEXc2lW4ZpsszTGkDqov3lgA4w",
+              "url": "/webhook-uploads/1421995109511_SpaceballsEagle5_0021_Layer1.jpg",
+              "width": 1385
+            }
+          },
+          {
+            "image": {
+              "height": 693,
+              "resize_url": "http://lh5.ggpht.com/IouECVC-TD99uRpNaZ8vn1T85vd0L16rl-qpkjst_qzc-fdCMpqfqFeuXrPelv2ZAZyBsGngyrp1sFA56G-bNj0rpGy-vA",
+              "url": "/webhook-uploads/1421995125690_8f5b2ee35fa642229924f326a7b05a4e.png",
+              "width": 1280
+            }
+          },
+          {
+            "image": {
+              "height": 696,
+              "resize_url": "http://lh5.ggpht.com/haMUahuBLPjLTrT8qvatWAtd-cMmHhCRRdHYKM33fGaa38q5MMfk3x_nvlOelSBFzL4LPveqaaf4iPW7IOu4PHjPorc-",
+              "url": "/webhook-uploads/1421995140755_Spaceballs%2BSchwarts.png",
+              "width": 1280
+            }
+          },
+          {
+            "image": {
+              "height": 720,
+              "resize_url": "http://lh3.ggpht.com/VFIb9G3wJ0kn5px2FypUsw0FFOQLt5gh8jhag9DW_VL9PIhXRpQLW78fC1z6u7iSljTg9bjyhakmJoyTK4WuI0gXJY-5",
+              "url": "/webhook-uploads/1421995154573_spaceballs.jpg",
+              "width": 1280
+            }
+          },
+          {
+            "image": {
+              "height": 1080,
+              "resize_url": "http://lh6.ggpht.com/gSNOadgIoGz-a4EmCe5s0BvkIws3Kq-2b-_WQPxvPRghnmUlKSA5_7UtSZiz2DPFUVATPdjJUhvQJLD8c1aHsavvN5w",
+              "url": "/webhook-uploads/1421995170803_spaceballs_image_2.jpg",
+              "width": 1920
+            }
+          },
+          {
+            "image": {
+              "height": 1082,
+              "resize_url": "http://lh6.ggpht.com/eO5ZF94Bpx-DcRuNPqtmBaEepiY_amXb5MDJmDZ4EGzi_IPtIwfL-4Fs-oZx2ieFnNH9qeOqOQK7H_XzUI6Mul1d5X0p",
+              "url": "/webhook-uploads/1421995197393_spaceballs-john-candy-bill-pullman-daphne-zuniga-19871.png",
+              "width": 2004
+            }
+          },
+          {
+            "image": {
+              "height": 704,
+              "resize_url": "http://lh4.ggpht.com/IaujpbEHE7hptuln3Z5QOih_ZE4GZA4fFdFI7PhQDDIuXvQvg4GN711ZfLkjyKGeEPlokvQ0ZziF7rcudJpvFNB1V-kM",
+              "url": "/webhook-uploads/1421995253131_maxresdefault.jpg",
+              "width": 1366
+            }
           }
         ],
-        "help": "Images can be reordered by dragging. The first image in the list will be the one used for click-throughs.",
-        "hidden": false,
-        "label": "Images",
-        "locked": false,
-        "name": "images",
-        "required": false,
-        "showInCms": true
-      },
-      {
-        "controlType": "textfield",
-        "hidden": true,
-        "label": "Preview URL",
-        "locked": true,
-        "name": "preview_url",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": true,
-        "label": "Slug",
-        "locked": true,
-        "name": "slug",
-        "required": false,
-        "showInCms": false
+        "last_updated": "2015-01-22T22:41:00-08:00",
+        "name": "Spaceballs",
+        "preview_url": "8a9d9c35-c2e8-5aa9-603d-2127033cd4e7",
+        "publish_date": "2015-01-22T22:15:00-08:00"
       }
-    ],
-    "individualMD5": "aa8a9828a589b28fd819bc31f7640c1c",
-    "listMD5": "a047b6f0921cd0342bbddffb6833803c",
-    "name": "gallery",
-    "oneOff": false
+    },
+    "link": {
+      "-JgKRC_yuYQYKYPyPVjx": {
+        "_sort_create_date": 1421993880,
+        "_sort_last_updated": 1421993880,
+        "_sort_publish_date": 1421993880,
+        "create_date": "2015-01-22T22:18:00-08:00",
+        "description": "Han Solo: Lady's Man for All Seasons is an essay by Sherry Magee about the appeal of Han Solo and his portrayal in fiction that has a romantic focus. In it, the author discusses a number of current stories.",
+        "last_updated": "2015-01-22T22:18:00-08:00",
+        "name": "Han Solo: Lay's Man for All Seasons",
+        "preview_url": "35f42081-4c46-f305-df21-290955417338",
+        "publish_date": "2015-01-22T22:18:00-08:00",
+        "url": "http://fanlore.org/wiki/Han_Solo:_Lady's_Man_for_All_Seasons"
+      },
+      "-JgKRVkSd3-8qpy-viRQ": {
+        "_sort_create_date": 1421993940,
+        "_sort_last_updated": 1421993940,
+        "_sort_publish_date": 1421993940,
+        "create_date": "2015-01-22T22:19:00-08:00",
+        "description": "Essayist Ashley Cardiff makes an astute observation about Star Wars in her new book Night Terrors. In an essay titled “Nightmares,” she points out how, as children, we go from loving Luke Skywalker to loving Han Solo. ",
+        "last_updated": "2015-01-22T22:19:00-08:00",
+        "name": "5 Reasons Why Han Solo is the Most Realistic Person in Star Wars",
+        "preview_url": "c80f545a-11b6-7769-09fd-99905e9f4c91",
+        "publish_date": "2015-01-22T22:19:00-08:00",
+        "url": "http://www.tor.com/blogs/2013/08/5-reasons-why-han-solo-is-the-most-realistic-person-in-star-wars"
+      },
+      "-JgKRjRrDt6ErWz-SjPc": {
+        "_sort_create_date": 1421994000,
+        "_sort_last_updated": 1421995380,
+        "_sort_publish_date": 1421994300,
+        "create_date": "2015-01-22T22:20:00-08:00",
+        "description": "\"Han shot first\" is a phrase referring to a controversial change made to a scene in Star Wars (1977), in which Han Solo (Harrison Ford) is confronted by the bounty hunter Greedo (Paul Blake) in the Mos Eisley cantina.",
+        "last_updated": "2015-01-22T22:43:00-08:00",
+        "name": "Han Shot First",
+        "preview_url": "0db2ace2-18e0-1fd0-9238-2cd0499ac880",
+        "publish_date": "2015-01-22T22:25:00-08:00",
+        "url": "http://en.wikipedia.org/wiki/Han_shot_first"
+      }
+    },
+    "twitter": {
+      "_sort_create_date": 1421994420,
+      "_sort_created_at": 1421395200,
+      "_sort_last_updated": 1421994420,
+      "create_date": "2015-01-22T22:27:00-08:00",
+      "created_at": "2015-01-16T00:00:00-08:00",
+      "last_updated": "2015-01-22T22:27:00-08:00",
+      "name": "hansolo",
+      "preview_url": "8f998ef2-bf7d-9d09-248c-275c1b96e948",
+      "text": "I just realized that I'm probably going to die in the sequel trilogy.",
+      "url": "https://twitter.com/hansolo/status/556211217081966592",
+      "user_profile_image_url": "https://pbs.twimg.com/profile_images/340648699/han_twitter_400x400.jpg",
+      "user_url": "https://twitter.com/hansolo"
+    },
+    "video": {
+      "-JgKOvMBMZjM8I1GGvYW": {
+        "_sort_create_date": 1421993280,
+        "_sort_last_updated": 1421995320,
+        "_sort_publish_date": 1421995320,
+        "create_date": "2015-01-22T22:08:00-08:00",
+        "last_updated": "2015-01-22T22:42:00-08:00",
+        "name": "Adam Savage's One Day Builds: Han Solo's DL-44 Blaster",
+        "preview_url": "1b2914a0-a439-2c2a-a33a-0b12daa4cd83",
+        "publish_date": "2015-01-22T22:42:00-08:00",
+        "url_of_your_video": {
+          "author_name": "Tested",
+          "author_url": "http://www.youtube.com/user/testedcom",
+          "description": "Adam has constructed a Blade Runner pistol and Indiana Jones' revolver, but not Han Solo's blaster from Star Wars A New Hope. Fortunately, the makers at the Replica Prop Forum have thoroughly researched the details of this prop and have faithfully recreated the components needed to build it.",
+          "height": 360,
+          "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=http%3A%2F%2Fwww.youtube.com%2Fembed%2F4sCReGjfZ_A%3Ffeature%3Doembed&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D4sCReGjfZ_A&image=http%3A%2F%2Fi.ytimg.com%2Fvi%2F4sCReGjfZ_A%2Fhqdefault.jpg&key=a2b00c0dc25742f1b1421c7d3ac87d10&type=text%2Fhtml&schema=youtube\" width=\"640\" height=\"360\" scrolling=\"no\" frameborder=\"0\" allowfullscreen></iframe>",
+          "original_url": "https://www.youtube.com/watch?v=4sCReGjfZ_A",
+          "provider_name": "YouTube",
+          "provider_url": "http://www.youtube.com/",
+          "thumbnail_height": 360,
+          "thumbnail_url": "http://i.ytimg.com/vi/4sCReGjfZ_A/hqdefault.jpg",
+          "thumbnail_width": 480,
+          "title": "Adam Savage's One Day Builds: Han Solo's DL-44 Blaster",
+          "type": "video",
+          "url": "http://www.youtube.com/watch?v=4sCReGjfZ_A",
+          "version": "1.0",
+          "width": 640
+        }
+      },
+      "-JgKPKez4BTUGVrMolE3": {
+        "_sort_create_date": 1421993400,
+        "_sort_last_updated": 1421993400,
+        "_sort_publish_date": 1421993400,
+        "create_date": "2015-01-22T22:10:00-08:00",
+        "last_updated": "2015-01-22T22:10:00-08:00",
+        "name": "9 Things You (Probably) Didn't Know About Han Solo",
+        "preview_url": "c74b55e0-5d14-8e38-85ab-589a52f2e85c",
+        "publish_date": "2015-01-22T22:10:00-08:00",
+        "url_of_your_video": {
+          "author_name": "IGN",
+          "author_url": "http://www.youtube.com/user/IGNentertainment",
+          "description": "We explore the lesser known history of the captain of the Millennium Falcon himself! Here are nine things you probably didn't know about Han Solo...",
+          "height": 360,
+          "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=http%3A%2F%2Fwww.youtube.com%2Fembed%2FuGrzs8yrxuo%3Ffeature%3Doembed&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DuGrzs8yrxuo&image=http%3A%2F%2Fi.ytimg.com%2Fvi%2FuGrzs8yrxuo%2Fhqdefault.jpg&key=a2b00c0dc25742f1b1421c7d3ac87d10&type=text%2Fhtml&schema=youtube\" width=\"640\" height=\"360\" scrolling=\"no\" frameborder=\"0\" allowfullscreen></iframe>",
+          "original_url": "https://www.youtube.com/watch?v=uGrzs8yrxuo",
+          "provider_name": "YouTube",
+          "provider_url": "http://www.youtube.com/",
+          "thumbnail_height": 360,
+          "thumbnail_url": "http://i.ytimg.com/vi/uGrzs8yrxuo/hqdefault.jpg",
+          "thumbnail_width": 480,
+          "title": "9 Things You (Probably) Didn't Know About Han Solo",
+          "type": "video",
+          "url": "http://www.youtube.com/watch?v=uGrzs8yrxuo",
+          "version": "1.0",
+          "width": 640
+        }
+      },
+      "-JgKPg3xzGIK03BVRh4A": {
+        "_sort_create_date": 1421993460,
+        "_sort_last_updated": 1421993460,
+        "_sort_publish_date": 1421993460,
+        "create_date": "2015-01-22T22:11:00-08:00",
+        "last_updated": "2015-01-22T22:11:00-08:00",
+        "name": "Kinect Star Wars \"I'm Han Solo\" Dancing",
+        "preview_url": "4a3ac5c4-a6a3-6272-a6d4-c22deb3b6ac5",
+        "publish_date": "2015-01-22T22:11:00-08:00",
+        "url_of_your_video": {
+          "author_name": "CVG",
+          "author_url": "http://www.youtube.com/user/cvg",
+          "description": "Kinect Star Wars \"I'm Han Solo\" Dancing. This is a play-through of \"I'm Han Solo\" in Kinect Star Wars Dancing. The original lyrics to Jason Derulo's Ridin' Solo have been changed to fit into the Star Wars universe. Good idea? Will you be picking this up?",
+          "height": 360,
+          "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=http%3A%2F%2Fwww.youtube.com%2Fembed%2Flg_FoEy8T_A%3Ffeature%3Doembed&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dlg_FoEy8T_A&image=http%3A%2F%2Fi.ytimg.com%2Fvi%2Flg_FoEy8T_A%2Fhqdefault.jpg&key=a2b00c0dc25742f1b1421c7d3ac87d10&type=text%2Fhtml&schema=youtube\" width=\"640\" height=\"360\" scrolling=\"no\" frameborder=\"0\" allowfullscreen></iframe>",
+          "original_url": "https://www.youtube.com/watch?v=lg_FoEy8T_A",
+          "provider_name": "YouTube",
+          "provider_url": "http://www.youtube.com/",
+          "thumbnail_height": 360,
+          "thumbnail_url": "http://i.ytimg.com/vi/lg_FoEy8T_A/hqdefault.jpg",
+          "thumbnail_width": 480,
+          "title": "Kinect Star Wars \"I'm Han Solo\" Dancing",
+          "type": "video",
+          "url": "http://www.youtube.com/watch?v=lg_FoEy8T_A",
+          "version": "1.0",
+          "width": 640
+        }
+      },
+      "-JgKQ-YcP1tLyU-lgO0J": {
+        "_sort_create_date": 1421993520,
+        "_sort_last_updated": 1421993580,
+        "_sort_publish_date": 1421993520,
+        "create_date": "2015-01-22T22:12:00-08:00",
+        "last_updated": "2015-01-22T22:13:00-08:00",
+        "name": "Han Solo Tribute",
+        "preview_url": "4aeb7fe6-ed70-c94f-5b44-069a0b488ac1",
+        "publish_date": "2015-01-22T22:12:00-08:00",
+        "url_of_your_video": {
+          "author_name": "compleetlyrandom",
+          "author_url": "http://www.youtube.com/user/compleetlyrandom",
+          "description": "No copyright infringement intended. Just a fanvid tribute video with sole means to entertain, not to make profit. Video clips owned by Lucas Film Ltd. (Star Wars Episode IV, V, and VI). Music owned by DGC/Interscope (Weezer \"The Greatest Man that Ever Lived\")",
+          "height": 360,
+          "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=http%3A%2F%2Fwww.youtube.com%2Fembed%2FL1QKNI8O9dE%3Ffeature%3Doembed&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DL1QKNI8O9dE&image=http%3A%2F%2Fi.ytimg.com%2Fvi%2FL1QKNI8O9dE%2Fhqdefault.jpg&key=a2b00c0dc25742f1b1421c7d3ac87d10&type=text%2Fhtml&schema=youtube\" width=\"640\" height=\"360\" scrolling=\"no\" frameborder=\"0\" allowfullscreen></iframe>",
+          "original_url": "https://www.youtube.com/watch?v=L1QKNI8O9dE",
+          "provider_name": "YouTube",
+          "provider_url": "http://www.youtube.com/",
+          "thumbnail_height": 360,
+          "thumbnail_url": "http://i.ytimg.com/vi/L1QKNI8O9dE/hqdefault.jpg",
+          "thumbnail_width": 480,
+          "title": "Han Solo Tribute",
+          "type": "video",
+          "url": "http://www.youtube.com/watch?v=L1QKNI8O9dE",
+          "version": "1.0",
+          "width": 640
+        }
+      },
+      "-JgKS7WPZKj6LWCeYO1H": {
+        "_sort_create_date": 1421994120,
+        "_sort_last_updated": 1421994120,
+        "_sort_publish_date": 1421994120,
+        "create_date": "2015-01-22T22:22:00-08:00",
+        "last_updated": "2015-01-22T22:22:00-08:00",
+        "name": "Star Wars: The Han Solo Affair",
+        "preview_url": "61510ebe-646a-259a-5fcc-fc00625a2400",
+        "publish_date": "2015-01-22T22:22:00-08:00",
+        "url_of_your_video": {
+          "author_name": "Spite Your Face",
+          "author_url": "http://vimeo.com/spiteyourface",
+          "description": "Viral short, produced for LEGO and Lucasfilm to promote Star Wars Episode II: Attack of the Clones. Stop-motion animation. Produced 2002 At time of release, this was only the second time in Star Wars history that a short film had been produced under license, preceding the Clone Wars shorts, and following the Boba Fett cartoon from the Star Wars Holiday Special, way back in 1977.",
+          "height": 256,
+          "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=http%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F22419551&src_secure=1&url=http%3A%2F%2Fvimeo.com%2F22419551&image=http%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F196454737_640.jpg&key=a2b00c0dc25742f1b1421c7d3ac87d10&type=text%2Fhtml&schema=vimeo\" width=\"640\" height=\"256\" scrolling=\"no\" frameborder=\"0\" allowfullscreen></iframe>",
+          "original_url": "https://vimeo.com/22419551",
+          "provider_name": "Vimeo",
+          "provider_url": "https://vimeo.com/",
+          "thumbnail_height": 360,
+          "thumbnail_url": "http://i.vimeocdn.com/video/196454737_640.jpg",
+          "thumbnail_width": 640,
+          "title": "Star Wars: The Han Solo Affair",
+          "type": "video",
+          "version": "1.0",
+          "width": 640
+        }
+      },
+      "-JgKSTTjhWsdnAI-flmw": {
+        "_sort_create_date": 1421994180,
+        "_sort_last_updated": 1421994180,
+        "_sort_publish_date": 1421994180,
+        "create_date": "2015-01-22T22:23:00-08:00",
+        "last_updated": "2015-01-22T22:23:00-08:00",
+        "name": "The Trial of Han Solo",
+        "preview_url": "061155cd-edc1-0688-3fd9-c70a53dc674a",
+        "publish_date": "2015-01-22T22:23:00-08:00",
+        "url_of_your_video": {
+          "author_name": "paul francis sanchez yates",
+          "author_url": "http://vimeo.com/oniongod",
+          "description": "Clips from this were used in the beautiful documentary: People vs. George Lucas...A jape...made at AFI",
+          "height": 360,
+          "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=http%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F12868083&src_secure=1&url=http%3A%2F%2Fvimeo.com%2F12868083&image=http%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F72945288_640.jpg&key=a2b00c0dc25742f1b1421c7d3ac87d10&type=text%2Fhtml&schema=vimeo\" width=\"640\" height=\"360\" scrolling=\"no\" frameborder=\"0\" allowfullscreen></iframe>",
+          "original_url": "https://vimeo.com/12868083",
+          "provider_name": "Vimeo",
+          "provider_url": "https://vimeo.com/",
+          "thumbnail_height": 360,
+          "thumbnail_url": "http://i.vimeocdn.com/video/72945288_640.jpg",
+          "thumbnail_width": 640,
+          "title": "THE TRIAL OF HAN SOLO",
+          "type": "video",
+          "version": "1.0",
+          "width": 640
+        }
+      },
+      "-JgKSlXm3fXpWIuf0wc3": {
+        "_sort_create_date": 1421994300,
+        "_sort_last_updated": 1421994300,
+        "_sort_publish_date": 1421994300,
+        "create_date": "2015-01-22T22:25:00-08:00",
+        "last_updated": "2015-01-22T22:25:00-08:00",
+        "name": "Star Wars the Musical",
+        "preview_url": "95165237-86a6-55f2-3f07-16a7771908f9",
+        "publish_date": "2015-01-22T22:25:00-08:00",
+        "url_of_your_video": {
+          "author_name": "Funny Farm Films",
+          "author_url": "http://vimeo.com/funnyfarmfilms",
+          "description": "Recorded on May 25th, 1996 at Palos Verdes Peninsula High School.",
+          "height": 480,
+          "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=http%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F21995539&src_secure=1&url=http%3A%2F%2Fvimeo.com%2F21995539&image=http%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F142031939_640.jpg&key=a2b00c0dc25742f1b1421c7d3ac87d10&type=text%2Fhtml&schema=vimeo\" width=\"640\" height=\"480\" scrolling=\"no\" frameborder=\"0\" allowfullscreen></iframe>",
+          "original_url": "https://vimeo.com/21995539",
+          "provider_name": "Vimeo",
+          "provider_url": "https://vimeo.com/",
+          "thumbnail_height": 480,
+          "thumbnail_url": "http://i.vimeocdn.com/video/142031939_640.jpg",
+          "thumbnail_width": 640,
+          "title": "Star Wars the Musical: Act 2, Part 3",
+          "type": "video",
+          "version": "1.0",
+          "width": 640
+        }
+      }
+    }
   },
-  "link": {
-    "controls": [
-      {
-        "controlType": "textfield",
-        "help": "The title of the page you're linking to.",
-        "hidden": false,
-        "label": "Name",
-        "locked": true,
-        "name": "name",
-        "placeholder": "Title of the page.",
-        "required": true,
-        "showInCms": true
-      },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Create Date",
-        "locked": true,
-        "name": "create_date",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Last Updated",
-        "locked": true,
-        "name": "last_updated",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Publish Date",
-        "locked": true,
-        "name": "publish_date",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "instruction",
-        "help": "Set up a Zapier task to automatically add links from your [Delicious](https://delicious.com/) or [Pinboard](https://pinboard.in) accounts. You can restrict it to only a certain tag (like \"to_website\" or \"share\"). [Here are some 5-minute instructions to set it up](http://solo.webhook.org/setup/).\n\nYou can of course manually add a new link to your site using the below fields.",
-        "hidden": false,
-        "label": "Optional: Link up your Delicious or Pinboard account",
-        "locked": false,
-        "name": "optional_link_up_your_delicious_or_pinboard_account",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "url",
-        "help": "",
-        "hidden": false,
-        "label": "URL",
-        "locked": false,
-        "name": "url",
-        "placeholder": "http://www.starwars.com",
-        "required": false,
-        "showInCms": true
-      },
-      {
-        "controlType": "markdown",
-        "hidden": false,
-        "label": "Description",
-        "locked": false,
-        "name": "description",
-        "required": false,
-        "showInCms": true
-      },
-      {
-        "controlType": "textfield",
-        "hidden": true,
-        "label": "Preview URL",
-        "locked": true,
-        "name": "preview_url",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": true,
-        "label": "Slug",
-        "locked": true,
-        "name": "slug",
-        "required": false,
-        "showInCms": false
-      }
-    ],
-    "individualMD5": "feff62257d7b77cfc48a586c3295cbda",
-    "listMD5": "e275cb500c66f9c24131dadb7b7cfa91",
-    "name": "Link",
-    "oneOff": false
+  "settings": {
+    "general": {
+      "site_message": "# Webhook solo blogger theme\n\nThis theme is meant to be used primarily by solo bloggers looking to mix in some videos, photos and links from around the web. To make it really awesome, you can **optionally** set up auto-importing so that it passively adds content to your stream.\n\n## How to set up auto-importing (optional).\n\n<div class=\"wy-alert\">\nSetting this up requires no code experience. You just need to follow the instructions and be careful that you type in things exactly as shown. It should take you about 15 minutes if you've never done anything like this before.\n</div>\n\nBelow is a brief guide to setting up your site to auto-import content from your other social services as you post to them. It's only requirement is that you set up a free [Zapier](http://www.zapier.com) account. You'll also need your Webhook API Key, which is provided in your [backups and data page](/)\n\n### 1. Create a free Zapier account.\n\n[Zapier](http://www.zapier.com) is a service that allows you to link one service (like YouTube) to another (in this case Webhook). Their free plan allows for 5 services to be attached along with 150 data-pushes. This should be enough for most sites using this theme.\n\n### 2. Create zaps for the services you wish to add.\n\nEach time you create a zap, you'll want to select the service you want to import from (in this case Twitter) and have it post to a Webhook.\n\n![](http://www.webhook.com/webhook-uploads/1417714786521_Screen%2520Shot%25202014-12-04%2520at%25209.39.25%2520AM.png)\n\n### 3. Configure the post action\n\n<div class=\"wy-alert\">\nDon't forget to test your Zap before turning it on. If your zap works correctly it should update data in your CMS.\n</div>\n\nFor each service you need to configure the post action to align with your forms in Webhook. Below are screenshots of the settings you'll need for each service.\n\n##### Twitter\n\nSetting this up will make it so that you your latest tweet shows up on your site. You may also want to set up a \"Filter\"\n\n```\nURL SETTING:\nhttps://server.webhook.com/update-item/?site=MY_SITE_NAME_HERE&apiKey=MY_API_KEY_HERE&type=twitter&id=twitter\n```\n\n![](http://solo-data.webhook.org/webhook-uploads/1422038268497_Image%25202015-01-23%2520at%252010.37.21%2520AM.png)\n\n##### YouTube or Vimeo\n\nThis will add YouTube or Vimeo videos to your site as you post to those services. Note that you can use the filter settings to tailor which videos appear.\n\n```\nURL SETTING:\nhttps://server.webhook.com/add-item/?site=MY_SITE_NAME_HERE&apiKey=MY_API_KEY_HERE&type=video\n```\n\n![](http://solo-data.webhook.org/webhook-uploads/1422038722274_Image%25202015-01-23%2520at%252010.44.36%2520AM.png)\n\n##### Pinboard or Delicious\n\nThis will make it so that the bookmarks you add to one of these services get added to your links section. You can also set up a filter to check for \"Tags\" that \"Contains\" a word.\n\n![](http://solo-data.webhook.org/webhook-uploads/1422039110546_Image%25202015-01-23%2520at%252010.51.18%2520AM.png)\n\n## Don't forget to deploy your site!\n\nIf this is your first time using Webhook, remember that you need to deploy your website before it's available live to others. You can do this by running `wh deploy` in your site directory or by using the Webhook app. Once deployed your site will live at `yoursitename.webhook.org`. After it's deployed go to the domain section of your CMS to attach a custom domain.\n\n"
+    }
   },
-  "twitter": {
-    "controls": [
-      {
-        "controlType": "textfield",
-        "help": "Twitter username, minus the @ symbol.",
-        "hidden": false,
-        "label": "Name",
-        "locked": true,
-        "name": "name",
-        "placeholder": "han_solo",
-        "required": true,
-        "showInCms": true
-      },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Create Date",
-        "locked": true,
-        "name": "create_date",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Last Updated",
-        "locked": true,
-        "name": "last_updated",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "instruction",
-        "help": "If you just want to use the twitter widget, add your twitter name above and hit save below. You don't need to fill in anything else.\n\nOptionally, you can set up a Zapier task (the free tier is enough) to auto-update your last tweet's details to the below fields. It will give you more control over just what tweets show up here (only ones based on a filter..etc) and also look a little prettier and load faster. [Here are some 5-minute instructions to set it up](http://solo-data.webhook.org/setup/).",
-        "hidden": false,
-        "label": "Twitter Widget or Custom Widget?",
-        "locked": false,
-        "name": "twitter_widget_or_custom_widget",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textarea",
-        "help": "Your last tweet's message.",
-        "hidden": false,
-        "label": "Text",
-        "locked": false,
-        "name": "text",
-        "required": false,
-        "showInCms": true
-      },
-      {
-        "controlType": "textfield",
-        "help": "The link to your tweet.",
-        "hidden": false,
-        "label": "URL",
-        "locked": false,
-        "name": "url",
-        "required": false,
-        "showInCms": true
-      },
-      {
-        "controlType": "datetime",
-        "help": "The time your tweet was posted to twitter.",
-        "hidden": false,
-        "label": "Created at",
-        "locked": false,
-        "name": "created_at",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "help": "Your avatar image.",
-        "hidden": false,
-        "label": "User profile image url",
-        "locked": false,
-        "name": "user_profile_image_url",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": true,
-        "label": "Preview URL",
-        "locked": true,
-        "name": "preview_url",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": true,
-        "label": "Slug",
-        "locked": true,
-        "name": "slug",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "number",
-        "help": "The number of followers you have.",
-        "hidden": false,
-        "label": "User followers count",
-        "locked": false,
-        "name": "user_followers_count",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "help": "The URL to the twitter user's profile.",
-        "hidden": false,
-        "label": "User url",
-        "locked": false,
-        "name": "user_url",
-        "placeholder": "",
-        "required": false,
-        "showInCms": false
-      }
-    ],
-    "name": "Twitter",
-    "oneOff": true,
-    "oneOffMD5": "92fd41122da71a5befc3f9a52d30023e"
-  },
-  "video": {
-    "controls": [
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Name",
-        "locked": true,
-        "name": "name",
-        "placeholder": "The name of your video.",
-        "required": true,
-        "showInCms": true
-      },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Create Date",
-        "locked": true,
-        "name": "create_date",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Last Updated",
-        "locked": true,
-        "name": "last_updated",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "datetime",
-        "hidden": true,
-        "label": "Publish Date",
-        "locked": true,
-        "name": "publish_date",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "instruction",
-        "help": "Use this field if you just want to add a video manually into your feed. We'll grab all the details from the URL you post below.",
-        "hidden": false,
-        "label": "Option 1: Manually add a video",
-        "locked": false,
-        "name": "option_1_manually_add_a_video",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "embedly",
-        "help": "The URL of the video you want to add. Something like `https://www.youtube.com/watch?v=XLxGQAgD3mA`",
-        "hidden": false,
-        "label": "URL of your video",
-        "locked": false,
-        "name": "url_of_your_video",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "instruction",
-        "help": "Using Zapier (their free tier will be enough) you can auto-add videos from YouTube or Vimeo. The following fields will be filled in as they get added. [Here are some 5-minute instructions to set it up](http://solo-data.webhook.org/setup/).",
-        "hidden": false,
-        "label": "Option 2: Use Zapier to auto-add videos.",
-        "locked": false,
-        "name": "option_2_use_zapier_to_autoadd_videos",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Source",
-        "locked": false,
-        "name": "source",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "help": "",
-        "hidden": false,
-        "label": "Video URL",
-        "locked": false,
-        "name": "video_url",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Embed URL",
-        "locked": false,
-        "name": "embed_url",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": false,
-        "label": "Thumbnail URL",
-        "locked": false,
-        "name": "thumbnail_url",
-        "required": false,
-        "showInCms": true
-      },
-      {
-        "controlType": "textfield",
-        "hidden": true,
-        "label": "Preview URL",
-        "locked": true,
-        "name": "preview_url",
-        "required": true,
-        "showInCms": false
-      },
-      {
-        "controlType": "textfield",
-        "hidden": true,
-        "label": "Slug",
-        "locked": true,
-        "name": "slug",
-        "required": false,
-        "showInCms": false
-      },
-      {
-        "controlType": "markdown",
-        "hidden": false,
-        "label": "Description",
-        "locked": false,
-        "name": "description",
-        "required": false,
-        "showInCms": true
-      }
-    ],
-    "individualMD5": "cc67d7b225245987fbc4fc10c60e1243",
-    "listMD5": "de426635770d13e5d3ca26f2a99c7425",
-    "name": "video",
-    "oneOff": false
+  "contentType": {
+    "aboutme": {
+      "controls": [
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Name",
+          "locked": true,
+          "name": "name",
+          "placeholder": "Han Solo",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Create Date",
+          "locked": true,
+          "name": "create_date",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Last Updated",
+          "locked": true,
+          "name": "last_updated",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "instruction",
+          "help": "This information will show up on your homepage as well as in your site's header.",
+          "hidden": false,
+          "label": "Homepage",
+          "locked": false,
+          "name": "homepage",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "image",
+          "help": "Should be squarish. We'll crop this down to a  circle for your homepage.",
+          "hidden": false,
+          "label": "Picture of you",
+          "locked": false,
+          "name": "picture_of_you",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "textfield",
+          "help": "We'll use your initials to build a small circular logo.",
+          "hidden": false,
+          "label": "Initials",
+          "locked": false,
+          "name": "initials",
+          "placeholder": "HS",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "markdown",
+          "help": "This is a short intro to welcome users to your homepage. Keep it short.",
+          "hidden": false,
+          "label": "Homepage hello",
+          "locked": false,
+          "name": "homepage_hello",
+          "placeholder": "",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "instruction",
+          "help": "The below information will show up on your About Me page.",
+          "hidden": false,
+          "label": "About me page",
+          "locked": false,
+          "name": "about_me_page",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Hometown",
+          "locked": false,
+          "name": "hometown",
+          "placeholder": "A galaxy far, far away",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "image",
+          "help": "A largish, wide image of you. Will show up on your about page.",
+          "hidden": false,
+          "label": "Bio picture",
+          "locked": false,
+          "name": "bio_picture",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "markdown",
+          "help": "Tell us who you are.",
+          "hidden": false,
+          "label": "Bio",
+          "locked": false,
+          "name": "bio",
+          "placeholder": "",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "email",
+          "hidden": false,
+          "label": "Email",
+          "locked": false,
+          "name": "email",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "instruction",
+          "help": "If you'd like to link our to your other online personas, simply add the username for the service below.",
+          "hidden": false,
+          "label": "Online personas",
+          "locked": false,
+          "name": "online_personas",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Facebook",
+          "locked": false,
+          "name": "facebook",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Github",
+          "locked": false,
+          "name": "github",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Instagram",
+          "locked": false,
+          "name": "instagram",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Reddit",
+          "locked": false,
+          "name": "reddit",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Twitter",
+          "locked": false,
+          "name": "twitter",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Steam",
+          "locked": false,
+          "name": "steam",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Vimeo",
+          "locked": false,
+          "name": "vimeo",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Youtube",
+          "locked": false,
+          "name": "youtube",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "instruction",
+          "help": "All of this is totally optional. But we can build out a mini-resume for you if you want to fill out the stuff below.",
+          "hidden": false,
+          "label": "Mini Resume",
+          "locked": false,
+          "name": "mini_resume",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "markdown",
+          "hidden": false,
+          "label": "Resume intro",
+          "locked": false,
+          "name": "resume_intro",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "file",
+          "help": "Can be a PDF or Doc or whatever you want to use.",
+          "hidden": false,
+          "label": "Formal resume",
+          "locked": false,
+          "name": "formal_resume",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "grid",
+          "controls": [
+            {
+              "controlType": "textfield",
+              "help": "Name of the project or place of work.",
+              "hidden": false,
+              "label": "Name",
+              "locked": false,
+              "name": "name",
+              "placeholder": "",
+              "required": true,
+              "showInCms": true
+            },
+            {
+              "controlType": "textfield",
+              "help": "You can write in whatever time format you want.",
+              "hidden": false,
+              "label": "Time period",
+              "locked": false,
+              "name": "time_period",
+              "placeholder": "May 2012 - Present",
+              "required": true,
+              "showInCms": false
+            },
+            {
+              "controlType": "textfield",
+              "help": "What was your role or title?",
+              "hidden": false,
+              "label": "Role",
+              "locked": false,
+              "name": "role",
+              "required": false,
+              "showInCms": true
+            },
+            {
+              "controlType": "url",
+              "help": "Optional link if needed.",
+              "hidden": false,
+              "label": "URL",
+              "locked": false,
+              "name": "url",
+              "required": false,
+              "showInCms": false
+            },
+            {
+              "controlType": "markdown",
+              "hidden": false,
+              "label": "Description",
+              "locked": false,
+              "name": "description",
+              "required": false,
+              "showInCms": true
+            }
+          ],
+          "help": "You can drag and drop to sort objects.",
+          "hidden": false,
+          "label": "Notable work",
+          "locked": false,
+          "name": "notable_work",
+          "placeholder": "",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Preview URL",
+          "locked": true,
+          "name": "preview_url",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Slug",
+          "locked": true,
+          "name": "slug",
+          "required": false,
+          "showInCms": false
+        }
+      ],
+      "name": "about me",
+      "oneOff": true,
+      "oneOffMD5": "9cc7e28839b916efd9ec9c4d371cfb6a"
+    },
+    "article": {
+      "controls": [
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Name",
+          "locked": true,
+          "name": "name",
+          "placeholder": "Title of your article",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Create Date",
+          "locked": true,
+          "name": "create_date",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Last Updated",
+          "locked": true,
+          "name": "last_updated",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Publish Date",
+          "locked": true,
+          "name": "publish_date",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "markdown",
+          "help": "The short description of this article.",
+          "hidden": false,
+          "label": "Deck",
+          "locked": false,
+          "name": "deck",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "markdown",
+          "help": "For image alignment, use [full],[center],[left] and [right]. Example `![center](myimage.jpg)`",
+          "hidden": false,
+          "label": "Body",
+          "locked": false,
+          "name": "body",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "image",
+          "help": "Add an image ONLY if you want to use a featured\"Big Hero\" image at the top.",
+          "hidden": false,
+          "label": "Optional big hero image.",
+          "locked": false,
+          "name": "optional_big_hero_image",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Preview URL",
+          "locked": true,
+          "name": "preview_url",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Slug",
+          "locked": true,
+          "name": "slug",
+          "required": false,
+          "showInCms": false
+        }
+      ],
+      "individualMD5": "a2f96de4e8bc563e61f7b9787e6c295a",
+      "listMD5": "1ff53b61c46576f7e3336e1d07a8ca3f",
+      "name": "article",
+      "oneOff": false
+    },
+    "gallery": {
+      "controls": [
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Name",
+          "locked": true,
+          "name": "name",
+          "placeholder": "Title of your gallery",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Create Date",
+          "locked": true,
+          "name": "create_date",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Last Updated",
+          "locked": true,
+          "name": "last_updated",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Publish Date",
+          "locked": true,
+          "name": "publish_date",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "markdown",
+          "hidden": false,
+          "label": "Description",
+          "locked": false,
+          "name": "description",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "grid",
+          "controls": [
+            {
+              "controlType": "image",
+              "hidden": false,
+              "label": "Image",
+              "locked": false,
+              "name": "image",
+              "required": false,
+              "showInCms": true
+            },
+            {
+              "controlType": "markdown",
+              "hidden": false,
+              "label": "Caption",
+              "locked": false,
+              "name": "caption",
+              "required": false,
+              "showInCms": true
+            }
+          ],
+          "help": "Images can be reordered by dragging. The first image in the list will be the one used for click-throughs.",
+          "hidden": false,
+          "label": "Images",
+          "locked": false,
+          "name": "images",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Preview URL",
+          "locked": true,
+          "name": "preview_url",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Slug",
+          "locked": true,
+          "name": "slug",
+          "required": false,
+          "showInCms": false
+        }
+      ],
+      "individualMD5": "aa8a9828a589b28fd819bc31f7640c1c",
+      "listMD5": "a047b6f0921cd0342bbddffb6833803c",
+      "name": "gallery",
+      "oneOff": false
+    },
+    "link": {
+      "controls": [
+        {
+          "controlType": "textfield",
+          "help": "The title of the page you're linking to.",
+          "hidden": false,
+          "label": "Name",
+          "locked": true,
+          "name": "name",
+          "placeholder": "Title of the page.",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Create Date",
+          "locked": true,
+          "name": "create_date",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Last Updated",
+          "locked": true,
+          "name": "last_updated",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Publish Date",
+          "locked": true,
+          "name": "publish_date",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "instruction",
+          "help": "Set up a Zapier task to automatically add links from your [Delicious](https://delicious.com/) or [Pinboard](https://pinboard.in) accounts. You can restrict it to only a certain tag (like \"to_website\" or \"share\"). [Here are some 5-minute instructions to set it up](http://solo.webhook.org/setup/).\n\nYou can of course manually add a new link to your site using the below fields.",
+          "hidden": false,
+          "label": "Optional: Link up your Delicious or Pinboard account",
+          "locked": false,
+          "name": "optional_link_up_your_delicious_or_pinboard_account",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "url",
+          "help": "",
+          "hidden": false,
+          "label": "URL",
+          "locked": false,
+          "name": "url",
+          "placeholder": "http://www.starwars.com",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "markdown",
+          "hidden": false,
+          "label": "Description",
+          "locked": false,
+          "name": "description",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Preview URL",
+          "locked": true,
+          "name": "preview_url",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Slug",
+          "locked": true,
+          "name": "slug",
+          "required": false,
+          "showInCms": false
+        }
+      ],
+      "individualMD5": "feff62257d7b77cfc48a586c3295cbda",
+      "listMD5": "e275cb500c66f9c24131dadb7b7cfa91",
+      "name": "Link",
+      "oneOff": false
+    },
+    "twitter": {
+      "controls": [
+        {
+          "controlType": "textfield",
+          "help": "Twitter username, minus the @ symbol.",
+          "hidden": false,
+          "label": "Name",
+          "locked": true,
+          "name": "name",
+          "placeholder": "han_solo",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Create Date",
+          "locked": true,
+          "name": "create_date",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Last Updated",
+          "locked": true,
+          "name": "last_updated",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "instruction",
+          "help": "If you just want to use the twitter widget, add your twitter name above and hit save below. You don't need to fill in anything else.\n\nOptionally, you can set up a Zapier task (the free tier is enough) to auto-update your last tweet's details to the below fields. It will give you more control over just what tweets show up here (only ones based on a filter..etc) and also look a little prettier and load faster. [Here are some 5-minute instructions to set it up](http://solo-data.webhook.org/setup/).",
+          "hidden": false,
+          "label": "Twitter Widget or Custom Widget?",
+          "locked": false,
+          "name": "twitter_widget_or_custom_widget",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textarea",
+          "help": "Your last tweet's message.",
+          "hidden": false,
+          "label": "Text",
+          "locked": false,
+          "name": "text",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "textfield",
+          "help": "The link to your tweet.",
+          "hidden": false,
+          "label": "URL",
+          "locked": false,
+          "name": "url",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "help": "The time your tweet was posted to twitter.",
+          "hidden": false,
+          "label": "Created at",
+          "locked": false,
+          "name": "created_at",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "help": "Your avatar image.",
+          "hidden": false,
+          "label": "User profile image url",
+          "locked": false,
+          "name": "user_profile_image_url",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Preview URL",
+          "locked": true,
+          "name": "preview_url",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Slug",
+          "locked": true,
+          "name": "slug",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "number",
+          "help": "The number of followers you have.",
+          "hidden": false,
+          "label": "User followers count",
+          "locked": false,
+          "name": "user_followers_count",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "help": "The URL to the twitter user's profile.",
+          "hidden": false,
+          "label": "User url",
+          "locked": false,
+          "name": "user_url",
+          "placeholder": "",
+          "required": false,
+          "showInCms": false
+        }
+      ],
+      "name": "Twitter",
+      "oneOff": true,
+      "oneOffMD5": "92fd41122da71a5befc3f9a52d30023e"
+    },
+    "video": {
+      "controls": [
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Name",
+          "locked": true,
+          "name": "name",
+          "placeholder": "The name of your video.",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Create Date",
+          "locked": true,
+          "name": "create_date",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Last Updated",
+          "locked": true,
+          "name": "last_updated",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Publish Date",
+          "locked": true,
+          "name": "publish_date",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "instruction",
+          "help": "Use this field if you just want to add a video manually into your feed. We'll grab all the details from the URL you post below.",
+          "hidden": false,
+          "label": "Option 1: Manually add a video",
+          "locked": false,
+          "name": "option_1_manually_add_a_video",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "embedly",
+          "help": "The URL of the video you want to add. Something like `https://www.youtube.com/watch?v=XLxGQAgD3mA`",
+          "hidden": false,
+          "label": "URL of your video",
+          "locked": false,
+          "name": "url_of_your_video",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "instruction",
+          "help": "Using Zapier (their free tier will be enough) you can auto-add videos from YouTube or Vimeo. The following fields will be filled in as they get added. [Here are some 5-minute instructions to set it up](http://solo-data.webhook.org/setup/).",
+          "hidden": false,
+          "label": "Option 2: Use Zapier to auto-add videos.",
+          "locked": false,
+          "name": "option_2_use_zapier_to_autoadd_videos",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Source",
+          "locked": false,
+          "name": "source",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "help": "",
+          "hidden": false,
+          "label": "Video URL",
+          "locked": false,
+          "name": "video_url",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Embed URL",
+          "locked": false,
+          "name": "embed_url",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Thumbnail URL",
+          "locked": false,
+          "name": "thumbnail_url",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Preview URL",
+          "locked": true,
+          "name": "preview_url",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Slug",
+          "locked": true,
+          "name": "slug",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "markdown",
+          "hidden": false,
+          "label": "Description",
+          "locked": false,
+          "name": "description",
+          "required": false,
+          "showInCms": true
+        }
+      ],
+      "individualMD5": "cc67d7b225245987fbc4fc10c60e1243",
+      "listMD5": "de426635770d13e5d3ca26f2a99c7425",
+      "name": "video",
+      "oneOff": false
+    }
   }
 }
