@@ -4059,7 +4059,7 @@ h1 {
 article .video {
   margin-bottom: 24px;
 }
-article blockquote {
+article > blockquote {
   font-family: "Noto sans", sans-serif;
   margin-bottom: 24px;
   margin-left: 24px;
