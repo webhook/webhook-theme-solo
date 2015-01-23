@@ -2,8 +2,8 @@
   "data": {
     "aboutme": {
       "_sort_create_date": 1421993100,
-      "_sort_last_updated": 1421993160,
-      "bio": "Han Solo, along with his friend Chewbacca, was hired by Obi-Wan Kenobi and Luke Skywalker to provide passage to Alderaan. Han boasted that his starship, the Millennium Falcon, could make the Kessel Run in less than 12 parsecs; whether that was true is unknown, but he needed the job. The smuggler was deep in debt to crime lord Jabba the Hutt, who had placed a bounty on his head. In a sit-down standoff at the Mos Eisley cantina, Han blasted Greedo, one of Jabba’s bounty hunters looking to collect a handsome sum for the Corellian. He later had a run in with the gangster himself, convincing Jabba to give him more time -- though it would cost 15% extra.\n\nThe group departed Tatooine, blasting their way out past Imperial stormtroopers who were searching for Luke’s droids. On the trip, it became clear that Han didn’t believe in the Force, saying, “There's no mystical energy field that controls my destiny.” Finally, they arrived at Alderaan -- or where Alderaan should have been. It had been completely blown away by the Empire’s Death Star, and the Millennium Falcon was soon caught in the space station’s tractor beam. On the Death Star, they rescued Princess Leia Organa -- with whom Han bickered intensely -- but lost Obi-Wan. \n\nThey escaped to Yavin 4, location of the hidden Rebel base, and delivered stolen Death Star plans to the Alliance. While the fledgling group was planning an attack on the Imperial outpost, Han collected a reward for rescuing the Princess and planned to leave -- a decision that disappointed his new friends. “I know what I’m doing,” he told Chewbacca. Toward the battle’s end, with Luke about to be blasted by Darth Vader, Han and Chewie returned in the Millennium Falcon. They cleared the TIE fighters off Luke’s tail, and he delivered a precise shot, destroying the dreaded Death Star.",
+      "_sort_last_updated": 1422049500,
+      "bio": "<p>\n\tHan Solo, along with his friend Chewbacca, was hired by Obi-Wan Kenobi and Luke Skywalker to provide passage to Alderaan. Han boasted that his starship, the Millennium Falcon, could make the Kessel Run in less than 12 parsecs; whether that was true is unknown, but he needed the job. The smuggler was deep in debt to crime lord Jabba the Hutt, who had placed a bounty on his head. In a sit-down standoff at the Mos Eisley cantina, Han blasted Greedo, one of Jabba's bounty hunters looking to collect a handsome sum for the Corellian. He later had a run in with the gangster himself, convincing Jabba to give him more time -- though it would cost 15% extra.\n</p>\n<p>\n\tThe group departed Tatooine, blasting their way out past Imperial stormtroopers who were searching for Luke's droids. On the trip, it became clear that Han didn't believe in the Force, saying, \"There's no mystical energy field that controls my destiny.\" Finally, they arrived at Alderaan -- or where Alderaan should have been. It had been completely blown away by the Empire's Death Star, and the Millennium Falcon was soon caught in the space station's tractor beam. On the Death Star, they rescued Princess Leia Organa -- with whom Han bickered intensely -- but lost Obi-Wan.\n</p>\n<p>\n\tThey escaped to Yavin 4, location of the hidden Rebel base, and delivered stolen Death Star plans to the Alliance. While the fledgling group was planning an attack on the Imperial outpost, Han collected a reward for rescuing the Princess and planned to leave -- a decision that disappointed his new friends. \"I know what I'm doing,\" he told Chewbacca. Toward the battle's end, with Luke about to be blasted by Darth Vader, Han and Chewie returned in the Millennium Falcon. They cleared the TIE fighters off Luke's tail, and he delivered a precise shot, destroying the dreaded Death Star.\n</p>",
       "bio_picture": {
         "height": 820,
         "resize_url": "http://lh3.ggpht.com/Y7DIRW5VQiSHODePupf_v2_zV5u-eIGrXcyGta1IRyqPyiwsAFBznKUmU8aIBah7GG8dF8cdps7e_Mtqo_UYklh5y7eing",
@@ -14,28 +14,28 @@
       "email": "totallyfakeemailforhansolo@hansolo.com",
       "facebook": "",
       "github": "hansolo",
-      "homepage_hello": "Hokey religions and ancient weapons are no match for a good blaster at your side.",
+      "homepage_hello": "<p>\n\tHokey religions and ancient weapons are no match for a good blaster at your side.\n</p>",
       "hometown": "A galaxy far,  far, away",
       "initials": "HS",
-      "last_updated": "2015-01-22T22:06:00-08:00",
+      "last_updated": "2015-01-23T13:45:00-08:00",
       "name": "Han Solo",
       "notable_work": [
         {
-          "description": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a wookiee and two droids to save the universe from the Empire's world-destroying battle-station, while also attempting to rescue Princess Leia from the evil Darth Vader.",
+          "description": "<p>\n\tLuke Skywalker joins forces with a Jedi Knight, a cocky pilot, a wookiee and two droids to save the universe from the Empire's world-destroying battle-station, while also attempting to rescue Princess Leia from the evil Darth Vader.\n</p>",
           "name": "A New Hope",
           "role": "Scoundrel",
           "time_period": "1997",
           "url": "http://www.imdb.com/title/tt0076759/?ref_=nv_sr_2"
         },
         {
-          "description": "After the rebels have been brutally overpowered by the Empire on their newly established base, Luke Skywalker takes advanced Jedi training with Master Yoda, while his friends are pursued by Darth Vader as part of his plan to capture Luke.",
+          "description": "<p>\n\tAfter the rebels have been brutally overpowered by the Empire on their newly established base, Luke Skywalker takes advanced Jedi training with Master Yoda, while his friends are pursued by Darth Vader as part of his plan to capture Luke.\n</p>",
           "name": "The Empire Strikes Back",
           "role": "Scoundrel",
           "time_period": "1980",
           "url": "http://www.imdb.com/title/tt0080684/?ref_=fn_al_tt_2"
         },
         {
-          "description": "After rescuing Han Solo from the palace of Jabba the Hutt, the rebels attempt to destroy the second Death Star, while Luke struggles to make Vader shake off of the dark side of the Force.",
+          "description": "<p>\n\tAfter rescuing Han Solo from the palace of Jabba the Hutt, the rebels attempt to destroy the second Death Star, while Luke struggles to make Vader shake off of the dark side of the Force.\n</p>",
           "name": "Return of the Jedi",
           "role": "General",
           "time_period": "1983",
@@ -52,7 +52,7 @@
       },
       "preview_url": "c18b6458-630f-c60d-c2d6-727001bab968",
       "reddit": "hansolo",
-      "resume_intro": "I'm a pilot with experience in getting goods from one part of the galaxy to the other. I once made the Kessel Run in 12 Parsecs. Lately I'm looking for something with a little more adventure. Saving a princess perhaps.",
+      "resume_intro": "<p>\n\tI'm a pilot with experience in getting goods from one part of the galaxy to the other. I once made the Kessel Run in 12 Parsecs. Lately I'm looking for something with a little more adventure. Saving a princess perhaps.\n</p>",
       "steam": "hansolo",
       "twitter": "hansolo",
       "youtube": "hansolo"
@@ -60,13 +60,13 @@
     "article": {
       "-JgNHwBoGsZZ_IXXW1uK": {
         "_sort_create_date": 1422041760,
-        "_sort_last_updated": 1422044340,
+        "_sort_last_updated": 1422049920,
         "_sort_publish_date": 1422041760,
-        "body": "Han Solo is a character in the original trilogy and sequel trilogy of the Star Wars universe. He is portrayed by Harrison Ford. He and his co-pilot, Chewbacca, become involved in the Rebel Alliance which opposes the Galactic Empire. During the course of the Star Wars story, he becomes a chief figure in the Alliance and succeeding galactic governments. Star Wars creator George Lucas described the character as \"a loner who realizes the importance of being part of a group and helping for the common good\".\n\n* This is how you\n* make\n* a list.\n\n## Appearances\n\n### Original trilogy\n\nIntroduced in Star Wars (1977), Han Solo and Chewbacca are indebted to Jabba the Hutt after the loss of valuable cargo.\n\n![center](http://solo-data.webhook.org/webhook-uploads/1422041596942_han-solo.jpeg)\n\nOn Tatooine, Solo accepts a charter to transport Luke Skywalker, Ben Kenobi, C-3PO and R2-D2 to Alderaan in his Millennium Falcon spaceship for a payment which will help him clear debt. But when the crew and passengers arrive at the planet's coordinates, they discover that Alderaan has been destroyed by the Death Star. The Falcon is then captured and held within the battle station, however Han Solo, Chewbacca and his passengers evade capture by hiding in the ship smuggling compartments. While trying to find a way to escape Luke Skywalker discovers that Princess Leia Organa is being held captive aboard the station. Enticed by the likelihood of a large reward, Solo and Chewbacca help Skywalker rescue the princess and escape from the Death Star.\n\n> This is how you handle a blockquote. Here is what a sorta long block quote looks like.\n\nAfter delivering Skywalker, Leia and the droids to the Rebel Alliance, Solo and his Wookiee co-pilot receive payment for their services. Unfortunately the Millenium Falcon has been tracked to the Rebel Alliance moon base by the Death Star. The rebels plan to attack the space station and exploit a weakness in the space station's defences. Solo initially does not want to get involved in the planned attack because,'What good's a reward if you ain't around to use it?'. Solo leaves with his reward and the rebels attack the Death Star. However, Solo has a change of heart and returns to save Luke's life during the film's climactic battle scene, ultimately enabling Luke to destroy the Death Star. For his heroics, Solo is presented with a medal of honour.\n\nIn The Empire Strikes Back (1980), Han Solo continues to assist the Rebels against the Empire.\n\n![full](http://solo-data.webhook.org/webhook-uploads/1422041649086_star-wars-episode-vi-han-solo.jpg)\n\nHan once again risks his life to save Luke Skywalker by braving a snowstorm on the ice planet Hoth to rescue his wounded friend. When the Empire attacks the Rebel base, Solo transports Chewbacca, Leia Organa and C-3PO to Cloud City where his old friend Lando Calrissian (Cloud City's administrator) operates to hide from Imperial agents. When bounty hunter Boba Fett tracks the Falcon to Cloud City, Darth Vader forces Calrissian to help capture Solo who is then sealed in carbonite for delivery to Jabba the Hutt. Lando is able to free Vader's other captives but their rescue attempt of Solo fails and Fett is able to escape with Solo's frozen body.\n\nDuring Return of the Jedi (1983), Han Solo is still frozen until Leia Organa and Jedi Knight Luke Skywalker, and Lando infiltrate Jabba the Hutt's palace and free him but they're caught by Jabba before they can escape. When Jabba orders them to be executed, Solo helps Luke, Leia, and Lando in defeating Jabba and his henchmen before escaping and defeating Boba Fett.\n\n![right](http://solo-data.webhook.org/webhook-uploads/1422041747884_Han-Solo-han-solo-30503102-557-378.png)\n\nReunited with the Rebels, Solo is commissioned as a General. Along with Leia and Chewbacca, he goes to the forest moon of Endor and leads a team deactivating the force fields protecting the Empire's second Death Star, in which they are aided by the Ewoks while Luke fights the Emperor on the Death Star. When the Death Star is destroyed, Solo sees Leia's concern for Luke and offers to step aside for the young Jedi to court her. However, Leia reveals to Han's surprise that Luke is her brother, and thus will obviously have no objection to his friend's relationship with her. At the end of the film, Solo joins the Rebels in celebrating the destruction of the second Death Star and the Empire. At the end, he and Leia declare their love for each other while reuniting with Luke and Lando as well.\n\n### Sequal Trilogy\n\nHarrison Ford will be in Star Wars: The Force Awakens, the first installment of the sequel trilogy which will be released on December 18, 2015. The film will take place 30 years after the events in Return of the Jedi.\n\n<div class=\"video\">\n<iframe width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/OMOVFvcNfvE\" frameborder=\"0\" allowfullscreen></iframe>\n</div>\n\n### Expanded Universe\n\nBrian Daley wrote a series of novels, the first published in 1979, exploring Han Solo and Chewbecca's smuggling adventures, and Ann C. Crispin's The Han Solo Trilogy (1997–1998) further develops the character's backstory. Crispin's books depict Solo as a beggar and pickpocket throughout much of his youth. He becomes a pilot and, in the process of undermining a religious fraud, falls in love with Bria Tharen, who disappears before Solo joins the Imperial Navy. Solo loses his commission and is cashiered when he refuses an order to skin Chewbacca for commandeering a ship carrying Wookiee children destined for slavery; Chewbacca, in turn, swears a \"life-debt\" to Solo. The two become smugglers, and help repel an Imperial blockade of a Hutt moon. Solo soon thereafter wins the Millennium Falcon from Lando Calrissian in a card tournament. Tharen, now a Rebel agent, reappears and asks for Solo, Chewbacca and Calrissian's help in attacking a slave colony. After succeeding, Tharen's troopers steal the smuggler's valuables to aid the Rebel Alliance. To compensate their losses, Solo and Chewbacca accept a smuggling job from Jabba the Hutt; but Imperial ships force the smugglers to jettison their cargo, invoking the debt Solo and Chewbacca owe the Hutt at the beginning of Star Wars.\n\nSolo plays a central role in several Star Wars stories set after Return of the Jedi. In The Courtship of Princess Leia (1995), he resigns his commission to pursue Leia, whom he eventually marries. Solo and Leia have three children: twins Jaina and Jacen and son Anakin. Chewbacca dies saving Anakin's life in Vector Prime (1999), sending Solo into a deep depression. In Star by Star (2001), Anakin dies as well, compounding Solo's despair. At the end of the series, however, Solo accepts the deaths of his son and his best friend, and reconciles with his family.\n\nIn the Legacy of the Force series, Jacen Solo becomes the Sith Lord Darth Caedus and plunges the galaxy into a bloody civil war. Solo disowns Jacen, but is still devastated by each new outrage his son commits. He and Leia adopt Allana (Jacen's daughter) after Jacen's death in the novel Invincible.\n\n### Influence and critical reaction\n\nHan Solo is a reckless smuggler with a sarcastic wit; he is \"a very practical guy\" and considers himself \"a materialist\"; but the adventures in the first Star Wars movie evoke his compassion, a trait \"he didn't know he possessed\".\n\nThe American Film Institute ranked Solo as the 14th greatest film hero. He was also deemed the 4th greatest movie character of all-time by Empire magazine. Entertainment Weekly ranked the character 7th on their list of The All-Time Coolest Heroes in Pop Culture. On their list of the 100 Greatest Fictional Characters, Fandomania.com ranked Solo at number 15. IGN listed Han Solo as the second greatest Star Wars character of all time (behind Darth Vader), as well as listing him as one of the top 10 characters who most needed a spin-off, saying he was \"Arguably the coolest character in the Star Wars universe\".\n\nPrince of Persia producer Ben Mattes explained that their \"inspiration was anything Harrison Ford has ever done: Indiana Jones, Han Solo\". The Japanese manga and anime anti-hero Space Adventure Cobra has been compared by reviewers to Solo. In preparing to play James T. Kirk, Chris Pine drew inspiration from Ford's depictions of Han Solo and Indiana Jones, highlighting their humor and \"accidental hero\" traits",
+        "body": "<p>\n\tHan Solo is a character in the original trilogy and sequel trilogy of the Star Wars universe. He is portrayed by Harrison Ford. He and his co-pilot, Chewbacca, become involved in the Rebel Alliance which opposes the Galactic Empire. During the course of the Star Wars story, he becomes a chief figure in the Alliance and succeeding galactic governments. Star Wars creator George Lucas described the character as \"a loner who realizes the importance of being part of a group and helping for the common good\".\n</p>\n<h2>Appearances</h2>\n<h3>Original Trilogy</h3>\n<p>\n\tIntroduced in Star Wars (1977), Han Solo and Chewbacca are indebted to Jabba the Hutt after the loss of valuable cargo.\n</p>\n<figure data-type=\"image\"><a href=\"/webhook-uploads/1422049676513_1422041596942_han-solo.jpeg\"><img data-resize-src=\"http://lh4.ggpht.com/nhnzkSdVoTpqiFXktI6Qs9XdS-TsYTMVPgjQNqBbRsmLtDo56GstjU5GGfrsgs8-DgMXEim9ZEbd5pnhyrQPo2vGZmJF9Q\" src=\"http://lh4.ggpht.com/nhnzkSdVoTpqiFXktI6Qs9XdS-TsYTMVPgjQNqBbRsmLtDo56GstjU5GGfrsgs8-DgMXEim9ZEbd5pnhyrQPo2vGZmJF9Q=s1200\"></a></figure>\n<p>\n\tOn Tatooine, Solo accepts a charter to transport Luke Skywalker, Ben Kenobi, C-3PO and R2-D2 to Alderaan in his Millennium Falcon spaceship for a payment which will help him clear debt. But when the crew and passengers arrive at the planet's coordinates, they discover that Alderaan has been destroyed by the Death Star. The Falcon is then captured and held within the battle station, however Han Solo, Chewbacca and his passengers evade capture by hiding in the ship smuggling compartments. While trying to find a way to escape Luke Skywalker discovers that Princess Leia Organa is being held captive aboard the station. Enticed by the likelihood of a large reward, Solo and Chewbacca help Skywalker rescue the princess and escape from the Death Star.\n</p>\n<figure data-type=\"quote\">\n<blockquote>\n\tHere's an example of a blockquote if you needed to do one<br>\n\t\n</blockquote>\n</figure>\n<p>\n\tAfter delivering Skywalker, Leia and the droids to the Rebel Alliance, Solo and his Wookiee co-pilot receive payment for their services. Unfortunately the Millenium Falcon has been tracked to the Rebel Alliance moon base by the Death Star. The rebels plan to attack the space station and exploit a weakness in the space station's defences. Solo initially does not want to get involved in the planned attack because,'What good's a reward if you ain't around to use it?'. Solo leaves with his reward and the rebels attack the Death Star. However, Solo has a change of heart and returns to save Luke's life during the film's climactic battle scene, ultimately enabling Luke to destroy the Death Star. For his heroics, Solo is presented with a medal of honour.\n</p>\n<p>\n\tIn The Empire Strikes Back (1980), Han Solo continues to assist the Rebels against the Empire.\n</p>\n<figure data-type=\"image\"><a href=\"/webhook-uploads/1422049740188_1422041649086_star-wars-episode-vi-han-solo.jpg\"><img data-resize-src=\"http://lh5.ggpht.com/T8dELhiv-VesiAK9AZlkZ5hAMbHTaTcql9EuJVpElRbiXLtXuQ72ldsZyQOyVOprD-wSHPC9TUfcfhFahWtDdOkWgbQb\" src=\"http://lh5.ggpht.com/T8dELhiv-VesiAK9AZlkZ5hAMbHTaTcql9EuJVpElRbiXLtXuQ72ldsZyQOyVOprD-wSHPC9TUfcfhFahWtDdOkWgbQb=s1200\"></a></figure>\n<p>\n\tHan once again risks his life to save Luke Skywalker by braving a snowstorm on the ice planet Hoth to rescue his wounded friend. When the Empire attacks the Rebel base, Solo transports Chewbacca, Leia Organa and C-3PO to Cloud City where his old friend Lando Calrissian (Cloud City's administrator) operates to hide from Imperial agents. When bounty hunter Boba Fett tracks the Falcon to Cloud City, Darth Vader forces Calrissian to help capture Solo who is then sealed in carbonite for delivery to Jabba the Hutt. Lando is able to free Vader's other captives but their rescue attempt of Solo fails and Fett is able to escape with Solo's frozen body.\n</p>\n<p>\n\tDuring Return of the Jedi (1983), Han Solo is still frozen until Leia Organa and Jedi Knight Luke Skywalker, and Lando infiltrate Jabba the Hutt's palace and free him but they're caught by Jabba before they can escape. When Jabba orders them to be executed, Solo helps Luke, Leia, and Lando in defeating Jabba and his henchmen before escaping and defeating Boba Fett.\n</p>\n<figure data-type=\"image\" class=\"wy-figure-right wy-figure-medium\"><a href=\"/webhook-uploads/1422049761968_1422041747884_Han-Solo-han-solo-30503102-557-378.png\"><img data-resize-src=\"http://lh4.ggpht.com/KxeFQw6pJ1enlFeg2twGVtrwqBB-kLh7ixFawgDK2NiqUFS5reQLG0J3yc6OrA19BQ9LrBwCr2ebWW_3LcBn7xaHubj3\" src=\"http://lh4.ggpht.com/KxeFQw6pJ1enlFeg2twGVtrwqBB-kLh7ixFawgDK2NiqUFS5reQLG0J3yc6OrA19BQ9LrBwCr2ebWW_3LcBn7xaHubj3=s1200\"></a></figure>\n<p>\n\tReunited with the Rebels, Solo is commissioned as a General. Along with Leia and Chewbacca, he goes to the forest moon of Endor and leads a team deactivating the force fields protecting the Empire's second Death Star, in which they are aided by the Ewoks while Luke fights the Emperor on the Death Star. When the Death Star is destroyed, Solo sees Leia's concern for Luke and offers to step aside for the young Jedi to court her. However, Leia reveals to Han's surprise that Luke is her brother, and thus will obviously have no objection to his friend's relationship with her. At the end of the film, Solo joins the Rebels in celebrating the destruction of the second Death Star and the Empire. At the end, he and Leia declare their love for each other while reuniting with Luke and Lando as well.\n</p>\n<h3>Sequel Trilogy</h3>\n<p>\n\tHarrison Ford will be in Star Wars: The Force Awakens, the first installment of the sequel trilogy which will be released on December 18, 2015. The film will take place 30 years after the events in Return of the Jedi.\n</p>\n<figure data-type=\"video\">\n<p>\n\t<iframe width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/OMOVFvcNfvE\" frameborder=\"0\" allowfullscreen=\"\">\n\t</iframe>\n</p>\n</figure>\n<h3>Expanded Universe</h3>\n<p>\n\tBrian Daley wrote a series of novels, the first published in 1979, exploring Han Solo and Chewbecca's smuggling adventures, and Ann C. Crispin's The Han Solo Trilogy (1997–1998) further develops the character's backstory. Crispin's books depict Solo as a beggar and pickpocket throughout much of his youth. He becomes a pilot and, in the process of undermining a religious fraud, falls in love with Bria Tharen, who disappears before Solo joins the Imperial Navy. Solo loses his commission and is cashiered when he refuses an order to skin Chewbacca for commandeering a ship carrying Wookiee children destined for slavery; Chewbacca, in turn, swears a \"life-debt\" to Solo. The two become smugglers, and help repel an Imperial blockade of a Hutt moon. Solo soon thereafter wins the Millennium Falcon from Lando Calrissian in a card tournament. Tharen, now a Rebel agent, reappears and asks for Solo, Chewbacca and Calrissian's help in attacking a slave colony. After succeeding, Tharen's troopers steal the smuggler's valuables to aid the Rebel Alliance. To compensate their losses, Solo and Chewbacca accept a smuggling job from Jabba the Hutt; but Imperial ships force the smugglers to jettison their cargo, invoking the debt Solo and Chewbacca owe the Hutt at the beginning of Star Wars.\n</p>\n<p>\n\tSolo plays a central role in several Star Wars stories set after Return of the Jedi. In The Courtship of Princess Leia (1995), he resigns his commission to pursue Leia, whom he eventually marries. Solo and Leia have three children: twins Jaina and Jacen and son Anakin. Chewbacca dies saving Anakin's life in Vector Prime (1999), sending Solo into a deep depression. In Star by Star (2001), Anakin dies as well, compounding Solo's despair. At the end of the series, however, Solo accepts the deaths of his son and his best friend, and reconciles with his family.\n</p>\n<p>\n\tIn the Legacy of the Force series, Jacen Solo becomes the Sith Lord Darth Caedus and plunges the galaxy into a bloody civil war. Solo disowns Jacen, but is still devastated by each new outrage his son commits. He and Leia adopt Allana (Jacen's daughter) after Jacen's death in the novel Invincible.\n</p>\n<h3>Influence and critical reaction</h3>\n<p>\n\tHan Solo is a reckless smuggler with a sarcastic wit; he is \"a very practical guy\" and considers himself \"a materialist\"; but the adventures in the first Star Wars movie evoke his compassion, a trait \"he didn't know he possessed\".\n</p>\n<p>\n\tThe American Film Institute ranked Solo as the 14th greatest film hero. He was also deemed the 4th greatest movie character of all-time by Empire magazine. Entertainment Weekly ranked the character 7th on their list of The All-Time Coolest Heroes in Pop Culture. On their list of the 100 Greatest Fictional Characters, Fandomania.com ranked Solo at number 15. IGN listed Han Solo as the second greatest Star Wars character of all time (behind Darth Vader), as well as listing him as one of the top 10 characters who most needed a spin-off, saying he was \"Arguably the coolest character in the Star Wars universe\".\n</p>\n<p>\n\tPrince of Persia producer Ben Mattes explained that their \"inspiration was anything Harrison Ford has ever done: Indiana Jones, Han Solo\". The Japanese manga and anime anti-hero Space Adventure Cobra has been compared by reviewers to Solo. In preparing to play James T. Kirk, Chris Pine drew inspiration from Ford's depictions of Han Solo and Indiana Jones, highlighting their humor and \"accidental hero\" traits\n</p>",
         "create_date": "2015-01-23T11:36:00-08:00",
-        "deck": "Here's some Wikipedia data styled up to be an article page.",
+        "deck": "<p>\n\tHere's some Wikipedia data styled up to be an article page.\n</p>",
         "isDraft": false,
-        "last_updated": "2015-01-23T12:19:00-08:00",
+        "last_updated": "2015-01-23T13:52:00-08:00",
         "name": "Some Background on Han Solo",
         "preview_url": "2bf0b605-a03c-73db-d62f-0211c43b73eb",
         "publish_date": "2015-01-23T11:36:00-08:00"
@@ -75,13 +75,13 @@
     "gallery": {
       "-JgKUZ115I0R3OjzZ4Vk": {
         "_sort_create_date": 1421994720,
-        "_sort_last_updated": 1421994900,
+        "_sort_last_updated": 1422049980,
         "_sort_publish_date": 1421994720,
         "create_date": "2015-01-22T22:32:00-08:00",
-        "description": "Just some pics of me hanging out, looking cool. My favorite one is of me and my buddy Lando. That guy, can you believe he turned us in to Darth Vadar? He said he didn't have any choice.",
+        "description": "<p>\n\tJust some pics of me hanging out, looking cool. My favorite one is of me and my buddy Lando. That guy, can you believe he turned us in to Darth Vadar? He said he didn't have any choice.\n</p>",
         "images": [
           {
-            "caption": "That Billy Dee, what a jokester.",
+            "caption": "That lando, what a crazy cat.",
             "image": {
               "height": 1972,
               "resize_url": "http://lh4.ggpht.com/mt0k0DYsac_vka7sYIFFFDRgJYrc9OOUBd4saUqC3V_isPy_6bIoE2u49yuGzJdGcrgzYgXFY2tLEn4FYbMiJykj3yQ",
@@ -98,7 +98,6 @@
             }
           },
           {
-            "caption": "",
             "image": {
               "height": 1200,
               "resize_url": "http://lh6.ggpht.com/1Cn_7w6us2oXz-oDJeASzgeQ10lGq4op-0RiVBYzPTF4GEet_Eclt3jIOIaxMnfsdkXzYgHzlOXAGT1gkq7EkDnXeFzg",
@@ -156,17 +155,17 @@
           }
         ],
         "isDraft": false,
-        "last_updated": "2015-01-22T22:35:00-08:00",
+        "last_updated": "2015-01-23T13:53:00-08:00",
         "name": "Portraits of me",
         "preview_url": "400506db-e5b7-c084-0fea-078310abed8b",
         "publish_date": "2015-01-22T22:32:00-08:00"
       },
       "-JgKWPcHdjyAXDUE7BGE": {
         "_sort_create_date": 1421995200,
-        "_sort_last_updated": 1421995260,
+        "_sort_last_updated": 1422049920,
         "_sort_publish_date": 1421993700,
         "create_date": "2015-01-22T22:40:00-08:00",
-        "description": "Someone told me about this movie Spaceballs. I guess they thought it was funny. I dunno, Bill Pullman? You think he looks like me?",
+        "description": "<p>\n\tSomeone told me about this movie Spaceballs. I guess they thought it was funny. I dunno, Bill Pullman? You think he looks like me?\n</p>",
         "images": [
           {
             "image": {
@@ -233,7 +232,8 @@
             }
           }
         ],
-        "last_updated": "2015-01-22T22:41:00-08:00",
+        "isDraft": false,
+        "last_updated": "2015-01-23T13:52:00-08:00",
         "name": "Spaceballs",
         "preview_url": "8a9d9c35-c2e8-5aa9-603d-2127033cd4e7",
         "publish_date": "2015-01-22T22:15:00-08:00"
@@ -242,11 +242,12 @@
     "link": {
       "-JgKRC_yuYQYKYPyPVjx": {
         "_sort_create_date": 1421993880,
-        "_sort_last_updated": 1421993880,
+        "_sort_last_updated": 1422050040,
         "_sort_publish_date": 1421993880,
         "create_date": "2015-01-22T22:18:00-08:00",
-        "description": "Han Solo: Lady's Man for All Seasons is an essay by Sherry Magee about the appeal of Han Solo and his portrayal in fiction that has a romantic focus. In it, the author discusses a number of current stories.",
-        "last_updated": "2015-01-22T22:18:00-08:00",
+        "description": "<p>\n\tHan Solo: Lady's Man for All Seasons is an essay by Sherry Magee about the appeal of Han Solo and his portrayal in fiction that has a romantic focus. In it, the author discusses a number of current stories.\n</p>",
+        "isDraft": false,
+        "last_updated": "2015-01-23T13:54:00-08:00",
         "name": "Han Solo: Lay's Man for All Seasons",
         "preview_url": "35f42081-4c46-f305-df21-290955417338",
         "publish_date": "2015-01-22T22:18:00-08:00",
@@ -254,11 +255,12 @@
       },
       "-JgKRVkSd3-8qpy-viRQ": {
         "_sort_create_date": 1421993940,
-        "_sort_last_updated": 1421993940,
+        "_sort_last_updated": 1422050040,
         "_sort_publish_date": 1421993940,
         "create_date": "2015-01-22T22:19:00-08:00",
-        "description": "Essayist Ashley Cardiff makes an astute observation about Star Wars in her new book Night Terrors. In an essay titled “Nightmares,” she points out how, as children, we go from loving Luke Skywalker to loving Han Solo. ",
-        "last_updated": "2015-01-22T22:19:00-08:00",
+        "description": "<p>\n\tEssayist Ashley Cardiff makes an astute observation about Star Wars in her new book Night Terrors. In an essay titled \"Nightmares,\" she points out how, as children, we go from loving Luke Skywalker to loving Han Solo.\n</p>",
+        "isDraft": false,
+        "last_updated": "2015-01-23T13:54:00-08:00",
         "name": "5 Reasons Why Han Solo is the Most Realistic Person in Star Wars",
         "preview_url": "c80f545a-11b6-7769-09fd-99905e9f4c91",
         "publish_date": "2015-01-22T22:19:00-08:00",
@@ -266,11 +268,12 @@
       },
       "-JgKRjRrDt6ErWz-SjPc": {
         "_sort_create_date": 1421994000,
-        "_sort_last_updated": 1421995380,
+        "_sort_last_updated": 1422049980,
         "_sort_publish_date": 1421994300,
         "create_date": "2015-01-22T22:20:00-08:00",
-        "description": "\"Han shot first\" is a phrase referring to a controversial change made to a scene in Star Wars (1977), in which Han Solo (Harrison Ford) is confronted by the bounty hunter Greedo (Paul Blake) in the Mos Eisley cantina.",
-        "last_updated": "2015-01-22T22:43:00-08:00",
+        "description": "<p>\n\t\"Han shot first\" is a phrase referring to a controversial change made to a scene in Star Wars (1977), in which Han Solo (Harrison Ford) is confronted by the bounty hunter Greedo (Paul Blake) in the Mos Eisley cantina.\n</p>",
+        "isDraft": false,
+        "last_updated": "2015-01-23T13:53:00-08:00",
         "name": "Han Shot First",
         "preview_url": "0db2ace2-18e0-1fd0-9238-2cd0499ac880",
         "publish_date": "2015-01-22T22:25:00-08:00",
@@ -555,13 +558,19 @@
           "showInCms": false
         },
         {
-          "controlType": "markdown",
+          "controlType": "wysiwyg",
           "help": "This is a short intro to welcome users to your homepage. Keep it short.",
           "hidden": false,
-          "label": "Homepage hello",
+          "label": "Homepage Hello",
           "locked": false,
+          "meta": {
+            "image": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
           "name": "homepage_hello",
-          "placeholder": "",
           "required": false,
           "showInCms": false
         },
@@ -596,15 +605,22 @@
           "showInCms": false
         },
         {
-          "controlType": "markdown",
+          "controlType": "wysiwyg",
           "help": "Tell us who you are.",
           "hidden": false,
           "label": "Bio",
           "locked": false,
+          "meta": {
+            "image": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
           "name": "bio",
           "placeholder": "",
           "required": false,
-          "showInCms": true
+          "showInCms": false
         },
         {
           "controlType": "email",
@@ -708,13 +724,20 @@
           "showInCms": false
         },
         {
-          "controlType": "markdown",
+          "controlType": "wysiwyg",
           "hidden": false,
           "label": "Resume intro",
           "locked": false,
+          "meta": {
+            "image": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
           "name": "resume_intro",
           "required": false,
-          "showInCms": false
+          "showInCms": true
         },
         {
           "controlType": "file",
@@ -772,13 +795,20 @@
               "showInCms": false
             },
             {
-              "controlType": "markdown",
+              "controlType": "wysiwyg",
               "hidden": false,
               "label": "Description",
               "locked": false,
+              "meta": {
+                "image": true,
+                "link": true,
+                "quote": true,
+                "table": true,
+                "video": true
+              },
               "name": "description",
               "required": false,
-              "showInCms": true
+              "showInCms": false
             }
           ],
           "help": "You can drag and drop to sort objects.",
@@ -853,21 +883,35 @@
           "showInCms": true
         },
         {
-          "controlType": "markdown",
+          "controlType": "wysiwyg",
           "help": "The short description of this article.",
           "hidden": false,
           "label": "Deck",
           "locked": false,
+          "meta": {
+            "image": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
           "name": "deck",
           "required": false,
-          "showInCms": false
+          "showInCms": true
         },
         {
-          "controlType": "markdown",
-          "help": "For image alignment, use [full],[center],[left] and [right]. Example `![center](myimage.jpg)`\n\nWrap video embeds in `<div class=\"video\">{{EMBED CODE}}</div>`",
+          "controlType": "wysiwyg",
+          "help": "",
           "hidden": false,
           "label": "Body",
           "locked": false,
+          "meta": {
+            "image": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
           "name": "body",
           "required": false,
           "showInCms": false
@@ -946,13 +990,20 @@
           "showInCms": false
         },
         {
-          "controlType": "markdown",
+          "controlType": "wysiwyg",
           "hidden": false,
           "label": "Description",
           "locked": false,
+          "meta": {
+            "image": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
           "name": "description",
           "required": false,
-          "showInCms": true
+          "showInCms": false
         },
         {
           "controlType": "grid",
@@ -967,7 +1018,7 @@
               "showInCms": true
             },
             {
-              "controlType": "markdown",
+              "controlType": "textarea",
               "hidden": false,
               "label": "Caption",
               "locked": false,
@@ -1070,13 +1121,20 @@
           "showInCms": true
         },
         {
-          "controlType": "markdown",
+          "controlType": "wysiwyg",
           "hidden": false,
           "label": "Description",
           "locked": false,
+          "meta": {
+            "image": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
           "name": "description",
           "required": false,
-          "showInCms": true
+          "showInCms": false
         },
         {
           "controlType": "textfield",
@@ -1334,6 +1392,22 @@
           "showInCms": true
         },
         {
+          "controlType": "wysiwyg",
+          "hidden": false,
+          "label": "Description",
+          "locked": false,
+          "meta": {
+            "image": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
+          "name": "description",
+          "required": false,
+          "showInCms": false
+        },
+        {
           "controlType": "textfield",
           "hidden": true,
           "label": "Preview URL",
@@ -1350,15 +1424,6 @@
           "name": "slug",
           "required": false,
           "showInCms": false
-        },
-        {
-          "controlType": "markdown",
-          "hidden": false,
-          "label": "Description",
-          "locked": false,
-          "name": "description",
-          "required": false,
-          "showInCms": true
         }
       ],
       "individualMD5": "cc67d7b225245987fbc4fc10c60e1243",
