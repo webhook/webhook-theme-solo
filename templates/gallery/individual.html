@@ -42,7 +42,7 @@
   <ul class="gallery swipe">
   {% for row in item.images %}
     <li>
-      <a href="{{ row.image.url }}" title="{{ row.caption|safe|striptags }}">
+      <a href="{{ row.image.url }}" title="{{ row.caption|striptags }}">
         <div class="image-wrap">
           <img src="{{ row.image|imageCrop(500) }}" />
         </div>

@@ -75,7 +75,7 @@
     "gallery": {
       "-JgKUZ115I0R3OjzZ4Vk": {
         "_sort_create_date": 1421994720,
-        "_sort_last_updated": 1422049980,
+        "_sort_last_updated": 1422046920,
         "_sort_publish_date": 1421994720,
         "create_date": "2015-01-22T22:32:00-08:00",
         "description": "<p>\n\tJust some pics of me hanging out, looking cool. My favorite one is of me and my buddy Lando. That guy, can you believe he turned us in to Darth Vadar? He said he didn't have any choice.\n</p>",
@@ -155,7 +155,7 @@
           }
         ],
         "isDraft": false,
-        "last_updated": "2015-01-23T13:53:00-08:00",
+        "last_updated": "2015-01-23T13:02:00-08:00",
         "name": "Portraits of me",
         "preview_url": "400506db-e5b7-c084-0fea-078310abed8b",
         "publish_date": "2015-01-22T22:32:00-08:00"
@@ -1101,7 +1101,7 @@
         },
         {
           "controlType": "instruction",
-          "help": "Set up a Zapier task to automatically add links from your [Delicious](https://delicious.com/) or [Pinboard](https://pinboard.in) accounts. You can restrict it to only a certain tag (like \"to_website\" or \"share\"). [Here are some 5-minute instructions to set it up](http://solo.webhook.org/setup/).\n\nYou can of course manually add a new link to your site using the below fields.",
+          "help": "Set up a Zapier task to automatically add links from your [Delicious](https://delicious.com/) or [Pinboard](https://pinboard.in) accounts. You can restrict it to only a certain tag (like \"to_website\" or \"share\"). [Here are some instructions to set it up](/cms/).\n\nYou can of course manually add a new link to your site using the below fields.",
           "hidden": false,
           "label": "Optional: Link up your Delicious or Pinboard account",
           "locked": false,
@@ -1193,7 +1193,7 @@
         },
         {
           "controlType": "instruction",
-          "help": "If you just want to use the twitter widget, add your twitter name above and hit save below. You don't need to fill in anything else.\n\nOptionally, you can set up a Zapier task (the free tier is enough) to auto-update your last tweet's details to the below fields. It will give you more control over just what tweets show up here (only ones based on a filter..etc) and also look a little prettier and load faster. [Here are some 5-minute instructions to set it up](http://solo-data.webhook.org/setup/).",
+          "help": "If you just want to use the twitter widget, add your twitter name above and hit save below. You don't need to fill in anything else.\n\nOptionally, you can set up a Zapier task (the free tier is enough) to auto-update your last tweet's details to the below fields. It will give you more control over just what tweets show up here (only ones based on a filter..etc) and also look a little prettier and load faster. [Here are some  instructions to set it up](/cms/).",
           "hidden": false,
           "label": "Twitter Widget or Custom Widget?",
           "locked": false,
@@ -1346,7 +1346,7 @@
         },
         {
           "controlType": "instruction",
-          "help": "Using Zapier (their free tier will be enough) you can auto-add videos from YouTube or Vimeo. The following fields will be filled in as they get added. [Here are some 5-minute instructions to set it up](http://solo-data.webhook.org/setup/).",
+          "help": "Using Zapier (their free tier will be enough) you can auto-add videos from YouTube or Vimeo. The following fields will be filled in as they get added. [Here are some instructions to set it up](/cms/).",
           "hidden": false,
           "label": "Option 2: Use Zapier to auto-add videos.",
           "locked": false,
