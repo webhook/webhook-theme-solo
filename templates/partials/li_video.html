@@ -1,11 +1,15 @@
 {# This partial gets included on the homepage and the list view for this type #}
 <li class="home-video">
 
+
+  {# Videos can come from Embedly if manually added. Or a user hooked up Zapier to auto populate fields. #}
+  {# The variables will be slightly different, but the markup is the same either way. #}
+
   {# VIDEO FROM EMBEDLY #}
   {# VIDEO FROM EMBEDLY #}
   {# VIDEO FROM EMBEDLY #}
   {% if item.url_of_your_video %}
-    <a href="{{ item.url_of_your_video.video_url }}" class="video-open" title="{{ item.url_of_your_video.description }}">
+    <a href="{{ item.url_of_your_video.url }}" class="video-open" title="{{ item.url_of_your_video.description }}">
       <div class="video-thumb">
         <div class="image" style="background-image:url({{ item.url_of_your_video.thumbnail_url }});"></div>
       </div>

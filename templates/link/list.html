@@ -14,8 +14,7 @@
 {# http://www.webhook.com/docs/template-inheritance-blocks/ #}
 {% extends "templates/partials/base.html" %}
 
-{# This sets our page <title>. It will append article to the site title defined in base.html #}
-{% block title %}{% parent %} Links of note{% endblock %}
+{% block title %}{% parent %} links of note{% endblock %}
 
 {% block content %}
   <div class="container">
@@ -40,6 +39,7 @@
         {% include "templates/partials/li_link.html" %}
       {% endfor %}
     </ul>
+    <div id="js-spinner" class="wy-spinner" style="display: none;"></div>
   </div>
 {% endblock %}
 
