@@ -3242,12 +3242,12 @@ code.code-large {
   list-style: disc;
 }
 
-.wy-video {
+.wy-video, article .video {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
 }
-.wy-video iframe, .wy-video object {
+.wy-video iframe, article .video iframe, .wy-video object, article .video object {
   position: absolute;
   top: 0;
   left: 0;
@@ -3255,11 +3255,11 @@ code.code-large {
   height: 100%;
 }
 
-.wy-video.wy-video-sd {
+.wy-video.wy-video-sd, article .wy-video-sd.video {
   padding-bottom: 75%;
 }
 
-.wy-video.wy-video-cinema {
+.wy-video.wy-video-cinema, article .wy-video-cinema.video {
   padding-bottom: 41.84%;
 }
 
@@ -4056,6 +4056,18 @@ h1 {
   font-size: 110%;
 }
 
+article .video {
+  margin-bottom: 24px;
+}
+article blockquote {
+  font-family: "Noto sans", sans-serif;
+  margin-bottom: 24px;
+  margin-left: 24px;
+  font-style: italic;
+  position: relative;
+  border-left: solid 5px #404040;
+  padding-left: 24px;
+}
 article .date {
   margin-bottom: 6px;
   text-align: center;
