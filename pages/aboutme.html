@@ -45,13 +45,13 @@
       {% endif %}
     </ul>
     <hr>
-    {{ cms.aboutme.bio|markdown }}
+    {{ cms.aboutme.bio|safe }}
 
     {# If at least one piece of notable work exists, show all this resume stuff.#}
     {% if cms.aboutme.notable_work[0] %}
       <hr>
       <h2>Some of my work</h2>
-      {{ cms.aboutme.resume_intro|markdown }}
+      {{ cms.aboutme.resume_intro|safe }}
       {% if cms.aboutme.formal_resume %}
         <a href="{{ cms.aboutme.formal_resume.url }}" class="btn btn-neutral">Download my resume</a>
       {% endif %}
@@ -68,7 +68,7 @@
               <span class="time-period">{{ row.time_period }}</span>
             </h3>
             <p class="role">{{ row.role }}</p>
-            {{ row.description|markdown }}
+            {{ row.description|safe }}
           </li>
         {% endfor %}
       </ul>

@@ -4,7 +4,7 @@
     <div class="mask"></div>
     <div class="text">
       <span class="title">{{ item.name }}</span>
-      <span class="description">{{ item.description|markdown|striptags|truncate(100) }}</span>
+      <span class="description">{{ item.description|safe|striptags|truncate(100) }}</span>
       <span class="num">{{ item.images|size }} images</span>
     </div>
   </a>

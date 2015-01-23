@@ -33,9 +33,9 @@
   <article>
     <div class="date">{{ item.publish_date|date('M d Y') }}</div>
     <h1>{{ item.name }}</h1>
-    <div class="deck">{{ item.deck|markdown }}</div>
+    <div class="deck">{{ item.deck|safe }}</div>
     <hr/>
-    {{ item.body|markdown }}
+    {{ item.body|safe }}
     <img src="{{ item.optional_big_hero_image|imageSize(200) }}" />
   </article>
 {% endblock %}

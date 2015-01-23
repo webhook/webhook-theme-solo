@@ -33,7 +33,7 @@
   {# VIDEO FROM API #}
   {# VIDEO FROM API #}
   {% else %}
-    <a href="{{ item.video_url }}" class="video-open" title="{{ item.description|markdown|striptags }}">
+    <a href="{{ item.video_url }}" class="video-open" title="{{ item.description|safe|striptags }}">
       <div class="video-thumb">
         <div class="image" style="background-image:url({{ item.thumbnail_url }});"></div>
       </div>
@@ -53,7 +53,7 @@
           {% endif %}
         </div>
         <h2>{{ item.name }}</h2>
-        {{ item.description|markdown }}
+        {{ item.description|safe }}
       </div>
     </a>
   {% endif %}

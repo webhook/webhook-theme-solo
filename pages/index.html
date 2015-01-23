@@ -10,7 +10,7 @@
 
   <h1>Hello. I'm <a href="{{ url('aboutme') }}">{{ cms.aboutme.name }}</a>.</h1>
   <div class="deck deck-smaller">
-    {{ cms.aboutme.homepage_hello|markdown }}
+    {{ cms.aboutme.homepage_hello|safe }}
   </div>
 
   <hr>

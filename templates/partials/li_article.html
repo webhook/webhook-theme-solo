@@ -2,7 +2,7 @@
 <li class="home-article">
   <a href="{{ url(item) }}">
     <h2>{{ item.name }}</h2>
-    {{ item.deck|markdown }}
+    {{ item.deck|safe }}
   </a>
 </li>
 
