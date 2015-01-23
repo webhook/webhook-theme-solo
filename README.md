@@ -9,3 +9,7 @@ to run a `bower install` and an `npm install` in your site directory to install 
 
 I've included a `sample_gruntfile.js` you can use when working on this theem. Just change the name of it to `Gruntfile.js`
 (replacing the empty one) and then restart your local server.
+
+## Auto-importing data through zapier.
+
+Instructions for setting up auto imports of data are in your CMS.
