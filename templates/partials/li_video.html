@@ -9,7 +9,8 @@
   {# VIDEO FROM EMBEDLY #}
   {# VIDEO FROM EMBEDLY #}
   {% if item.url_of_your_video %}
-    <a href="{{ item.url_of_your_video.url }}" class="video-open" title="{{ item.url_of_your_video.description }}">
+    {# Vimeo and Youtube have slightly different url vars. #}
+    <a href="{% if item.url_of_your_video.original_url %}{{ item.url_of_your_video.url }}{% else %}{{ item.url_of_your_video.url }}{% endif %}" class="video-open" title="{{ item.url_of_your_video.description }}">
       <div class="video-thumb">
         <div class="image" style="background-image:url({{ item.url_of_your_video.thumbnail_url }});"></div>
       </div>
