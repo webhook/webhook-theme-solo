@@ -26,7 +26,7 @@ $(document).ready(function() {
     if(scrollBottom > bottomOfContainer)
     {
       loading = true;
-      $('#load-more-spinner').show();
+      $('#js-spinner').show();
 
       $.ajax({
         url: nextPage,
@@ -50,10 +50,10 @@ $(document).ready(function() {
                   finishedLoading = true;
                 }
 
-                $('#load-more-spinner').hide();
+                $('#js-spinner').hide();
             } else {
                 finishedLoading = true;
-                $('#load-more-spinner').hide();
+                $('#js-spinner').hide();
             }
 
             loading = false;

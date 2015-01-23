@@ -18,6 +18,7 @@
   {# MERGE A BUNCH OF CMS CONTENT TOGETHER INTO ONE FEED #}
   {% set editorial = merge(cms.article, cms.gallery, cms.link, cms.video) %}
   {% set editorial = editorial|sort('publish_date', true) %}
+  {# INFINITE SCROLL BY 10 #}
   {% set editorial = paginate(editorial, 10) %}
 
   <ul class="home-feed js-paginate" data-next-page="{{ getPageUrl(getCurPage() + 1) }}" data-max-page="{{ getPageUrl(getMaxPage()) }}" data-remove-first="true">
@@ -62,9 +63,8 @@
       {% endif %}
     {% endfor %}
   </ul>
-  <div id="load-more-spinner" class="wy-spinner" style="display: none;"></div>
+  <div id="js-spinner" class="wy-spinner" style="display: none;"></div>
 </div>
 {% endblock %}
 
-{% block scripts_extra %}
-{% endblock %}
+{% block scripts_extra %}{% endblock %}
