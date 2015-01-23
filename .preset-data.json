@@ -1,0 +1,870 @@
+{
+  "aboutme": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "placeholder": "Dave Snider",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "instruction",
+        "help": "This information will show up on your homepage as well as in your site's header.",
+        "hidden": false,
+        "label": "Homepage",
+        "locked": false,
+        "name": "homepage",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "image",
+        "help": "Should be squarish. We'll crop this down to a  circle for your homepage.",
+        "hidden": false,
+        "label": "Picture of you",
+        "locked": false,
+        "name": "picture_of_you",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "textfield",
+        "help": "We'll use your initials to build a small circular logo.",
+        "hidden": false,
+        "label": "Initials",
+        "locked": false,
+        "name": "initials",
+        "placeholder": "DS",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "markdown",
+        "help": "This is a short intro to welcome users to your homepage. Keep it short.",
+        "hidden": false,
+        "label": "Homepage hello",
+        "locked": false,
+        "name": "homepage_hello",
+        "placeholder": "",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "instruction",
+        "help": "The below information will show up on your About Me page.",
+        "hidden": false,
+        "label": "About me page",
+        "locked": false,
+        "name": "about_me_page",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Hometown",
+        "locked": false,
+        "name": "hometown",
+        "placeholder": "Petaluma, CA.",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "image",
+        "help": "A largish, wide image of you. Will show up on your about page.",
+        "hidden": false,
+        "label": "Bio picture",
+        "locked": false,
+        "name": "bio_picture",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "markdown",
+        "help": "Tell us who you are.",
+        "hidden": false,
+        "label": "Bio",
+        "locked": false,
+        "name": "bio",
+        "placeholder": "",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "email",
+        "hidden": false,
+        "label": "Email",
+        "locked": false,
+        "name": "email",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "instruction",
+        "help": "If you'd like to link our to your other online personas, simply add the username for the service below.",
+        "hidden": false,
+        "label": "Online personas",
+        "locked": false,
+        "name": "online_personas",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Facebook",
+        "locked": false,
+        "name": "facebook",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Github",
+        "locked": false,
+        "name": "github",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Instagram",
+        "locked": false,
+        "name": "instagram",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Reddit",
+        "locked": false,
+        "name": "reddit",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Twitter",
+        "locked": false,
+        "name": "twitter",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Steam",
+        "locked": false,
+        "name": "steam",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Vimeo",
+        "locked": false,
+        "name": "vimeo",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Youtube",
+        "locked": false,
+        "name": "youtube",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "instruction",
+        "help": "All of this is totally optional. But we can build out a mini-resume for you if you want to fill out the stuff below.",
+        "hidden": false,
+        "label": "Mini Resume",
+        "locked": false,
+        "name": "mini_resume",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "markdown",
+        "hidden": false,
+        "label": "Resume intro",
+        "locked": false,
+        "name": "resume_intro",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "file",
+        "help": "Can be a PDF or Doc or whatever you want to use.",
+        "hidden": false,
+        "label": "Formal resume",
+        "locked": false,
+        "name": "formal_resume",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "grid",
+        "controls": [
+          {
+            "controlType": "textfield",
+            "help": "Name of the project or place of work.",
+            "hidden": false,
+            "label": "Name",
+            "locked": false,
+            "name": "name",
+            "placeholder": "",
+            "required": true,
+            "showInCms": true
+          },
+          {
+            "controlType": "textfield",
+            "help": "You can write in whatever time format you want.",
+            "hidden": false,
+            "label": "Time period",
+            "locked": false,
+            "name": "time_period",
+            "placeholder": "May 2012 - Present",
+            "required": true,
+            "showInCms": false
+          },
+          {
+            "controlType": "textfield",
+            "help": "What was your role or title?",
+            "hidden": false,
+            "label": "Role",
+            "locked": false,
+            "name": "role",
+            "required": false,
+            "showInCms": true
+          },
+          {
+            "controlType": "url",
+            "help": "Optional link if needed.",
+            "hidden": false,
+            "label": "URL",
+            "locked": false,
+            "name": "url",
+            "required": false,
+            "showInCms": false
+          },
+          {
+            "controlType": "markdown",
+            "hidden": false,
+            "label": "Description",
+            "locked": false,
+            "name": "description",
+            "required": false,
+            "showInCms": true
+          }
+        ],
+        "help": "You can drag and drop to sort objects.",
+        "hidden": false,
+        "label": "Notable work",
+        "locked": false,
+        "name": "notable_work",
+        "placeholder": "",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Slug",
+        "locked": true,
+        "name": "slug",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "name": "about me",
+    "oneOff": true,
+    "oneOffMD5": "9cc7e28839b916efd9ec9c4d371cfb6a"
+  },
+  "article": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "markdown",
+        "help": "The short description of this article.",
+        "hidden": false,
+        "label": "Deck",
+        "locked": false,
+        "name": "deck",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "markdown",
+        "help": "For image alignment, use [full],[center],[left] and [right]. Example `![center](myimage.jpg)`",
+        "hidden": false,
+        "label": "Body",
+        "locked": false,
+        "name": "body",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "image",
+        "help": "Add an image ONLY if you want to use a featured\"Big Hero\" image at the top.",
+        "hidden": false,
+        "label": "Optional big hero image.",
+        "locked": false,
+        "name": "optional_big_hero_image",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Slug",
+        "locked": true,
+        "name": "slug",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "individualMD5": "a2f96de4e8bc563e61f7b9787e6c295a",
+    "listMD5": "1ff53b61c46576f7e3336e1d07a8ca3f",
+    "name": "article",
+    "oneOff": false
+  },
+  "gallery": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "markdown",
+        "hidden": false,
+        "label": "Description",
+        "locked": false,
+        "name": "description",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "grid",
+        "controls": [
+          {
+            "controlType": "image",
+            "hidden": false,
+            "label": "Image",
+            "locked": false,
+            "name": "image",
+            "required": false,
+            "showInCms": true
+          },
+          {
+            "controlType": "markdown",
+            "hidden": false,
+            "label": "Caption",
+            "locked": false,
+            "name": "caption",
+            "required": false,
+            "showInCms": true
+          }
+        ],
+        "help": "Images can be reordered by dragging. The first image in the list will be the one used for click-throughs.",
+        "hidden": false,
+        "label": "Images",
+        "locked": false,
+        "name": "images",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Slug",
+        "locked": true,
+        "name": "slug",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "individualMD5": "aa8a9828a589b28fd819bc31f7640c1c",
+    "listMD5": "a047b6f0921cd0342bbddffb6833803c",
+    "name": "gallery",
+    "oneOff": false
+  },
+  "link": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "help": "The title of the page you're linking to.",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "placeholder": "Title of the page.",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "instruction",
+        "help": "Set up a Zapier task to automatically add links from your [Delicious](https://delicious.com/) or [Pinboard](https://pinboard.in) accounts. You can restrict it to only a certain tag (like \"to_website\" or \"share\"). [Here are some 5-minute instructions to set it up](http://solo.webhook.org/setup/).\n\nYou can of course manually add a new link to your site using the below fields.",
+        "hidden": false,
+        "label": "Optional: Link up your Delicious or Pinboard account",
+        "locked": false,
+        "name": "optional_link_up_your_delicious_or_pinboard_account",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "url",
+        "hidden": false,
+        "label": "URL",
+        "locked": false,
+        "name": "url",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "markdown",
+        "hidden": false,
+        "label": "Description",
+        "locked": false,
+        "name": "description",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Slug",
+        "locked": true,
+        "name": "slug",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "individualMD5": "feff62257d7b77cfc48a586c3295cbda",
+    "listMD5": "e275cb500c66f9c24131dadb7b7cfa91",
+    "name": "Link",
+    "oneOff": false
+  },
+  "twitter": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "help": "Twitter username, minus the @ symbol.",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "instruction",
+        "help": "If you just want to use the twitter widget, add your twitter name above and hit save below. You don't need to fill in anything else.\n\nOptionally, you can set up a Zapier task (the free tier is enough) to auto-update your last tweet's details to the below fields. It will give you more control over just what tweets show up here (only ones based on a filter..etc) and also look a little prettier and load faster. [Here are some 5-minute instructions to set it up](http://solo-data.webhook.org/setup/).",
+        "hidden": false,
+        "label": "Twitter Widget or Custom Widget?",
+        "locked": false,
+        "name": "twitter_widget_or_custom_widget",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textarea",
+        "help": "Your last tweet's message.",
+        "hidden": false,
+        "label": "Text",
+        "locked": false,
+        "name": "text",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "textfield",
+        "help": "The link to your tweet.",
+        "hidden": false,
+        "label": "URL",
+        "locked": false,
+        "name": "url",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "help": "The time your tweet was posted to twitter.",
+        "hidden": false,
+        "label": "Created at",
+        "locked": false,
+        "name": "created_at",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "help": "Your avatar image.",
+        "hidden": false,
+        "label": "User profile image url",
+        "locked": false,
+        "name": "user_profile_image_url",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Slug",
+        "locked": true,
+        "name": "slug",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "number",
+        "help": "The number of followers you have.",
+        "hidden": false,
+        "label": "User followers count",
+        "locked": false,
+        "name": "user_followers_count",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "help": "The URL to the twitter user's profile.",
+        "hidden": false,
+        "label": "User url",
+        "locked": false,
+        "name": "user_url",
+        "placeholder": "",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "name": "Twitter",
+    "oneOff": true,
+    "oneOffMD5": "92fd41122da71a5befc3f9a52d30023e"
+  },
+  "video": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "placeholder": "The name of your video.",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "instruction",
+        "help": "Use this field if you just want to add a video manually into your feed. We'll grab all the details from the URL you post below.",
+        "hidden": false,
+        "label": "Option 1: Manually add a video",
+        "locked": false,
+        "name": "option_1_manually_add_a_video",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "embedly",
+        "help": "The URL of the video you want to add. Something like `https://www.youtube.com/watch?v=XLxGQAgD3mA`",
+        "hidden": false,
+        "label": "URL of your video",
+        "locked": false,
+        "name": "url_of_your_video",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "instruction",
+        "help": "Using Zapier (their free tier will be enough) you can auto-add videos from YouTube or Vimeo. The following fields will be filled in as they get added. [Here are some 5-minute instructions to set it up](http://solo-data.webhook.org/setup/).",
+        "hidden": false,
+        "label": "Option 2: Use Zapier to auto-add videos.",
+        "locked": false,
+        "name": "option_2_use_zapier_to_autoadd_videos",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Source",
+        "locked": false,
+        "name": "source",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "help": "",
+        "hidden": false,
+        "label": "Video URL",
+        "locked": false,
+        "name": "video_url",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Embed URL",
+        "locked": false,
+        "name": "embed_url",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Thumbnail URL",
+        "locked": false,
+        "name": "thumbnail_url",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Slug",
+        "locked": true,
+        "name": "slug",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "markdown",
+        "hidden": false,
+        "label": "Description",
+        "locked": false,
+        "name": "description",
+        "required": false,
+        "showInCms": true
+      }
+    ],
+    "individualMD5": "cc67d7b225245987fbc4fc10c60e1243",
+    "listMD5": "de426635770d13e5d3ca26f2a99c7425",
+    "name": "video",
+    "oneOff": false
+  }
+}
