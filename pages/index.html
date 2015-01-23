@@ -43,60 +43,22 @@
       {# GALLERY #}
       {# GALLERY #}
       {% if item._type == "gallery" %}
-        <li class="home-gallery">
-          <a href="{{ url(item)}}" class="image" style="background-image:url({{ item.images[0].image|imageSize(1050) }})">
-            <div class="mask"></div>
-            <div class="text">
-              <span class="title">{{ item.name }}</span>
-              <span class="description">{{ item.description|markdown|striptags|truncate(100) }}</span>
-              <span class="num">{{ item.images|size }} images</span>
-            </div>
-          </a>
-        </li>
+        {% include "templates/partials/li_gallery.html" %}
       {# ARTICLE #}
       {# ARTICLE #}
       {# ARTICLE #}
       {% elseif item._type == "article" %}
-        <li class="home-article">
-          <a href="{{ url(item) }}">
-            <h2>{{ item.name }}</h2>
-            {{ item.deck|markdown }}
-          </a>
-        </li>
+        {% include "templates/partials/li_article.html" %}
       {# LINK #}
       {# LINK #}
       {# LINK #}
       {% elseif item._type == "link" %}
-        <li class="home-link">
-          <a href="{{ item.url }}">
-            <div class="type"><span class="fa fa-bookmark"></span> Bookmark</div>
-            <h2>{{ item.name }} <span class="fa fa-external-link-square"></span></h2>
-            {{ item.description|markdown }}
-          </a>
-        </li>
+        {% include "templates/partials/li_link.html" %}
       {# VIDEO #}
       {# VIDEO #}
       {# VIDEO #}
       {% elseif item._type == "video" %}
-        <li class="home-video">
-          <a href="{{ item.video_url }}" class="video-open" title="{{ item.description|markdown|striptags }}">
-            <div class="video-thumb">
-              <div class="image" style="background-image:url({{ item.thumbnail_url }});"></div>
-            </div>
-            <div class="video-text">
-              <div class="type">
-                {% if item.source == "YouTube" %}
-                  <span class="fa fa-youtube-play"></span>
-                {% else %}
-                  <span class="fa fa-vimeo-square"></span>
-                {% endif %}
-                {{ item.source }}
-              </div>
-              <h2>{{ item.name }}</h2>
-              {{ item.description|markdown }}
-            </div>
-          </a>
-        </li>
+        {% include "templates/partials/li_video.html" %}
       {% endif %}
     {% endfor %}
   </ul>

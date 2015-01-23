@@ -1,0 +1,8 @@
+{# This partial gets included on the homepage and the list view for this type #}
+<li class="home-article">
+  <a href="{{ url(item) }}">
+    <h2>{{ item.name }}</h2>
+    {{ item.deck|markdown }}
+  </a>
+</li>
+

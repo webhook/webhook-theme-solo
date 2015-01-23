@@ -18,36 +18,28 @@
 {% block title %}{% parent %} Links of note{% endblock %}
 
 {% block content %}
-<div class="container">
-  <article>
-    <div class="date">
-      {% set last = cms.link|last %}
-      Last update {{ last.publish_date|date('M d, Y.') }}
-    </div>
-    <h1>Links of note</h1>
-    <div class="deck deck-smaller wy-text-center">
-      <p>Consider it my own personal web-ring.</p>
-    </div>
-  </article>
-  <hr>
+  <div class="container">
+    <article>
+      <div class="date">
+        {% set last = cms.link|last %}
+        Last update {{ last.publish_date|date('M d, Y.') }}
+      </div>
+      <h1>Links of note</h1>
+      <div class="deck deck-smaller wy-text-center">
+        <p>Consider it my own personal web-ring.</p>
+      </div>
+    </article>
+    <hr>
 
-  {% set editorial = cms.link %}
-  {% set editorial = editorial|sort('publish_date', true) %}
-  {% set editorial = paginate(editorial, 10) %}
+    {% set editorial = cms.link %}
+    {% set editorial = editorial|sort('publish_date', true) %}
+    {% set editorial = paginate(editorial, 10) %}
 
-  <ul class="home-feed js-paginate" data-next-page="{{ getPageUrl(getCurPage() + 1) }}" data-max-page="{{ getPageUrl(getMaxPage()) }}">
-    {% for item in editorial %}
-      <li class="home-link">
-        <a href="{{ item.url }}">
-          <div class="type"><span class="fa fa-bookmark"></span> Bookmark</div>
-          <h2>{{ item.name }} <span class="fa fa-external-link-square"></span></h2>
-          {{ item.description|markdown }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-
-
+    <ul class="home-feed js-paginate" data-next-page="{{ getPageUrl(getCurPage() + 1) }}" data-max-page="{{ getPageUrl(getMaxPage()) }}">
+      {% for item in editorial %}
+        {% include "templates/partials/li_link.html" %}
+      {% endfor %}
+    </ul>
+  </div>
 {% endblock %}
 

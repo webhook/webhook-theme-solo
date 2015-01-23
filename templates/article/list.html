@@ -37,12 +37,7 @@
 
   <ul class="home-feed js-paginate" data-next-page="{{ getPageUrl(getCurPage() + 1) }}" data-max-page="{{ getPageUrl(getMaxPage()) }}">
     {% for item in editorial %}
-    <li class="home-article">
-    <a href="{{ url(item) }}">
-      <h2>{{ item.name }}</h2>
-      {{ item.deck|markdown }}
-    </a>
-    </li>
+      {% include "templates/partials/li_article.html" %}
     {% endfor %}
   </ul>
   <div id="load-more-spinner" class="wy-spinner" style="display: none;"></div>

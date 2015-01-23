@@ -1,0 +1,12 @@
+{# This partial gets included on the homepage and the list view for this type #}
+<li class="home-gallery">
+  <a href="{{ url(item)}}" class="image" style="background-image:url({{ item.images[0].image|imageSize(1050) }})">
+    <div class="mask"></div>
+    <div class="text">
+      <span class="title">{{ item.name }}</span>
+      <span class="description">{{ item.description|markdown|striptags|truncate(100) }}</span>
+      <span class="num">{{ item.images|size }} images</span>
+    </div>
+  </a>
+</li>
+
