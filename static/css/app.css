@@ -3052,7 +3052,7 @@ a:hover {
   color: #3091d1;
 }
 a:visited {
-  color: #E74C3C;
+  color: #e43725;
 }
 
 html {
@@ -4981,7 +4981,7 @@ button[disabled] {
   box-shadow: none;
 }
 .btn-link:visited {
-  color: #E74C3C;
+  color: #e43725;
 }
 
 .wy-btn-group .btn, .wy-control .btn {

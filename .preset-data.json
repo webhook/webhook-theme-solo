@@ -1392,22 +1392,6 @@
           "showInCms": true
         },
         {
-          "controlType": "wysiwyg",
-          "hidden": false,
-          "label": "Description",
-          "locked": false,
-          "meta": {
-            "image": true,
-            "link": true,
-            "quote": true,
-            "table": true,
-            "video": true
-          },
-          "name": "description",
-          "required": false,
-          "showInCms": false
-        },
-        {
           "controlType": "textfield",
           "hidden": true,
           "label": "Preview URL",
@@ -1424,6 +1408,15 @@
           "name": "slug",
           "required": false,
           "showInCms": false
+        },
+        {
+          "controlType": "textarea",
+          "hidden": false,
+          "label": "Description",
+          "locked": false,
+          "name": "description",
+          "required": false,
+          "showInCms": true
         }
       ],
       "individualMD5": "cc67d7b225245987fbc4fc10c60e1243",
