@@ -161,6 +161,10 @@
           url = url.slice(4, -1);
           url = url.replace(/"/g, '');
 
+          // CUSTOM ADDITION
+          // Must set the crossOrigin attribute for images that are cross origin
+          list[e].img.crossOrigin = "Anonymous";
+
           list[e].img.src = url;
           log('CSS Image - ' + url);
         } else {
