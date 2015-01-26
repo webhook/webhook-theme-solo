@@ -53,7 +53,7 @@
           {% endif %}
         </div>
         <h2>{{ item.name }}</h2>
-        {{ item.description|markdown }}
+        {{ item.description|striptags }}
       </div>
     </a>
   {% endif %}

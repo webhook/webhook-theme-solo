@@ -1351,7 +1351,7 @@
           "showInCms": false
         },
         {
-          "controlType": "markdown",
+          "controlType": "textarea",
           "hidden": false,
           "label": "Description",
           "locked": false,

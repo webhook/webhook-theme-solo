@@ -11,6 +11,8 @@
 {% extends "templates/partials/base.html" %}
 {# This sets our page <title>. It will append this gallery's name to the site title defined in base.html #}
 {% block title %}{{ item.name }}{% endblock %}
+{% block description %}{{ item.description|markdown|striptags }}{% endblock %}
+
 {% block content %}
 
   {% set next = nextItem(item, 'publish_date', true) %}
