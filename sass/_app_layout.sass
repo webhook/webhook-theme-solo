@@ -572,7 +572,26 @@ footer
   border-color: $gray-lighter
   border-top-color: $gray-light
 
-
+.big-hero
+  margin-top: -$base-line-height * 3
+  padding-top: $base-line-height * 5
+  background-size: cover
+  padding-bottom: $base-line-height * 2
+  margin-bottom: $base-line-height * 2
+  .date
+    margin-bottom: $base-line-height / 4
+    text-align: center
+    color: $gray-light
+  &.background--dark
+    .date
+      color: rgba(255,255,255,.8)
+      text-shadow: 0px 1px 5px rgba(0,0,0,.8)
+    h1
+      color: $white
+      text-shadow: 0px 1px 10px rgba(0,0,0,.8)
+    .deck
+      color: $white
+      text-shadow: 0px 1px 10px rgba(0,0,0,.8)
 +media($tablet)
   .container, article
     padding: 0 $gutter

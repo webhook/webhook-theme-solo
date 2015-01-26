@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<rss version="2.0">
+  <channel>
+    <title>{{ cms.aboutme.name }} blog</title>
+    <link>{{ getSetting('site_url') }}</link>
+    <description>The blog for Webhook.com</description>
+      {% for object in cms.article|sort('publish_date', true)|slice(0,10) %}
+      <item>
+        <title>{{ object.name }}</title>
+        <link>{{ getSetting('site_url') }}{{ url(object) }}</link>
+        <description>
+          {{ object.body|markdown }}
+        </description>
+        <pubDate>{{ object.publish_date }}</pubDate>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>

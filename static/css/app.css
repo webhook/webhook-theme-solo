@@ -4682,6 +4682,31 @@ footer {
   border-top-color: #999;
 }
 
+.big-hero {
+  margin-top: -72px;
+  padding-top: 120px;
+  background-size: cover;
+  padding-bottom: 48px;
+  margin-bottom: 48px;
+}
+.big-hero .date {
+  margin-bottom: 6px;
+  text-align: center;
+  color: #999;
+}
+.big-hero.background--dark .date {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.8);
+}
+.big-hero.background--dark h1 {
+  color: #fff;
+  text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.8);
+}
+.big-hero.background--dark .deck {
+  color: #fff;
+  text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.8);
+}
+
 @media screen and (max-width: 768px) {
   .container, article {
     padding: 0 1.618em;
