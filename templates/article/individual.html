@@ -38,35 +38,26 @@
     <div class="container">
       <div class="date">{{ item.publish_date|date('M d Y') }}</div>
       <h1>{{ item.name }}</h1>
-      <div class="deck">{{ item.deck|markdown }}</div>
+      <div class="deck">{{ item.deck|wysiwyg }}</div>
     </div>
   </div>
   {% endif %}
 
   <article>
-<<<<<<< HEAD
-    <div class="date">{{ item.publish_date|date('M d Y') }}</div>
-    <h1>{{ item.name }}</h1>
-    <div class="deck">{{ item.deck|safe }}</div>
-    <hr/>
-    {{ item.body|safe }}
-    <img src="{{ item.optional_big_hero_image|imageSize(200) }}" />
-=======
     {# REGULAR HEADER #}
     {% if not item.optional_big_hero_image %}
       <div class="date">{{ item.publish_date|date('M d Y') }}</div>
       <h1>{{ item.name }}</h1>
-      <div class="deck">{{ item.deck|markdown }}</div>
+      <div class="deck">{{ item.deck|safe }}</div>
       <hr/>
     {% endif %}
 
-    {{ item.body|markdown }}
+    {{ item.body|safe }}
     <hr>
     <p>
       Enjoyed this post? Follw me on <a href="http://www.twitter.com/{{ cms.twitter.name }}">twitter</a>
       or grab some <a href="/rss.xml">RSS</a>.
     </p>
->>>>>>> master
   </article>
 
 {% endblock %}
