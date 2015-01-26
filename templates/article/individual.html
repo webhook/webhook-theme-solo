@@ -39,5 +39,11 @@
     <hr/>
     {{ item.body|markdown }}
     <img src="{{ item.optional_big_hero_image|imageSize(200) }}" />
+    <hr>
+    <p>
+      Enjoyed this post? Follw me on <a href="http://www.twitter.com/{{ cms.twitter.name }}">twitter</a>
+      or grab some <a href="/rss.xml">RSS</a>.
+    </p>
   </article>
+
 {% endblock %}
