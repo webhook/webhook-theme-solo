@@ -38,7 +38,7 @@
     <div class="container">
       <div class="date">{{ item.publish_date|date('M d Y') }}</div>
       <h1>{{ item.name }}</h1>
-      <div class="deck">{{ item.deck|wysiwyg }}</div>
+      <div class="deck">{{ item.deck|safe }}</div>
     </div>
   </div>
   {% endif %}
