@@ -5,7 +5,7 @@
     <title>{{ cms.aboutme.name }} blog</title>
     <link>{{ getSetting('site_url') }}</link>
     <description>The blog for Webhook.com</description>
-      {% for object in cms.blog|sort('publish_date', true)|slice(0,10) %}
+      {% for object in cms.article|sort('publish_date', true)|slice(0,10) %}
       <item>
         <title>{{ object.name }}</title>
         <link>{{ getSetting('site_url') }}{{ url(object) }}</link>
