@@ -32,13 +32,27 @@
     </a>
   {% endif %}
 
+  {# BIG HERO STYLE HEADER #}
+  {% if item.optional_big_hero_image %}
+  <div class="big-hero" data-src="{{ item.optional_big_hero_image|imageSize(1200) }}">
+    <div class="container">
+      <div class="date">{{ item.publish_date|date('M d Y') }}</div>
+      <h1>{{ item.name }}</h1>
+      <div class="deck">{{ item.deck|markdown }}</div>
+    </div>
+  </div>
+  {% endif %}
+
   <article>
-    <div class="date">{{ item.publish_date|date('M d Y') }}</div>
-    <h1>{{ item.name }}</h1>
-    <div class="deck">{{ item.deck|markdown }}</div>
-    <hr/>
+    {# REGULAR HEADER #}
+    {% if not item.optional_big_hero_image %}
+      <div class="date">{{ item.publish_date|date('M d Y') }}</div>
+      <h1>{{ item.name }}</h1>
+      <div class="deck">{{ item.deck|markdown }}</div>
+      <hr/>
+    {% endif %}
+
     {{ item.body|markdown }}
-    <img src="{{ item.optional_big_hero_image|imageSize(200) }}" />
     <hr>
     <p>
       Enjoyed this post? Follw me on <a href="http://www.twitter.com/{{ cms.twitter.name }}">twitter</a>
@@ -46,4 +60,44 @@
     </p>
   </article>
 
+{% endblock %}
+
+{% block scripts_extra %}
+
+  {% if item.optional_big_hero_image %}
+    <script>
+      function convertImageToDataURI(img) {
+        var canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+
+        var ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+
+        return canvas.toDataURL('image/png');
+      }
+
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var img = new Image();
+        img.setAttribute('crossorigin', '');
+
+        var background = document.querySelector('.big-hero');
+        var dataSrc = background.getAttribute('data-src');
+
+        img.onload = function () {
+        var data = convertImageToDataURI(img);
+        background.style.backgroundImage = 'url(' + data + ')';
+
+          // Prepare BackgroundCheck
+          BackgroundCheck.init({
+            targets: '.big-hero',
+            images: background
+            });
+          };
+
+          img.src = dataSrc;
+      });
+    </script>
+  {% endif %}
 {% endblock %}

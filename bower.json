@@ -1,11 +1,11 @@
 {
-  "name": "webhook-theme-wyrm",
+  "name": "webhook-theme-solo",
   "version": "0.0.0",
-  "homepage": "https://github.com/webhook/webhook-site",
+  "homepage": "https://github.com/webhook/webhook-theme-solo",
   "authors": [
     "Dave Snider <dave.snider@gmail.com>"
   ],
-  "description": "The webhook.com site.",
+  "description": "Theme for webhook blog.",
   "license": "private",
   "private": true,
   "ignore": [
@@ -23,6 +23,7 @@
     "wyrm": "~0.0.x"
   },
   "devDependencies": {
-    "moment": "~2.9.0"
+    "moment": "~2.9.0",
+    "background-check": "~1.2.2"
   }
 }
