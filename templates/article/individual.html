@@ -15,8 +15,8 @@
 
 {% block content %}
 
-  {% set next = nextItem(item, 'publish_date', true) %}
-  {% set prev = prevItem(item, 'publish_date', true) %}
+  {% set next = nextItem(item, 'publish_date') %}
+  {% set prev = prevItem(item, 'publish_date') %}
   {% if next %}
     <a href="{{ url(next)}}" class="next-item">
       <span class="fa fa-angle-right"></span>
