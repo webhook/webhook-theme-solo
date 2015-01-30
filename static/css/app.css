@@ -4056,6 +4056,15 @@ h1 {
   font-size: 110%;
 }
 
+article .caption {
+  text-align: center;
+  padding: 12px;
+  color: #999;
+  border-bottom: solid 1px #e1e4e5;
+  font-size: 14px;
+  position: relative;
+  top: -48px;
+}
 article .video {
   margin-bottom: 24px;
 }
