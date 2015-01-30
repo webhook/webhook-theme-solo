@@ -15,8 +15,8 @@
 
 {% block content %}
 
-  {% set next = nextItem(item, 'publish_date', true) %}
-  {% set prev = prevItem(item, 'publish_date', true) %}
+  {% set next = nextItem(item, 'publish_date') %}
+  {% set prev = prevItem(item, 'publish_date') %}
   {% if next %}
     <a href="{{ url(next)}}" class="next-item">
       <span class="fa fa-angle-right"></span>
@@ -55,7 +55,7 @@
     {{ item.body|safe }}
     <hr>
     <p>
-      Enjoyed this post? Follw me on <a href="http://www.twitter.com/{{ cms.twitter.name }}">twitter</a>
+      Enjoyed this post? Let me know on <a href="http://www.twitter.com/{{ cms.twitter.name }}">twitter</a>
       or grab some <a href="/rss.xml">RSS</a>.
     </p>
   </article>
